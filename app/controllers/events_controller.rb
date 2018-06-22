@@ -100,7 +100,6 @@ class EventsController < ApplicationController
     if ele_signed_in?
       @event.eleattendees << current_ele
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
-      @event.update_attribute(:apayer, @event.apayer << 0)
     else
       if 
         @event.professor_id == nil

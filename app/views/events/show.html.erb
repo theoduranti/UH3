@@ -182,13 +182,11 @@
             <tr>
                 <td> <%= e.firstname %> </td>
                 <td> <%= e.email %> </td>
-                <% @event.apayer.each do |iiid| %>
-                    <% if iddd = iiid %>
-                        <td> A son pass, est autorisé </td>
-                    <% else %>
-                    <% end %>
+                <% if @event.apayer.include? iddd %>
+                    <td> A son pass, est autorisé </td>
+                <% else %>
+                    <td> En attente de paiement </td>
                 <% end %>
-                <td> En attente de paiement </td>
             </tr>
         <% end %>
         </table>
