@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_22_140014) do
+ActiveRecord::Schema.define(version: 2018_06_22_141332) do
 
   create_table "eles", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,8 +25,25 @@ ActiveRecord::Schema.define(version: 2018_06_22_140014) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "photo"
+    t.string "description"
+    t.string "passion1"
+    t.string "passion2"
+    t.string "passion3"
+    t.string "passion4"
+    t.string "ville"
+    t.string "departement"
     t.index ["email"], name: "index_eles_on_email", unique: true
     t.index ["reset_password_token"], name: "index_eles_on_reset_password_token", unique: true
+  end
+
+  create_table "eles_events", id: false, force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "ele_id", null: false
+    t.index ["ele_id", "event_id"], name: "index_eles_events_on_ele_id_and_event_id"
+    t.index ["event_id", "ele_id"], name: "index_eles_events_on_event_id_and_ele_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -48,6 +65,13 @@ ActiveRecord::Schema.define(version: 2018_06_22_140014) do
     t.integer "apayer"
   end
 
+  create_table "events_pros", id: false, force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "pro_id", null: false
+    t.index ["event_id", "pro_id"], name: "index_events_pros_on_event_id_and_pro_id"
+    t.index ["pro_id", "event_id"], name: "index_events_pros_on_pro_id_and_event_id"
+  end
+
   create_table "pros", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -61,6 +85,16 @@ ActiveRecord::Schema.define(version: 2018_06_22_140014) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "photo"
+    t.string "description"
+    t.string "passion1"
+    t.string "passion2"
+    t.string "passion3"
+    t.string "passion4"
+    t.string "ville"
+    t.string "departement"
     t.index ["email"], name: "index_pros_on_email", unique: true
     t.index ["reset_password_token"], name: "index_pros_on_reset_password_token", unique: true
   end

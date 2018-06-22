@@ -1,0 +1,85 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :passion1 %><br />
+    <%= f.text_field :passion1, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :passion2 %><br />
+    <%= f.text_field :passion2, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :passion3 %><br />
+    <%= f.text_field :passion3, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :passion4 %><br />
+    <%= f.text_field :passion4, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ville %><br />
+    <%= f.text_field :ville, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :despartement %><br />
+    <%= f.text_field :departement, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

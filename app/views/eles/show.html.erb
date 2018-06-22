@@ -1,0 +1,254 @@
+<div class="container">
+  <div class="row">
+    <h1 class="card-header"><%= @ele.firstname %></h1>
+        <div class="card-body">
+            <p class="card-text">Passions : <%= @ele.passion1 %>, <%= @ele.passion2 %>, <%= @ele.passion3 %>, <%= @ele.passion4 %> </p>
+            <p class="card-text">Ville : <%= @ele.ville %> </p>
+            <p class="card-text">Mail : <%= @ele.email %> </p>
+        </div>
+  </div>
+
+
+    </br></br>
+
+
+    <h1 class = "text-center">Les événements que <%=@ele.firstname%>  a créé </h1>
+
+
+
+    <div class="row">
+        <% if !@ele.created_events.empty? %>
+            <% @ele.created_events.each do |event| %>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header"><%= event.name %></h4>
+                            <div class="card-body">
+                                <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                            </div>
+                            <div class="card-footer">
+                            <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                            </div>
+                    </div>
+                </div>
+            <% end %>
+        <% else %>
+            <p> <%= @ele.firstname %> n a pour le moment créer aucun event </p>
+        <% end %>
+    </div>
+
+
+    </br></br>
+
+
+    <h1>Les événements auxquels <%=@ele.firstname%>  a participé </h1>
+
+
+    <div class="row">
+        <% if !@ele.eleattended_events.empty? %>
+            <% @ele.eleattended_events.each do |event| %>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header"><%= event.name %></h4>
+                            <div class="card-body">
+                                <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                            </div>
+                            <div class="card-footer">
+                                <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                            </div>
+                    </div>
+                </div>
+            <% end %>
+        <% else %>
+            <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
+        <% end %>
+    </div>
+
+
+
+    <% if !@ele.eleattended_events.empty? %>
+        <% @ele.eleattended_events.each do |event| %>
+                <% if !event.apayer.nil? %>
+                    <% if event.apayer.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer2.nil? %>
+                    <% if event.apayer2.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer3.nil? %>
+                    <% if event.apayer3.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer4.nil? %>
+                    <% if event.apayer4.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer5.nil? %>
+                    <% if event.apayer5.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer6.nil? %>
+                    <% if event.apayer6.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer7.nil? %>
+                    <% if event.apayer7.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer8.nil? %>
+                    <% if event.apayer8.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer9.nil? %>
+                    <% if event.apayer9.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% elsif !event.apayer10.nil? %>
+                    <% if event.apayer10.to_s.include? @ele.id.to_s %>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <h4 class="card-header"><%= event.name %></h4>
+                                <div class="card-body">
+                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                </div>
+                                <div class="card-footer">
+                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% else %>
+                    <% end %>
+                <% else %>
+                <% end %>
+        <% end %>
+    <% else %>
+        <p> <%=@ele.firstname%> n a pour le moment aucune activité </p>
+    <% end %>
+    </br></br>
+
+
+    <h1>Tous les evenement à venir qui intéressent <%=@ele.firstname%> </h1>
+
+
+
+
+    <div class="row">
+        <% if !@ele.eleattended_events.empty? %>
+            <% @ele.eleattended_events.each do |event| %>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header"><%= event.name %></h4>
+                            <div class="card-body">
+                                <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                            </div>
+                            <div class="card-footer">
+                                <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                            </div>
+                    </div>
+                </div>
+            <% end %>
+        <% else %>
+            <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
+        <% end %>
+    </div>
+
+</div>

@@ -1,4 +1,723 @@
-<p id="notice"><%= notice %></p>
+<div class="container bg-white">
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+    <p id="notice"><%= notice %></p>
+
+        <h1> <%= @event.name %> </h1>
+    
+        
+        <h3 class= "d-inline">Votre statut : </h3>
+
+
+        <% if @event.etat == "open" %>
+            <% if signed_in? == false %>
+                <p class= "d-inline"> Connectez-vous pour rejoindre levenement </p>
+            <% elsif pro_signed_in? %>
+                <% if @event.professor_id == nil %>
+                    <p class="text-center">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+                <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
+                    <p> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
+                    </br> les élèves recevront un mail et pourront payer puis recevoir leur invitation </p>
+                    <p class="text-center">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
+                <% else %>
+                    <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
+                    
+                <% end %>
+
+
+            <% elsif @event.asubscribe.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe2.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe3.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe4.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe5.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe6.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe7.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe8.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe9.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+            <% elsif @event.asubscribe10.to_s.include? current_ele.id.to_s %>
+                <p class= "d-inline"> Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+
+            <% elsif ele_signed_in? %>
+                <% if @event.etat == "open" %>
+                    <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+                <% else %>
+                    <p>  <%= link_to "Vous inscrire, payer et recevoir votre pass", { :controller => "events", :action => "subscribeandpay"}, class: "btn btn-success" %> </p>
+                <% end %>
+            <% else %>
+            <% end %>
+
+        <% elsif @event.etat == "close" %>
+        
+            <% if ele_signed_in? %>
+                <% if @event.asubscribe.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %> 
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>          
+                <% elsif @event.asubscribe2.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer2 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe3.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer3 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe4.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer4 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe5.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer5 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe6.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer6 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe7.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer7 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe8.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer8 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe9.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer9 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>
+                <% elsif @event.asubscribe10.to_s.include? current_ele.id.to_s %>
+                    <% if @event.apayer10 == nil %>
+                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
+                        <%= form_tag pay_path do %>
+                            <article>
+                            <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                <p><%= flash[:error] %></p>
+                                </div>
+                            <% end %>
+                            <label class="amount">
+                                <span>Amount: $5.00</span>
+                            </label>
+                            </article>
+                        
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="A month's subscription"
+                                    data-amount="500"
+                                    data-locale="auto"
+                                    data-label="Confirmer payement et recevoir pass"></script>                     
+                        <% end %>
+                    <% else %>
+                        <p class= "d-inline"> Vous êtes participants officiel, il ne vous reste plus qu à y aller </p>
+                    <% end %>        
+                <% elsif @event.asubscribe10 == nil %>
+                <%= form_tag pay_path do %>
+                    <article>
+                      <% if flash[:error].present? %>
+                        <div id="error_explanation">
+                          <p><%= flash[:error] %></p>
+                        </div>
+                      <% end %>
+                      <label class="amount">
+                        <span>Amount: $5.00</span>
+                      </label>
+                    </article>
+                  
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                            data-description="A month's subscription"
+                            data-amount="500"
+                            data-locale="auto"
+                            data-label="Confirmer payement et recevoir pass"></script>                     
+                  <% end %>        
+                <% else %>
+                    <p class= "d-inline"> Cet événement est complet </p>
+                <% end %>
+            <% else  %> 
+            <% end %>
+
+        <% else %>
+        <% end %>
+
+        </br>
+        <h3 class= "d-inline">Discipline :</h3>
+        <strong class= "d-inline"> <%= @event.discipline %> </strong> </br>
+        <h3 class= "d-inline">Gérant événement :</h3></br>
+        <p class= "d-inline">Nom: <%=@creator.firstname%>, </br>Email: <%=@creator.email%> </p></br>
+        <h3 class= "d-inline">Professeur :</h3>
+        <% if @event.professeur == "present" %>
+            <p>Nom: <%=@professor.firstname%>, </br> Email: <%=@professor.email%> </br> Disciplines préférées: <%=@professor.passion1%>, <%=@professor.passion2%></p>
+        <% else %>
+        <p>Pas encore de prof, invitez-en ci-dessous</p>
+        <% end %> </br></br>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3>Les professeurs invités</h3>
+    <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Disciplines préférées</th>
+            <th>Voir le profil</th>
+        </tr>
+    <% @event.proinvitatees.each do |invitatee| %> 
+        <tr>
+            <td> <%= invitatee.firstname %> </td>
+            <td> <%= invitatee.email %> </td>
+            <td> <%= invitatee.passion1 %>, <%= invitatee.passion2 %> </td>
+            <td> <%= link_to 'Voir son profil', pro_path(invitatee) %> </td>
+        </tr>
+    <% end %> 
+    </table></br>
+
+
+    <% if signed_in? %>
+
+
+            <h3> Inviter des prof </h3>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Disciplines préférées</th>
+                    <th>Inviter ce professeur</th>
+                </tr>
+
+
+                <% @allpro.each do |pro| %> 
+                    <% unless @event.proinvitatees.include? pro %>
+                    <tr>
+                        <td><%= pro.firstname %></td>
+                        <td><%= pro.email %></td>
+                        <td> <%= pro.passion1 %>, <%= pro.passion2 %> </td>
+                        <td><%= link_to "Inviter ce professeur", { :controller => "events", :action => "addprotoinvitation", :pro_id => pro.id, :test => @event.id}%></td>
+                    </tr>
+                    <% end %>
+                <% end %>
+            </table>
+
+    <% else %>
+        <p> Connectez-vous pour ajouter des participants </p>
+    <% end %></br></br>
+
+
+    <h1>Les élèves</h1>
+
+    <% if @event.etat == "open" %>
+
+        <h3>Participants </h3>
+        <% if @event.asubscribe.nil? %>
+        <% else %>
+            <table class="table table-striped">
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+            </tr>
+            <% @event.asubscribe.each do |asub| %>
+                <% ele = Ele.find_by_id(asub) %>
+                <tr>
+                    <td> <%= ele.firstname %> </td>
+                    <td> <%= ele.email %> </td>
+                </tr>
+            <% end %>
+            </table>
+        <% end %>
+        
+
+    <% else %>
+
+        <h3>Participants définitifs </h3>
+        <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Autorisé à participer?</th>
+        </tr>
+        <% @event.eleattendees.each do |attendee| %> 
+
+            <% if @event.asubscribe.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe2.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer2.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe3.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer3.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe4.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer4.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe5.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer5.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe6.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer6.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe7.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer7.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+
+            <% elsif @event.asubscribe8.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer8.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe9.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer9.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            
+            <% elsif @event.asubscribe10.to_s.include? attendee.id.to_s %>
+                <% if @event.apayer10.to_s.include? attendee.id.to_s %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> A payé, a son pass </td>
+                    </tr>
+                <% else %>
+                    <tr>
+                    <td> <%= attendee.firstname %> </td>
+                    <td> <%= attendee.email %> </td>
+                    <td> en attente de paiement </td>
+                    </tr>
+                <% end %>
+            <% else %>
+            <% end %>
+        <% end %>
+        </table> </br></br>
+
+        <h3>Participants en attente de paiement </h3>
+        <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+        </tr>
+        <% @event.eleattendees.each do |attendee| %> 
+            <% if @event.asubscribe.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe2.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe3.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe4.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe5.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe6.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe7.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe8.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe9.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% elsif @event.asubscribe10.to_s.include? attendee.id.to_s %> 
+            <tr>
+            <td> <%= attendee.firstname %> </td>
+            <td> <%= attendee.email %> </td>
+            </tr>
+            <% else %>
+            <% end %>
+        <% end %>
+        </table> </br></br>
+
+    <% end %>
+
+    <h3>Invités </h3>
+    <table class="table table-striped">
+    <tr>
+        <th>Nom</th>
+        <th>Email</th>
+    </tr>
+    <% @event.eleattendees.each do |invitatee| %> 
+        <% if @event.asubscribe.to_s.include? invitatee.id.to_s %> 
+        <% else %>
+        <tr>
+        <td> <%= invitatee.firstname %> </td>
+        <td> <%= invitatee.email %> </td>
+        </tr>
+        <% end %>
+    <% end %>
+    </table> </br></br>
+
+
+    <% if signed_in? %>
+    
+            <h3> Inviter des élèves </h3>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+
+                <% @allele.each do |ele| %> 
+                    <% unless @event.eleattendees.include? ele %>
+                    <tr>
+                        <td><%= ele.firstname %></td>
+                        <td><%= ele.email %></td>
+                        
+                        <td><%= link_to "Inviter cet élève", { :controller => "events", :action => "addeletoinvitation", :ele_id => ele.id, :test => @event.id}%></td>
+                    </tr>
+                    <% end %>
+                <% end %>
+            </table>
+    <% else %>
+            <p> Connectez-vous pour ajouter des participants </p>
+    <% end %></br></br>
+
+
+
+
+
+
+    </br></br>
+
+
+
+    <%= link_to 'Edit', edit_event_path(@event) %> |
+    <%= link_to 'Back', events_path %>
+</div>

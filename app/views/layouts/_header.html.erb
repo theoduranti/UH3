@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default bg-light fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <% if ele_signed_in? %>
+              <li><%= current_ele.email %>, vous êtes connecté en tant qu'élève</li>
+              <li><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></li>
+            <% elsif pro_signed_in? %>
+              <li><%= current_pro.email %>, vous êtes connecté en tant que professeur</li>
+              <li><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></li>
+            <% else %>
+            <% end %>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right"style="margin-right:10px; margin-top:1.3%;">
+          <li class="active"><a href="/">RECHERCHER UN EVENT</a></li>
+          <% if ele_signed_in? %>
+            <li><%= link_to eles_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un élève<%end%></li>
+            <li><%= link_to pros_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un prof<%end%></li>
+            <li><%= link_to new_event_path do %><span class="glyphicon glyphicon-user"></span>Créer un événement<%end%></li>
+          <% elsif pro_signed_in? %>
+            <li><%= link_to eles_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un élève<%end%></li>
+            <li><%= link_to pros_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un prof<%end%></li>
+            <li><%= link_to new_event_path do %><span class="glyphicon glyphicon-user"></span>Créer un événement<%end%></li>
+          <% else %>
+            <li><%= link_to new_ele_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte élève<%end%></li>
+            <li><%= link_to new_pro_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte professeur<%end%></li>
+            <li><%= link_to new_ele_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter élève<%end%></li>
+            <li><%= link_to new_pro_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter professeur<%end%></li>
+          <% end %>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
