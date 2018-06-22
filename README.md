@@ -1,24 +1,17 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### lien de prod : https://salty-brook-35546.herokuapp.com</br></br>
 
-Things you may want to cover:
 
-* Ruby version
+En dev marche pas, mais marche en prod (gmsql comprend qu'une colonne peut être array, en dev non)</br></br>
 
-* System dependencies
+Pour que la prod fonctionne correctement, il ne reste plus qu'à modifier toutes les vues :</br>
+Remplacer tout ce qui est boucle avec asubscribeX et apayerX en
+</br>
+``` 
+@event.asubscribe.each do |iddd|
+  if current_ele.id == iddd
+    ...
+  end
+end
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
