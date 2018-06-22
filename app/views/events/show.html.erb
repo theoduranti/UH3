@@ -182,7 +182,7 @@
             <tr>
                 <td> <%= ele.firstname %> </td>
                 <td> <%= ele.email %> </td>
-                <% event.apayer.each do |iiid| %>
+                <% @event.apayer.each do |iiid| %>
                     <% if current_ele.id = iiid %>
                         <td> A son pass, est autorisé </td>
                     <% else %>
