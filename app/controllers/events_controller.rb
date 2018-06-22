@@ -83,7 +83,7 @@ class EventsController < ApplicationController
     @pro = current_pro
 
     if ele_signed_in?
-      @event.eleinvitatees << current_ele
+      @event.eleattendees << current_ele
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
       @event.update_attribute(:apayer, @event.apayer << 0)
     else
@@ -129,7 +129,7 @@ class EventsController < ApplicationController
 # devrait être nommée def after_subscribeandpay, à corriger, avec recherche, remplace
   def subscribeandpay
     if ele_signed_in?
-      @event.eleinvitatees << current_ele
+      @event.eleattendees << current_ele
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
       @event.update_attribute(:apayer, @event.apayer << 0)
     end
