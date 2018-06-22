@@ -178,10 +178,10 @@
             </tr>
 
         <% @event.asubscribe.each do |iddd| %>
-            <% ele = Ele.find_by_id(iddd) %>
+            <% e = Ele.find_by_id(iddd) %>
             <tr>
-                <td> <%= ele.firstname %> </td>
-                <td> <%= ele.email %> </td>
+                <td> <%= e.firstname %> </td>
+                <td> <%= e.email %> </td>
                 <% @event.apayer.each do |iiid| %>
                     <% if current_ele.id = iiid %>
                         <td> A son pass, est autorisé </td>
