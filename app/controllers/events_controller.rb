@@ -10,6 +10,21 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find(params[:id])
+    @allele = Ele.all
+    @allpro = Pro.all
+    
+    if @event.naturecreateur == "eleve"
+      @creator = Ele.find(@event.creator_id)
+    elsif @event.naturecreateur == "professeur"
+      @creator = Pro.find(@event.creator_id)
+      @professor = Pro.find(@event.professor_id)
+    else
+    end
+    if @event.professeur == "present"
+      @professor = Pro.find_by_id(@event.professor_id)
+    else
+    end
   end
 
   # GET /events/new
