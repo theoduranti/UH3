@@ -84,6 +84,12 @@
                                 data-label="Confirmer payement et recevoir pass"></script>                     
                     <% end %>
                 <% end %>
+            <% elsif pro_signed_in? %>
+                <% if @event.professor_id = current_pro.id %>
+                    <p> Vous êtes le prof et avez validé l event, si au moins 5 personnes ont payés, vous donnerez ce cours </p>
+                <% else %>
+                    <p> Ce cours n est plus accessible, il est dispensé par <%= @event.professor_id.firstname %> </p>
+                <% end %>
             <% else %>
                 <p> Veuillez vous connecter </p>
             <% end %>
