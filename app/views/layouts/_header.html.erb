@@ -28,8 +28,8 @@
             <p class="d-inline"><%= link_to eles_path do %><span class="glyphicon glyphicon-search"></span> Rechercher un élève<%end%></p>
             <p class="d-inline"><%= link_to pros_path do %><span class="glyphicon glyphicon-search"></span> Rechercher un prof<%end%></p>
           <% else %>
-            <li><%= link_to new_ele_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter élève<%end%></li>
-            <li><%= link_to new_pro_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter professeur<%end%></li>
+            <p class="d-inline"><%= link_to new_ele_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter élève<%end%></p>
+            <p class="d-inline"><%= link_to new_pro_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter professeur<%end%></p>
           <% end %>
         </ul>
     </div>
