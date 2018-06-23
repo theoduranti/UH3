@@ -142,8 +142,8 @@ class EventsController < ApplicationController
   
 # devrait être nommée def after_after_subscribeandpay, à corriger, avec recherche, remplace
   def after_subscribeandpay
+    @event = Event.find(params[:id])
     if ele_signed_in?
-      @event.update_attribute(:eleattendees, @event.eleattendees << current_ele)
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
       @event.update_attribute(:apayer, @event.apayer << current_ele.id)
     end
