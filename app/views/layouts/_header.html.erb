@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <% if ele_signed_in? %>
-              <p class="d-inline"><%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
+              <p class="d-inline"><span class="glyphicon glyphicon-check"></span><%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
               <p class="d-inline"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
               <p class="d-inline"><%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
