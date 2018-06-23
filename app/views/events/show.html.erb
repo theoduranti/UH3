@@ -184,7 +184,7 @@
                 <th>Email</th>
             </tr>
         <% @event.asubscribe.each do |iddd| %>
-            <% if iddd = 0 %>
+            <% if iddd == 0 %>
             <% else %>
                 <% ele = Ele.find_by_id(iddd) %>
                 <tr>
