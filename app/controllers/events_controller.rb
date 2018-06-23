@@ -42,13 +42,12 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.professeur = "vide"
     @event.etat = "open"
-    @event.apayer << 0
+    
     if ele_signed_in?
       @event.creator_id = current_ele.id
       @event.naturecreateur = "eleve"
-      @event.eleattendees << current_ele.id
       @event.asubscribe << current_ele.id
-      
+      @event.apayer << 0
     elsif pro_signed_in?
       @event.creator_id = current_pro.id
       @event.naturecreateur = "professeur"
