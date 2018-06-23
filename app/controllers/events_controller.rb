@@ -148,6 +148,7 @@ class EventsController < ApplicationController
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
       @event.update_attribute(:apayer, @event.apayer << current_ele.id)
     end
+    redirect_to @event
   end
 
 # Le .include, faut peut être le mettre dans un .each, ou peut être qu'il n'est pas nécessaire
