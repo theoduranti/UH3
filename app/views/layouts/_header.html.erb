@@ -2,12 +2,14 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <% if ele_signed_in? %>
-              <li><%= current_ele.email %>, vous êtes connecté en tant qu'élève</li>
-              <li><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></li>
+              <p class="d-inline"><%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
+              <p class="d-inline"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
-              <li><%= current_pro.email %>, vous êtes connecté en tant que professeur</li>
-              <li><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></li>
+              <p class="d-inline"><%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
+              <p class="d-inline"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% else %>
+              <p class="d-inline"><%= link_to new_ele_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte élève<%end%></p>
+              <p class="d-inline"><%= link_to new_pro_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte professeur<%end%></p>
             <% end %>
         </ul>
 
@@ -20,10 +22,9 @@
           <% elsif pro_signed_in? %>
             <p class="d-inline"><%= link_to eles_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un élève<%end%></p>
             <p class="d-inline"><%= link_to pros_path do %><span class="glyphicon glyphicon-user"></span>Rechercher un prof<%end%></p>
-            <p class="d-inline"><%= link_to new_event_path do %><span class="glyphicon glyphicon-user"></span>Créer un événement<%end%></p>
+            <p class="d-inline"><%= link_to new_event_path do %><span class="glyphicon glyphicon-plus"></span>Créer un événement<%end%></p>
           <% else %>
-            <p class="d-inline"><%= link_to new_ele_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte élève<%end%></p>
-            <li><%= link_to new_pro_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte professeur<%end%></li>
+            
             <li><%= link_to new_ele_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter élève<%end%></li>
             <li><%= link_to new_pro_session_path do %><span class="glyphicon glyphicon-log-in"></span> Connecter professeur<%end%></li>
           <% end %>
