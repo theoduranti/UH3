@@ -63,7 +63,7 @@
                         <% end %>
                     <% end %>
                 <% else %>
-                    <p> Vous n êtes pas encore inscrit, mais il reste encore de la place, cliquez-ci-dessous pour vous inscrire, payer et recevoir votre pass</p>
+                    <p>  <%= link_to "Vous inscrire, payer et recevoir votre pass", { :controller => "events", :action => "after_subscribeandpay"}, class: "btn btn-success" %> </p>
                 <% end %>
             <% else %>
                 <p> Veuillez vous connecter </p>
