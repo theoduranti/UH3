@@ -46,14 +46,15 @@ class EventsController < ApplicationController
     if ele_signed_in?
       @event.creator_id = current_ele.id
       @event.naturecreateur = "eleve"
-      @event.asubscribe << current_ele.id
+      @event.asubscribe << 0
       @event.apayer << 0
     elsif pro_signed_in?
       @event.creator_id = current_pro.id
       @event.naturecreateur = "professeur"
       @event.professeur = "present"
       @event.professor_id = current_pro.id
-      @event.asubscribe << current_pro.id
+      @event.asubscribe << 0
+      @event.apayer << 0
     else
     end
 
