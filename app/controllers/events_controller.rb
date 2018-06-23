@@ -53,6 +53,7 @@ class EventsController < ApplicationController
       @event.naturecreateur = "professeur"
       @event.professeur = "present"
       @event.professor_id = current_pro.id
+      @event.asubscribe << current_pro.id
     else
     end
 
