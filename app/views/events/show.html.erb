@@ -176,13 +176,15 @@
                 <th>Nom</th>
                 <th>Email</th>
             </tr>
-
-        <% @event.asubscribe.each do |iddd| %>
-            <% ele = Ele.find_by_id(iddd) %>
-            <tr>
-                <td> <%= ele.firstname %> </td>
-                <td> <%= ele.email %> </td>
-            </tr>
+        <% if @event.asubscribe.length >> 1 %>
+            <% @event.asubscribe.each do |iddd| %>
+                <% ele = Ele.find_by_id(iddd) %>
+                <tr>
+                    <td> <%= ele.firstname %> </td>
+                    <td> <%= ele.email %> </td>
+                </tr>
+            <% end %>
+        <% else %>
         <% end %>
         </table>
 
