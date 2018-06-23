@@ -25,15 +25,13 @@
 
             <% elsif ele_signed_in? %>
                 <% @event.asubscribe.each do |iddd| %>
-                    <% if @event.professeur == "present" %>
-                        <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-                    <% else %>
+                    
                         <% if current_ele.id == iddd %>
                             <p class= "d-inline">  Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
                         <% else %>
                             <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
                         <% end %>
-                    <% end %>
+                    
                 <% end %>
             <% else %>
             <% end %>
