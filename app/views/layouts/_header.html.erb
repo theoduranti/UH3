@@ -8,7 +8,7 @@
               <p class="d-inline"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
               <p class="d-inline"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% else %>
-              <p class="d-inline"><a href="/eles/sign_up" class="text-primary">Créer compte élève</a></p>
+              <p class="d-inline"><a href="/eles/sign_up" class="text-primary"><span class="glyphicon glyphicon-user"></span> Créer compte élève</a></p>
               <p class="d-inline"><%= link_to new_ele_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte élève<%end%></p>
               <p class="d-inline"><%= link_to new_pro_registration_path do %><span class="glyphicon glyphicon-user"></span> Créer compte professeur<%end%></p>
             <% end %>
