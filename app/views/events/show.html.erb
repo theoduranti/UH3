@@ -206,16 +206,19 @@
             </tr>
 
         <% @event.asubscribe.each do |iddd| %>
-            <% e = Ele.find_by_id(iddd) %>
-            <tr>
-                <td> <%= e.firstname %> </td>
-                <td> <%= e.email %> </td>
-                <% if @event.apayer.include? iddd %>
-                    <td> A son pass, est autorisé </td>
-                <% else %>
-                    <td> En attente de paiement </td>
-                <% end %>
-            </tr>
+            <% if iddd == 0 %>
+            <% else %>
+                <% e = Ele.find_by_id(iddd) %>
+                <tr>
+                    <td> <%= e.firstname %> </td>
+                    <td> <%= e.email %> </td>
+                    <% if @event.apayer.include? iddd %>
+                        <td> A son pass, est autorisé </td>
+                    <% else %>
+                        <td> En attente de paiement </td>
+                    <% end %>
+                </tr>
+            <% end %>
         <% end %>
         </table>
         </br></br>
