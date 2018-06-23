@@ -18,7 +18,7 @@
             <% if signed_in? %>
               <p class="d-inline"><%= link_to new_event_path do %><span class="glyphicon glyphicon-upload"></span> CREER UN EVENEMENT<%end%></p>
             <% else %>
-              <p> Connectes-toi pour t inscrire ou créer des événments </p>
+              <p><span class "glyphicon glyphicon-warning-sign"></span> Connectes-toi pour t inscrire ou créer des événments </p>
             <% end %>
         </ul>
 
