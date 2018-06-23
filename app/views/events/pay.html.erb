@@ -1,3 +1,7 @@
 Votre paiement a bien été enregistré, vous allez recevoir un mail avec votre pass
 
-<p class="text-center">  <%= link_to "valider votre inscription", { :controller => "events", :action => "after_pay"}, class: "btn btn-success" %> </p>
+<% if @event.asubscribe.include? current_ele.id %>
+    <p class="text-center">  <%= link_to "valider votre inscription", { :controller => "events", :action => "after_pay"}, class: "btn btn-success" %> </p>
+<% else %>
+    <p>  <%= link_to "Valider votre inscription", { :controller => "events", :action => "after_subscribeandpay"}, class: "btn btn-success" %> </p>
+<% end %>

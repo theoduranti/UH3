@@ -42,11 +42,12 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.professeur = "vide"
     @event.etat = "open"
+    @event.asubscribe << 0
+    @event.apayer << 0
     if ele_signed_in?
       @event.creator_id = current_ele.id
       @event.naturecreateur = "eleve"
-      @event.asubscribe << current_ele.id
-      @event.apayer << 0
+      
       
 
     elsif pro_signed_in?
@@ -98,7 +99,6 @@ class EventsController < ApplicationController
     @pro = current_pro
 
     if ele_signed_in?
-      @event.eleattendees << current_ele
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
     else
       if 
