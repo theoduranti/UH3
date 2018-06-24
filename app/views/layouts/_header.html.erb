@@ -4,7 +4,7 @@
             <% if ele_signed_in? %>
               <p class="d-inline text-primary"><span class="glyphicon glyphicon-check"></span> <%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
               <p class="d-inline"><a href="/eles/sign_out" class="text-danger"><span class="glyphicon glyphicon-log-out"></span> Logout</a></p>
-              <p class="d-inline text-primary"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
+              <p class="active"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
               <p class="d-inlinet ext-primary"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
               <p class="d-inline"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
