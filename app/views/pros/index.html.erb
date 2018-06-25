@@ -2,8 +2,8 @@
 
 
 <div class="container">
-<h1> Les professeurs </h1></br></br>
-  <div class="row">
+    <h1 class="text-white"> Les professeurs </h1></br></br>
+    <div class="row">
     <% @pros.each do |pro|%>
         <div class="col-lg-4 mb-4">
         <div class="card h-100">
@@ -16,7 +16,7 @@
                 <p> <%= link_to 'Voir son profil', pro_path(pro) %> </p>
                 </div>
         </div>
-        </div>
+    </div>
     <% end %>
   </div>
 </div>
