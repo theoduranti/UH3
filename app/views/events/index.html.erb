@@ -19,8 +19,14 @@
                         <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-primary d-inline" aria-pressed="true"> <%= link_to 'Voir l evenement', event_destroy_path(event) %> </button>
-                        
+                        <button type="button" class="btn btn-primary d-inline" aria-pressed="true"> <%= link_to 'Voir l evenement', event_path(event) %> </button>
+                        <button type="button" class="btn btn-danger d-inline" aria-pressed="true"> <%= link_to 'Supprimer l evenement', event_destroy_path(event) %> </button>
+                        <% if current_ele.id == event.creator_id %>
+                            <button type="button" class="btn btn-danger d-inline" aria-pressed="true"> <%= link_to 'Supprimer l evenement', event_destroy_path(event) %> </button>
+                        <% elsif current_pro.id == event.creator_id %>
+                            <button type="button" class="btn btn-danger d-inline" aria-pressed="true"> <%= link_to 'Supprimer l evenement', event_destroy_path(event) %> </button>
+                        <% else %>
+                        <% end %>
                     </div>
             </div>
         </div>
