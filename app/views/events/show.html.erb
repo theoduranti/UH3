@@ -125,6 +125,20 @@
         <div class="row">
         <div class="col-lg-6">
             <h2><%= @event.name %></h2>
+            <ul>
+                <li>
+                <p><strong>Discipline:</strong> <%= @event.discipline %></p>
+                </li>
+                <li><strong>Créateur événement : </strong></br> <%=@creator.firstname%> , <%=@creator.email%></li>
+                <li><strong>Professeur :</strong> 
+                    <% if @event.professeur == "present" %>
+                        <p>Prénom: <%=@professor.firstname%>, </br> Email: <%=@professor.email%> </br> Disciplines préférées: <%=@professor.passion1%>, <%=@professor.passion2%></p>
+                    <% else %>
+                        <p>Pas encore de prof, invitez-en ci-dessous</p>
+                    <% end %>
+                </li>
+            </ul>
+            <p><strong>Description:</strong> </br> <%= @event.description %></p>
             <p class= "d-inline">
                 <strong>Votre statut :</strong> 
                 <% if @event.etat == "open" %>
@@ -217,24 +231,10 @@
                 <% else %>
                 <% end %>
             </p>
-            <ul>
-                <li>
-                <p><strong>Discipline:</strong> <%= @event.discipline %></p>
-                </li>
-                <li><strong>Créateur événement : </strong></br> <%=@creator.firstname%> , <%=@creator.email%></li>
-                <li><strong>Professeur :</strong> 
-                    <% if @event.professeur == "present" %>
-                        <p>Prénom: <%=@professor.firstname%>, </br> Email: <%=@professor.email%> </br> Disciplines préférées: <%=@professor.passion1%>, <%=@professor.passion2%></p>
-                    <% else %>
-                        <p>Pas encore de prof, invitez-en ci-dessous</p>
-                    <% end %>
-                </li>
-            </ul>
-            <p><strong>Description:</strong> </br> <%= @event.description %></p>
             </div>
             <div class="col-lg-6">
-            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div>
+                <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+            </div>
         </div>
 
         </br></br></br>
