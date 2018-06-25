@@ -10,7 +10,6 @@
     <div class="row">
     <% @events.each do |event|%>
         <div class="col-lg-4 mb-4">
-        
             <div class="card h-100 shadow-lg">
                 <h4 class="card-header"><%= event.name %></h4>
                 <img class="card-img-top" src="http://placehold.it/700x400" alt="">
@@ -20,7 +19,8 @@
                     </div>
                     <div class="card-footer">
                         <button type="button" class="btn btn-primary d-inline" aria-pressed="true"> <%= link_to 'Voir l evenement', event_path(event) %> </button>
-                        <button type="button" class="btn btn-danger d-inline" aria-pressed="true"> <%= link_to 'Supprimer l event', event_destroy_path(event) %></button>
+                        <p class="active"><%= link_to events_path(event), method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Supprimer evenement<%end%></p>
+                        
                         
                     </div>
             </div>
