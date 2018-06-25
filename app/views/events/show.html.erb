@@ -114,7 +114,7 @@
 
 
 
-        
+
 
         </br></br></br>
 
@@ -125,18 +125,18 @@
         <div class="row">
         <div class="col-lg-6">
             <h2><%= @event.name %></h2>
-            <p>
-                <strong>Votre statut :</strong> </br>
+            <p class= "d-inline">
+                <strong>Votre statut :</strong> 
                 <% if @event.etat == "open" %>
                 <% if signed_in? == false %>
                     <p class= "d-inline"> Connectez-vous pour rejoindre levenement </p>
                 <% elsif pro_signed_in? %>
                     <% if @event.professor_id == nil %>
-                        <p class="text-center">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+                        <p class= "d-inline">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
                     <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
-                        <p> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
+                        <p class= "d-inline"> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
                         </br> les élèves recevront un mail et pourront payer puis recevoir leur invitation </p>
-                        <p class="text-center">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
+                        <p class= "d-inline">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
                     <% else %>
                         <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
                         
@@ -183,7 +183,7 @@
                                 <% end %>
                             <% end %>
                         <% else %>
-                            <p> Pas encore inscrit, l event est validé. Cliquez ci-dessous pour vous inscrire, payer et recevoir votre pass </p>
+                            <p class= "d-inline"> Pas encore inscrit, l event est validé. Cliquez ci-dessous pour vous inscrire, payer et recevoir votre pass </p>
                             <%= form_tag pay_path do %>
                                 <article>
                                 <% if flash[:error].present? %>
@@ -206,12 +206,12 @@
                         <% end %>
                     <% elsif pro_signed_in? %>
                         <% if @event.professor_id = current_pro.id %>
-                            <p> Vous êtes le prof et avez validé l event, si au moins 5 personnes ont payés, vous donnerez ce cours </p>
+                            <p class= "d-inline"> Vous êtes le prof et avez validé l event, si au moins 5 personnes ont payés, vous donnerez ce cours </p>
                         <% else %>
-                            <p> Ce cours n est plus accessible, il est dispensé par <%= @event.professor_id.firstname %> </p>
+                            <p class= "d-inline"> Ce cours n est plus accessible, il est dispensé par <%= @event.professor_id.firstname %> </p>
                         <% end %>
                     <% else %>
-                        <p> Veuillez vous connecter </p>
+                        <p class= "d-inline"> Veuillez vous connecter </p>
                     <% end %>
 
                 <% else %>
