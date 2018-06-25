@@ -10,16 +10,17 @@
     <div class="row">
     <% @events.each do |event|%>
         <div class="col-lg-4 mb-4">
-        <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-        <div class="card h-100 shadow-lg">
-            <h4 class="card-header"><%= event.name %></h4>
-                <div class="card-body">
-                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
-                </div>
-                <div class="card-footer">
-                <p> <%= link_to 'Voir l evenement', event_path(event) %> </p>
-                </div>
-        </div>
+        
+            <div class="card h-100 shadow-lg">
+                <h4 class="card-header"><%= event.name %></h4>
+                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+                    <div class="card-body">
+                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
+                    </div>
+                    <div class="card-footer">
+                    <p> <%= link_to 'Voir l evenement', event_path(event) %> </p>
+                    </div>
+            </div>
         </div>
     <% end %>
     </div>
