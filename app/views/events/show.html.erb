@@ -2,133 +2,13 @@
 
     <p id="notice"><%= notice %></p>
 
-        <h1> <%= @event.name %> </h1>
-    
-        
-        <h3 class= "d-inline">Votre statut : </h3>
-
-
-        <% if @event.etat == "open" %>
-            <% if signed_in? == false %>
-                <p class= "d-inline"> Connectez-vous pour rejoindre levenement </p>
-            <% elsif pro_signed_in? %>
-                <% if @event.professor_id == nil %>
-                    <p class="text-center">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-                <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
-                    <p> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
-                    </br> les élèves recevront un mail et pourront payer puis recevoir leur invitation </p>
-                    <p class="text-center">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
-                <% else %>
-                    <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
-                    
-                <% end %>
-
-            <% elsif ele_signed_in? %>
-
-                <% if @event.asubscribe.include? current_ele.id %>
-                    <p class= "d-inline">  Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
-                <% else %>
-                <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-                <% end %>
-
-
-            <% else %>
-            <% end %>
-
-        <% elsif @event.etat == "close" %>
-        
-            <% if ele_signed_in? %>
-                <% if @event.asubscribe.include? current_ele.id %>
-                    <% if @event.apayer.include? current_ele.id %>
-                        <p class= "d-inline"> Vous n avez plus qu à aller à l evenement </p>
-                    <% else %>
-                        <p class= "d-inline"> Vous êtes inscrit mais n avez pas encore payé </p>
-                        <%= form_tag pay_path do %>
-                            <article>
-                            <% if flash[:error].present? %>
-                                <div id="error_explanation">
-                                <p><%= flash[:error] %></p>
-                                </div>
-                            <% end %>
-                            <label class="amount">
-                                <span>Amount: $5.00</span>
-                            </label>
-                            </article>
-                        
-                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                                    data-description="A month's subscription"
-                                    data-amount="500"
-                                    data-locale="auto"
-                                    data-label="Confirmer payement et recevoir pass"></script>                     
-                        <% end %>
-                    <% end %>
-                <% else %>
-                    <p> Pas encore inscrit, l event est validé. Cliquez ci-dessous pour vous inscrire, payer et recevoir votre pass </p>
-                    <%= form_tag pay_path do %>
-                        <article>
-                        <% if flash[:error].present? %>
-                            <div id="error_explanation">
-                            <p><%= flash[:error] %></p>
-                            </div>
-                        <% end %>
-                        <label class="amount">
-                            <span>Amount: $5.00</span>
-                        </label>
-                        </article>
-                    
-                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                                data-description="A month's subscription"
-                                data-amount="500"
-                                data-locale="auto"
-                                data-label="Confirmer payement et recevoir pass"></script>                     
-                    <% end %>
-                <% end %>
-            <% elsif pro_signed_in? %>
-                <% if @event.professor_id = current_pro.id %>
-                    <p> Vous êtes le prof et avez validé l event, si au moins 5 personnes ont payés, vous donnerez ce cours </p>
-                <% else %>
-                    <p> Ce cours n est plus accessible, il est dispensé par <%= @event.professor_id.firstname %> </p>
-                <% end %>
-            <% else %>
-                <p> Veuillez vous connecter </p>
-            <% end %>
-
-        <% else %>
-        <% end %>
-
-        </br>
-        <h3 class= "d-inline">Discipline :</h3>
-        <strong class= "d-inline"> <%= @event.discipline %> </strong> </br>
-        <h3 class= "d-inline">Gérant événement :</h3></br>
-        <p class= "d-inline">Nom: <%=@creator.firstname%>, </br>Email: <%=@creator.email%> </p></br>
-        <h3 class= "d-inline">Professeur :</h3>
-        <% if @event.professeur == "present" %>
-            <p>Nom: <%=@professor.firstname%>, </br> Email: <%=@professor.email%> </br> Disciplines préférées: <%=@professor.passion1%>, <%=@professor.passion2%></p>
-        <% else %>
-        <p>Pas encore de prof, invitez-en ci-dessous</p>
-        <% end %> </br></br>
-    
-
-
-
-
-
-
-        </br></br></br>
-
-
-
 
 
         <div class="row">
         <div class="col-lg-6">
             <h2><%= @event.name %></h2>
             <ul>
-                <li>
-                <p><strong>Discipline:</strong> <%= @event.discipline %></p>
-                </li>
+                <li> <p><strong>Discipline:</strong> <%= @event.discipline %></p> </li>
                 <li><strong>Créateur événement : </strong></br> <%=@creator.firstname%> , <%=@creator.email%></li>
                 <li><strong>Professeur :</strong> 
                     <% if @event.professeur == "present" %>
@@ -137,8 +17,8 @@
                         <p>Pas encore de prof, invitez-en ci-dessous</p>
                     <% end %>
                 </li>
+                <li> <strong>Description:</strong> </br> <%= @event.description %> </li>
             </ul>
-            <p><strong>Description:</strong> </br> <%= @event.description %></p>
             <p class= "d-inline">
                 <strong>Votre statut :</strong> 
                 <% if @event.etat == "open" %>
