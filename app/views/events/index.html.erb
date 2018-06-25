@@ -7,9 +7,10 @@
     <br>
 
 
-  <div class="row">
+    <div class="row">
     <% @events.each do |event|%>
         <div class="col-lg-4 mb-4">
+        <img class="card-img-top" src="http://placehold.it/700x400" alt="">
         <div class="card h-100 shadow-lg">
             <h4 class="card-header"><%= event.name %></h4>
                 <div class="card-body">
@@ -21,5 +22,5 @@
         </div>
         </div>
     <% end %>
-  </div>
+    </div>
 </div>
