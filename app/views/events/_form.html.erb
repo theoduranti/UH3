@@ -1,51 +1,55 @@
-<%= form_with(model: event, local: true) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<div class="text-white">
 
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %></br>
+  <%= form_with(model: event, local: true) do |form| %>
+    <% if event.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div></br>
-
-  <div class="field">
-    <%= form.label :discipline %>
-    <%= form.text_field :discipline %>
-  </div></br>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div></br>
-
-  <div class="field">
-    <%= form.label :ville %>
-    <%= form.text_field :ville %>
-  </div></br>
-
-  <div class="field">
-    <%= form.label :price %>
-    <p> Prix min conseillé pour que levent soit attractif pour les professeurs : 3€ <p>
-    <p> Prix max conseillé pour que levent soit attractif pour les élèves : 5€ <p>
-    <%= form.text_field :price %><p>€</p>
-  </div></br>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div></br>
+        <ul>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %></br>
 
 
-  <div class="actions">
-    <%= form.submit %>
-  </div></br>
-<% end %>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :discipline %>
+      <%= form.text_field :discipline %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :ville %>
+      <%= form.text_field :ville %>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :price %>
+      <p> Prix min conseillé pour que levent soit attractif pour les professeurs : 3€ <p>
+      <p> Prix max conseillé pour que levent soit attractif pour les élèves : 5€ <p>
+      <%= form.text_field :price %><p>€</p>
+    </div></br>
+
+    <div class="field">
+      <%= form.label :date %>
+      <%= form.date_select :date %>
+    </div></br>
+
+
+    <div class="actions">
+      <%= form.submit %>
+    </div></br>
+  <% end %>
+
+</div>
