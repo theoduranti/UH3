@@ -135,7 +135,7 @@
                         <p class= "d-inline">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
                     <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
                         <p class= "d-inline"> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
-                        </br> les élèves recevront un mail et pourront payer puis recevoir leur invitation </p>
+                        Les élèves recevront alors un mail et pourront payer puis recevoir leur invitation </p>
                         <p class= "d-inline">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
                     <% else %>
                         <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
