@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   resources :charges
   resources :events
-  delete "events/:id", to: "events#destroy", as: event_destroy
+  delete "events/:id", to: "events#destroy", as: destroy
   get "events/subscribe/:id", to: "events#subscribe"
   get "events/closingevent/:id", to: "events#closingevent"
   post "events/pay/:id", to: "events#pay", as: "pay"
