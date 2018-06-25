@@ -18,7 +18,8 @@
                         <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" href="event_path" role="button">Voir l événement</a>
+                        <a class="btn btn-primary" href=event_path(event) role="button">Voir l événement</a>
+                        <p class="text-center text-primary"> <%= link_to 'Voir l evenement', event_path(event) %> </p>
                     </div>
             </div>
         </div>
