@@ -2,7 +2,7 @@
 
 <div class="container bg-white">
 
-    <p class= "d-inline">  <%= link_to "Supprimer l'événement", { :controller => "events", :action => "destroy"}, class: "btn btn-success" %> </p>
+    <p class= "d-inline">  <%= link_to "Supprimer l'événement", { :controller => "events", :action => "destroy", method: :delete}, class: "btn btn-success" %> </p>
 
     <p id="notice"><%= notice %></p>
 
