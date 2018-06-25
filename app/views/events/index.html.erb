@@ -16,6 +16,7 @@
                 <img class="card-img-top" src="http://placehold.it/700x400" alt="">
                     <div class="card-body">
                         <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
+                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
                     </div>
                     <div class="card-footer">
                         <button type="button" class="btn btn-link"> <%= link_to 'Voir l evenement', event_path(event) %> </button>
