@@ -2,7 +2,7 @@
 
 <div class="container bg-white">
 
-    <p class="active"><%= link_to destroy_event_path(@event.id), method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Supprimer l evenement<%end%></p>
+    <p class= "d-inline">  <%= link_to "Supprimer l'événement", { :controller => "events", :action => "destroy"}, class: "btn btn-success" %> </p>
 
     <p id="notice"><%= notice %></p>
 
