@@ -1,6 +1,6 @@
 <div class="text-white text-center"> <h1> <%= @event.name %> </h1> </div> </br></br></br>
 
-<div class="container">
+<div class="container bg-white">
 
 <p class="active"><%= link_to destroy_event_path(@event), method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Supprimer evenement<%end%></p>
 
@@ -129,7 +129,7 @@
 
 
 
-    <h3 class="text-white">Les professeurs invités</h3>
+    <h3>Les professeurs invités</h3>
     <table class="table table-striped">
         <tr>
             <th>Nom</th>
@@ -151,7 +151,7 @@
     <% if signed_in? %>
 
 
-            <h3 class="text-white"> Inviter des prof </h3>
+            <h3> Inviter des prof </h3>
 
             <table class="table table-striped">
                 <tr>
@@ -179,7 +179,7 @@
     <% end %></br></br>
 
 
-    <h3 class="text-white">Les élèves</h3>
+    <h3>Les élèves</h3>
 
     <% if @event.etat == "open" %>
 
@@ -203,7 +203,7 @@
 
     <% else %>
 
-        <h3 class="text-white">Participants </h3>
+        <h3>Participants </h3>
         <table class="table table-striped">
             <tr>
                 <th>Nom</th>
@@ -233,7 +233,7 @@
 
 
 
-    <h3 class="text-white">Invités </h3>
+    <h3>Invités </h3>
 
 
     <table class="table table-striped">
@@ -252,7 +252,7 @@
 
     <% if signed_in? %>
     
-            <h3 class="text-white"> Inviter des élèves </h3>
+            <h3> Inviter des élèves </h3>
 
             <table class="table table-striped">
                 <tr>
