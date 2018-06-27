@@ -1,9 +1,9 @@
 <div class="container">
-    <h1 class="text-white"> Les élèves </h1></br></br>
+    <h1 class="text-body"> Les élèves </h1></br></br>
     <div class="row p-2">
     <% @eles.each do |ele|%>
         <div class="col-lg-4 mb-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-lg p-2">
             <h4 class="card-header"><%= ele.firstname %></h4>
                 <div class="card-body">
                     <p class="card-text">Passions : <%= ele.passion1 %>, <%= ele.passion2 %>, <%= ele.passion3 %>, <%= ele.passion4 %> </p>
