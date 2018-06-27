@@ -12,6 +12,7 @@
         <div class="col-lg-4 mb-4">
             <div class="card h-100 shadow p-2">
                 <h4 class="card-header"><%= event.name %></h4>
+                <%= image_tag("disciplines/hip-hop1.png")
                 <img class="card-img-top" src="../../assets/images/disciplines/hip-hop1.png" alt="devrait y avoir photo 700x400">
                     <div class="card-body">
                         <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes invitatees: <%= event.eleattendees.count %>  </p>
