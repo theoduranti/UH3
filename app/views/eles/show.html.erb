@@ -33,7 +33,7 @@
         <% if !@ele.created_events.empty? %>
             <% @ele.created_events.each do |event| %>
                 <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 shadow">
                         <h4 class="card-header"><%= event.name %></h4>
                             <div class="card-body">
                                 <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
