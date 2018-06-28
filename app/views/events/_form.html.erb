@@ -17,15 +17,14 @@
       <div class="field">
         <%= form.label :name %>
         <div class="text-body">
-          <%= form.text_field :name %>
+          <%= form.text_field :name, placeholder "Cours de Slackline débutant" %>
         </div>
       </div></br>
 
       <div class="field">
         <%= form.label :discipline %>
         <div class="text-body">
-          <%= form.text_field :discipline, placeholder: "Roller, BMX, Skate, Trotinette, Parkour, Slackline, Monocycle, Cirque, Workout, Pilat, Hip-Hop, Capoeira, Danse Latine, Foot urbain, Golf urbain, Graff" %>
-          <%= form.select :discipline, ['Roller', 'BMX']%>
+          <%= form.select :discipline, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Graff']%>
         </div>
       </div></br>
 
