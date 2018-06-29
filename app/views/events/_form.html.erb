@@ -28,6 +28,11 @@
         </div>
       </div></br>
 
+      <% if @event.discipline == 'Roller' %>
+            <p> Roller a été choisi </p>
+      <% else %>
+      <% end %>
+
       <div class="field">
         <%= form.label :description %>
         <div class="text-body">
