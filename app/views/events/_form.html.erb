@@ -29,10 +29,10 @@
         </div>
       </div></br>
 
-      <% if @event.discipline == 'Roller' %>
+      <% if params[:discipline] == 'Roller' %>
             <p> Roller a été choisi </p>
       <% else %>
-            <p> l ev n etant pas submit, on ne peut pas appeler @event.discipline</p>
+            <p> params[:discipline] == 'Roller' ne marche pas</p>
       <% end %>
 
       <div class="field">
