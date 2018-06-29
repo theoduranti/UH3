@@ -1,116 +1,118 @@
 <div class="container">
-    <div class="col-lg-3 mb-4">
-        <p> aaaaaaaaaaaaaaaaaaaaaa </p><p> aaaaaaaaaaaaaaaaaaaaaa </p><p> aaaaaaaaaaaaaaaaaaaaaa </p>
-    <div>
-    <div class="col-lg-9 mb-4">
-    <div class="text-body text-center"> <h1> <%= @ele.firstname %> </h1> </div> </br></br></br>
-        <div class="bg-white">
-            <div class="row p-2">
-                <div class="container p-2 border shadow">
-                    <div class="col-lg-6">
-                        <h2><%= @ele.firstname %></h2>
-                        <ul>
-                            <li> <p><strong>Passions:</strong> <%= @ele.passion1 %>, <%= @ele.passion2 %>, <%= @ele.passion3 %>, <%= @ele.passion4 %></p> </li>
-                            <li><strong>Ville : </strong></br> <%= @ele.ville %></li>
-                            <li><strong>Email :</strong> <%= @ele.email %> </li>
-                        </ul>
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+    <div class="row">
+        <div class="col-lg-3 mb-4">
+            <p> aaaaaaaaaaaaaaaaaaaaaa </p><p> aaaaaaaaaaaaaaaaaaaaaa </p><p> aaaaaaaaaaaaaaaaaaaaaa </p>
+        <div>
+        <div class="col-lg-9 mb-4">
+        <div class="text-body text-center"> <h1> <%= @ele.firstname %> </h1> </div> </br></br></br>
+            <div class="bg-white">
+                <div class="row p-2">
+                    <div class="container p-2 border shadow">
+                        <div class="col-lg-6">
+                            <h2><%= @ele.firstname %></h2>
+                            <ul>
+                                <li> <p><strong>Passions:</strong> <%= @ele.passion1 %>, <%= @ele.passion2 %>, <%= @ele.passion3 %>, <%= @ele.passion4 %></p> </li>
+                                <li><strong>Ville : </strong></br> <%= @ele.ville %></li>
+                                <li><strong>Email :</strong> <%= @ele.email %> </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        </br></br></br></br></br>
+            </br></br></br></br></br>
 
-        <h1 class="text-center text-body">Les événements que vous avez tous les deux suivis</h1>
-
-
-
-        </br></br></br></br>
-
-
-        <h1 class="text-center text-body">Les événements que <%=@ele.firstname%>  a créé </h1>
+            <h1 class="text-center text-body">Les événements que vous avez tous les deux suivis</h1>
 
 
 
-        <div class="row p-2">
-            <% if !@ele.created_events.empty? %>
-                <% @ele.created_events.each do |event| %>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 shadow">
-                            <h4 class="card-header"><%= event.name %></h4>
-                                <div class="card-body">
-                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
-                                </div>
-                                <div class="card-footer">
-                                <p> <%= link_to 'Voir l event', event_path(event) %> </p>
-                                </div>
-                        </div>
-                    </div>
-                <% end %>
-            <% else %>
-                <p> <%= @ele.firstname %> n a pour le moment créer aucun event </p>
-            <% end %>
-        </div>
+            </br></br></br></br>
 
 
-        </br></br>
+            <h1 class="text-center text-body">Les événements que <%=@ele.firstname%>  a créé </h1>
 
 
-        <h1 class="text-center text-body">Les événements auxquels <%=@ele.firstname%>  a participé </h1>
 
-
-        <div class="row">
-            <% if !@ele.eleattended_events.empty? %>
-                <% @ele.eleattended_events.each do |event| %>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 shadow">
-                            <h4 class="card-header"><%= event.name %></h4>
-                                <div class="card-body">
-                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
-                                </div>
-                                <div class="card-footer">
+            <div class="row p-2">
+                <% if !@ele.created_events.empty? %>
+                    <% @ele.created_events.each do |event| %>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow">
+                                <h4 class="card-header"><%= event.name %></h4>
+                                    <div class="card-body">
+                                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                    </div>
+                                    <div class="card-footer">
                                     <p> <%= link_to 'Voir l event', event_path(event) %> </p>
-                                </div>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
+                    <% end %>
+                <% else %>
+                    <p> <%= @ele.firstname %> n a pour le moment créer aucun event </p>
                 <% end %>
-            <% else %>
-                <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
-            <% end %>
-        </div>
+            </div>
 
 
-
-        
-
-        <h1 class="text-center text-body">Tous les evenement à venir qui intéressent <%=@ele.firstname%> </h1>
+            </br></br>
 
 
+            <h1 class="text-center text-body">Les événements auxquels <%=@ele.firstname%>  a participé </h1>
 
 
-        <div class="row">
-            <% if !@ele.eleattended_events.empty? %>
-                <% @ele.eleattended_events.each do |event| %>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 shadow">
-                            <h4 class="card-header"><%= event.name %></h4>
-                                <div class="card-body">
-                                    <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
-                                </div>
-                                <div class="card-footer">
-                                    <p> <%= link_to 'Voir l event', event_path(event) %> </p>
-                                </div>
+            <div class="row">
+                <% if !@ele.eleattended_events.empty? %>
+                    <% @ele.eleattended_events.each do |event| %>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow">
+                                <h4 class="card-header"><%= event.name %></h4>
+                                    <div class="card-body">
+                                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
+                    <% end %>
+                <% else %>
+                    <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
                 <% end %>
-            <% else %>
-                <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
-            <% end %>
-        </div>
+            </div>
 
+
+
+            
+
+            <h1 class="text-center text-body">Tous les evenement à venir qui intéressent <%=@ele.firstname%> </h1>
+
+
+
+
+            <div class="row">
+                <% if !@ele.eleattended_events.empty? %>
+                    <% @ele.eleattended_events.each do |event| %>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow">
+                                <h4 class="card-header"><%= event.name %></h4>
+                                    <div class="card-body">
+                                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p> <%= link_to 'Voir l event', event_path(event) %> </p>
+                                    </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% else %>
+                    <p> <%= @ele.firstname %> n a pour le moment aucune activité </p>
+                <% end %>
+            </div>
+
+        </div>
     </div>
 </div>
