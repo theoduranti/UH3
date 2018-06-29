@@ -24,13 +24,14 @@
       <div class="field">
         <%= form.label :discipline %>
         <div class="text-body">
-          <%= form.select :discipline, ['Roller'['a', 'b'], 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']%>
+          <%= form.select :discipline, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']%>
         </div>
       </div></br>
 
       <% if @event.discipline == 'Roller' %>
             <p> Roller a été choisi </p>
       <% else %>
+            <p> l ev n etant pas submit, on ne peut pas appeler @event.discipline</p>
       <% end %>
 
       <div class="field">
