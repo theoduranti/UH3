@@ -5,11 +5,13 @@
     </div>
 
     <%= form_tag root_path, :method => 'get' do %>
-        <%= label_tag("Rechercher par mots clés") %>
-        <%= text_field_tag :search, params[:search] %> </br>
         <%= label_tag("Choisir une discipline") %>
         <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
-        <%= label_tag("Choisir une date") %> </br>
+        <%= label_tag("Choisir la nature de l'évènement") %> </br>
+        <%= label_tag("Sélectionner un jour (lundi...)") %> </br>
+        <%= label_tag("Ou une date") %> </br>
+        <%= label_tag("Ajouter des mots clés") %>
+        <%= text_field_tag :search, params[:search] %> </br>
         <%= submit_tag "Rechercher" %>
 
     <% end %>
