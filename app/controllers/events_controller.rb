@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @events = @events.search(params[:search])
-    @events = @events.find(params[:find])
+    @events = @events.search2(params[:search2])
   end
 
   # GET /events/1
