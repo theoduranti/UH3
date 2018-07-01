@@ -18,7 +18,7 @@ class Event < ApplicationRecord
 
     def self.search2(search2)
         if search2
-            where(["discipline LIKE ?", "%#{search2}%"])
+            where(["lower(discipline) LIKE ?", "%#{search2.downcase}%"])
         else
             all
         end

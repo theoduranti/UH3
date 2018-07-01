@@ -8,7 +8,7 @@
         <%= label_tag("rechercher dans name, discipline, description:") %>
         <%= text_field_tag :search, params[:search] %>
         <%= label_tag("Rechercher dans discipline") %>
-        <%= text_field_tag :search2, params[:search2] %>
+        <%= select_tag(:search2, '<option value="1">Jemmy Legs</option>') %>
         
 
         <%= submit_tag "Rechercher" %>
