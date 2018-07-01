@@ -9,7 +9,7 @@
         <%= text_field_tag :search, params[:search] %>
         <%= label_tag("Rechercher dans discipline") %>
         <%= select_tag(:search2, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']) %>
-        
+        <%= select_tag "search2", options_for_select([ "VISA", "MasterCard" ], "MasterCard") %>
 
         <%= submit_tag "Rechercher" %>
 
