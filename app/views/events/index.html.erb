@@ -4,12 +4,12 @@
         <h1 class="text-center">Events</h1>
     </div>
 
-    <%= form_tag root_path, :method => 'get' do |form| %>
+    <%= form_tag root_path, :method => 'get' do %>
         <%= text_field_tag :search, params[:search] %>
 
         <div class="field">
-            <%= form.label :discipline %>
-            <%= form.select :search2, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :include_blank => true %>
+            <%= label :discipline %>
+            <%= select :search2, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :include_blank => true %>
         </div>
 
         <%= submit_tag "Rechercher" %>
