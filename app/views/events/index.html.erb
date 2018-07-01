@@ -4,7 +4,8 @@
         <h1 class="text-center">Events</h1>
     </div>
 
-    <%= form_tag root_path, :method => 'get' do |s| %>
+    
+    <%= form_with(model: event, local: true) do |s| %>
         <div class="field">
             <%= s.label :motscles %>
             <%= s.text_field_tag :search, params[:search] %>
