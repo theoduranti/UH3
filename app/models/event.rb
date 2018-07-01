@@ -10,7 +10,7 @@ class Event < ApplicationRecord
 
     def self.search(search)
         if search
-            where(["name LIKE ? or description LIKE ? or discipline LIKE ?","%#{search}%","%#{search}%","%#{search}%"])
+            where(["lower(name) LIKE ? or lower(description) LIKE ? or lower(discipline) LIKE ?","%#{search.downcase}%","%#{search.downcase}%","%#{search.downcase}%"])
         else
             all
         end
