@@ -16,4 +16,12 @@ class Event < ApplicationRecord
         end
     end
 
+    def self.find(find)
+        if find
+            where(["discipline LIKE ?", "%#{find}%"])
+        else
+            all
+        end
+    end
+
 end
