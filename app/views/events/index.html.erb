@@ -8,8 +8,8 @@
         <%= label_tag("Rechercher par mots clés") %>
         <%= text_field_tag :search, params[:search] %> </br>
         <%= label_tag("Choisir une discipline") %>
-        <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %>
-
+        <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
+        <%= label_tag("Choisir une date") %> </br>
         <%= submit_tag "Rechercher" %>
 
     <% end %>
