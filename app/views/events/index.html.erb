@@ -5,8 +5,10 @@
     </div>
 
     <%= form_tag root_path, :method => 'get' do %>
+        <%= label_tag("rechercher dans name, discipline, description:") %>
         <%= text_field_tag :search, params[:search] %>
-
+        <%= label_tag("Rechercher dans discipline") %>
+        <%= text_field_tag :search2, params[:search2] %>
         
 
         <%= submit_tag "Rechercher" %>
