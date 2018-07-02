@@ -77,7 +77,7 @@
                         <p class="card-text">Discipline : <%= event.discipline %> </br>
                         Description : <%= event.description %></br> 
                         Date: <%= event.date %></br> 
-                        Personnes inscrites : <% if event.professeur = "present" %> <%= event.asubscribe.count %> + 1 prof <% else %> <%= event.asubscribe.count %> <% end %> </br> 
+                        Personnes inscrites : <% if event.professeur == "present" %> <%= event.asubscribe.count %> + 1 prof <% else %> <%= event.asubscribe.count %> <% end %> </br> 
                         Personnes intéressées: <%= event.eleattendees.count + event.proinvitatees.count %>  </p>
                     </div>
                     <div class="card-footer">
