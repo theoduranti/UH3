@@ -31,7 +31,6 @@ class Event < ApplicationRecord
                 all
             else
                 eleveid = eleve.id.to_s
-                
                 where(["cast(asubscribe as text) LIKE ?", "%#{eleveid}%"])
             end
         else
