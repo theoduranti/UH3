@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ### lien de prod : https://salty-brook-35546.herokuapp.com</br></br>
 
@@ -11,3 +12,6 @@ Solution de secours, créer un controller et model search, où l'on met toute le
 Mais du coup ça créé une nouvelle vue show search: on mettra un lien d'accès à cette recherche avancée sur la page root)
 ```
 
+=======
+# UH3
+>>>>>>> a9fbbea5e4c69b9bcc94645447d73d19562276ce
