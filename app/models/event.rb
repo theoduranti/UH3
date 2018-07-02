@@ -31,7 +31,8 @@ class Event < ApplicationRecord
                 all
             else
                 eleveid = eleve.id
-                where(["asubscribe INCLUDES ?", "%#{eleveid}%"])
+                
+                where(":name = ANY(asubscribe)", name: "%#{eleveid}%")
             end
         else
             all
