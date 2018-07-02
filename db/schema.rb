@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_22_141332) do
+ActiveRecord::Schema.define(version: 2018_07_02_092304) do
 
   create_table "eles", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 2018_06_22_141332) do
     t.string "name"
     t.text "description"
     t.string "discipline"
-    t.string "date"
     t.string "ville"
     t.string "departement"
     t.decimal "prix"
@@ -63,6 +62,7 @@ ActiveRecord::Schema.define(version: 2018_06_22_141332) do
     t.string "professeur"
     t.integer "asubscribe"
     t.integer "apayer"
+    t.datetime "date"
   end
 
   create_table "events_pros", id: false, force: :cascade do |t|
