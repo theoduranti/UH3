@@ -67,7 +67,7 @@ class Event < ApplicationRecord
             elsif search4 == 'Tous les événements futurs'
                 where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+5.year).all
             elsif search4 == 'Tous les événements passés'
-                where('date BETWEEN ? AND ?', DateTime.now.-5.year, DateTime.now.beginning_of_day).all
+                where('date BETWEEN ? AND ?', DateTime.now-5.year, DateTime.now.beginning_of_day).all
             else
                 all
             end
