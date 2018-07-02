@@ -31,7 +31,7 @@ class Event < ApplicationRecord
                 all
             else
                 eleveid = eleve.id
-                where(["asubscribe LIKE ?", "%#{eleveid}%"])
+                where(["asubscribe INCLUDES ?", "%#{eleveid}%"])
             end
         else
             all
