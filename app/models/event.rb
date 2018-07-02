@@ -189,7 +189,7 @@ class Event < ApplicationRecord
 
     def self.search5(search5)
         if search5 == 'Les lundis'
-            evs = Event.find_by_date.strftime('%A')("Monday")
+            evs = Event.find_by_date(date.strftime('%A') = "Monday")
             if evs == nil
                 all
             else
