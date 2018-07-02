@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @events = @events.search3(params[:search3])
     @events = @events.search4(params[:search4])
     @events = @events.search5(params[:search5])
+    @events = @events.search6(params[:search6])
   end
 
   # GET /events/1

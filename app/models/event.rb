@@ -127,5 +127,14 @@ class Event < ApplicationRecord
     end
     
 
+    def self.search6(search6)
+        if search6 == nil
+            all
+        else 
+            sss = search6.to_s
+            where(["cast(date as text) LIKE ?", "%#{sss}%" ])
+        end
+    end
+
 
 end
