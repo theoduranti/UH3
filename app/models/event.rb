@@ -60,10 +60,14 @@ class Event < ApplicationRecord
     def self.search4(search4)
         if search4
             datetimenow = DateTime.now 
-            if search4 == 'Futurs'
-                where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+1.year).all
-            elsif search4 == 'Passés'
-                where(["date <=", "%#{datetimenow}%"])
+            if search4 == 'Les 7 prochains jours'
+                where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+7.day).all
+            elsif search4 == 'Les 30 prochains jours'
+                where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+30.day).all
+            elsif search4 == 'Tous les événements futurs'
+                where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+5.year).all
+            elsif search4 == 'Tous les événements passés'
+                where('date BETWEEN ? AND ?', DateTime.now.-5.year, DateTime.now.beginning_of_day).all
             else
                 all
             end
