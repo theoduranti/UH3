@@ -27,7 +27,7 @@ class Event < ApplicationRecord
     def self.search3(search3)
         if search3
             eleve = Ele.find_by_email(search3)
-            if eleve.id == nil
+            if eleve == nil
             else
                 eleveid = eleve.id
                 where(["asubscribe INCLUDE ?", "%#{eleveid}%"])
