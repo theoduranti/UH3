@@ -24,4 +24,17 @@ class Event < ApplicationRecord
         end
     end
 
+    def self.search3(search3)
+        if search3
+            asubscribe.each do |i|
+                eleve = Ele.find_by_id(i)
+                eleveemail = eleve.email
+                where(["eleveemail LIKE ?", "%#{search3}%"])
+            end
+        else
+            all
+        end
+    end
+
+
 end
