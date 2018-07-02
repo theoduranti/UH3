@@ -47,7 +47,7 @@ class Event < ApplicationRecord
                 else
                     eleveid = eleve.id.to_s
                     profeid = profe.id.to_s
-                    where(["cast(asubscribe as text) LIKE ? or cost(professor_id as text) LIKE ?", "%#{eleveid}%", "%#{profeid}%"])
+                    where(["cast(asubscribe as text) LIKE ? or professor_id.to_s LIKE ?", "%#{eleveid}%", "%#{profeid}%"])
                 end
             end
         else
