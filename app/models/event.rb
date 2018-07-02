@@ -30,9 +30,9 @@ class Event < ApplicationRecord
             if eleve == nil
                 all
             else
-                eleveid = eleve.id
+                eleveid = eleve.id.to_s
                 
-                where(":name = ANY(asubscribe)", name: "%#{eleveid}%")
+                where(":name = ANY(asubscribe.to_s)", name: "%#{eleveid}%")
             end
         else
             all
