@@ -13,6 +13,8 @@
                 <%= label_tag("Choisir la nature de l'évènement") %> </br>
             </div>
             <div class="col-sm">
+                <%= label_tag("Futurs par défault") %> </br>
+                <%= select_tag "search4", options_for_select(['Futurs', 'Passés']) %> </br>
                 <%= label_tag("Sélectionner un jour (lundi...)") %> </br>
                 <%= label_tag("Ou une date") %> </br>
             </div>

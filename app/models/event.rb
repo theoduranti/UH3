@@ -57,4 +57,19 @@ class Event < ApplicationRecord
 
 
 
+    def self.search4(search4)
+        if search4
+            datetimenow = DateTime.now 
+            if search4 == 'Futurs'
+                where(["date >=", "%#{datetimenow}%"])
+            else
+                where(["date >=", "%#{datetimenow}%"])
+            end
+        else
+            all
+        end
+    end
+
+
+
 end
