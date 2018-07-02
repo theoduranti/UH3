@@ -31,7 +31,8 @@
 
     <div class="row p-2">
     <% @events.each do |event|%>
-        <% if event.date >= Datetime.now %>
+        <% datetimenow = Datetime.now %>
+        <% if event.date >= datetimenow %>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100 shadow p-2">
                     <h4 class="card-header"><%= event.name %></h4>
