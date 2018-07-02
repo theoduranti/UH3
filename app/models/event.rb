@@ -26,12 +26,9 @@ class Event < ApplicationRecord
 
     def self.search3(search3)
         if search3
-            @events.each do |ev|
-                ev.asubscribe.each do |i|
-                    eleve = Ele.find_by_id(i)
-                    eleveemail = eleve.email
-                    where(["eleveemail LIKE ?", "%#{search3}%"])
-                end
+            eleve = Ele.find_by_email(search3)
+            eleveid = eleve.id
+            where(["asubscribe INCLUDE ?", "%#{eleveid}%"])
         else
             all
         end
