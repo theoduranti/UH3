@@ -104,11 +104,12 @@ class EventsController < ApplicationController
       @event.eleattendees << current_ele
       @event.update_attribute(:asubscribe, @event.asubscribe << current_ele.id)
     else
-      if 
+      
+        @event.proattendees << current_pro
         @event.professor_id == nil
         @event.update_column(:professor_id, current_pro.id)
         @event.update_column(:professeur, "present")
-      end
+      
     end
     redirect_to @event
   end

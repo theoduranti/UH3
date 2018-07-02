@@ -74,7 +74,7 @@
                 <% end %>
 
                     <div class="card-body">
-                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes intéressées: <%= event.eleattendees.count + 1 %>  </p>
+                        <p class="card-text">Discipline : <%= event.discipline %> </br>Description : <%= event.description %></br> Date: <%= event.date %></br> Description : <%= event.description %> </br> Nombre de personnes intéressées: <%= event.eleattendees.count + event.proattendees.count %>  </p>
                     </div>
                     <div class="card-footer">
                         <button type="button" class="btn btn-primary d-inline" aria-pressed="true"> <%= link_to 'Voir l evenement', event_path(event) %> </button>
