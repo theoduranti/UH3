@@ -31,7 +31,7 @@ class Event < ApplicationRecord
                 all
             else
                 eleveid = eleve.id
-                where(["asubscribe.includes", "%#{eleveid}%"])
+                where("asubscribe.includes", "%#{eleveid}%")
             end
         else
             all
