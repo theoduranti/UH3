@@ -18,8 +18,8 @@
                 <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
                 <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :include_blank => true %> </br>
                 <%= label_tag("Ou une date") %> 
-                
-                <%= select_tag "search6", options_for_select(date_select), :include_blank => true %>
+                <%= date_select :search6, :include_blank => true %> </br>
+ 
             </div>
             <div class="col-sm">
                 <%= label_tag("Ajouter des mots clés") %>
