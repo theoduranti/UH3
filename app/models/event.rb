@@ -61,7 +61,7 @@ class Event < ApplicationRecord
         if search4
             datetimenow = DateTime.now 
             if search4 == 'Futurs'
-                where(@events.date >= datetimenow)
+                where('date BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now+1.year).all
             elsif search4 == 'Passés'
                 where(["date <=", "%#{datetimenow}%"])
             else
