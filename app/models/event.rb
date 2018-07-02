@@ -32,7 +32,7 @@ class Event < ApplicationRecord
             else
                 eleveid = eleve.id.to_s
                 
-                where([":asubscribe LIKE ?", "%eleveid%"])
+                where(["asubscribe LIKE ?", "%eleveid%"])
             end
         else
             all
