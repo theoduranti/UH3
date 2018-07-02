@@ -158,7 +158,7 @@ class Event < ApplicationRecord
 
     def self.search5(search5)
         if search5 == 'Les lundis'
-            evs = Event.find_by_date(date.strftime('%A') == "Monday")
+            evs = Event.find_by_date("Monday")
             evsid = evs.id.to_s
             where(["cast(id as text) LIKE ?", "%#{evsid}%"])
         else
