@@ -32,14 +32,14 @@ class Event < ApplicationRecord
         if search3
             eleve = Ele.find_by_email(search3)
             profe = Pro.find_by_email(search3)
-            if eleve != nil && profe != nil
+            if !eleve==nil && !profe==nil
                 eleveid = eleve.id.to_s
                 profeid = profe.id.to_s
                 where(["cast(asubscribe as text) LIKE ? or professor_id.to_s LIKE ?", "%#{eleveid}%"], "%#{profeid}%"])
-            elsif eleve != nil
+            elsif !eleve == nil
                 eleveid = eleve.id.to_s
                 where(["cast(asubscribe as text) LIKE ?", "%#{eleveid}%"])
-            elsif profe != nil
+            elsif !profe == nil
                 profeid = profe.id.to_s
                 where(["professor_id.to_s LIKE ?", "%#{profeid}%"])
             else
