@@ -32,7 +32,7 @@ class Event < ApplicationRecord
             else
                 eleveid = eleve.id.to_s
                 
-                where(":name = ANY(asubscribe.to_s)", name: "%#{eleveid}%")
+                where(":name = ANY(@events.asubscribe.to_s)", name: "%#{eleveid}%")
             end
         else
             all
