@@ -82,14 +82,6 @@ class Event < ApplicationRecord
         SELF.SEARCH5 ================ MARCHE PAS
 
 
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date as text) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
 
     def self.search5(search5)
         if search5 == 'Les lundis'
@@ -205,6 +197,14 @@ class Event < ApplicationRecord
         end
     end
 
+    def self.search5(search5)
+        if search5 == 'Les lundis'
+            where(["cast(date.strftime('%A') as text)": 'Monday')
+        else
+            all
+        end
+    end
+
 =end
 
     
@@ -212,7 +212,7 @@ class Event < ApplicationRecord
 
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where(["cast(date.strftime('%A') as text)": 'Monday')
+            where(["cast(date as text) LIKE ?", "Monday"])
         else
             all
         end
