@@ -229,7 +229,7 @@ class Event < ApplicationRecord
 
     
 
-
+=begin
 
     def self.search6(search6)
         if search6 == nil
@@ -237,6 +237,16 @@ class Event < ApplicationRecord
         else 
             sss = search6.to_s
             where(["cast(date as text) LIKE ?", "%#{sss}%" ])
+        end
+    end
+
+=end
+
+    def self.search6(search6)
+        if search6 == nil
+            all
+        else 
+            where date_trunc('day', date) = "%#{search6}%"
         end
     end
 
