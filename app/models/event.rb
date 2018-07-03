@@ -246,7 +246,7 @@ class Event < ApplicationRecord
         if search6 == nil
             all
         else 
-            where date_trunc('day', date) = "%#{search6}%"
+            where(['date_trunc('day', date)' == "%#{search6}%"])
         end
     end
 
