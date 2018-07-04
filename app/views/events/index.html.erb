@@ -17,11 +17,9 @@
     </button>
     </div>
 
-    <div class="mx-auto text-center">
     <div class="collapse" id="collapseRecherche">
 
         <%= form_tag root_path, :method => 'get' do %>
-            <div class="container-fluid">
             <div class="card card-body">
                 <ul class="nav navbar-nav navbar-left">
                     <%= label_tag("Choisir une discipline") %>
@@ -45,10 +43,8 @@
                     <%= submit_tag "Rechercher" %>
                 </ul>
             </div>
-            </div>
         <% end %>
 
-    </div>
     </div>
 
 </div>
