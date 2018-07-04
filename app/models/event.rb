@@ -239,7 +239,7 @@ class Event < ApplicationRecord
 
     
 
-=begin
+
 
     def self.search6(search6)
         if search6 == nil
@@ -251,7 +251,7 @@ class Event < ApplicationRecord
     end
 
 
-
+=begin
     def self.search6(search6)
         if search6 == nil
             all
