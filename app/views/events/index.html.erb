@@ -42,7 +42,9 @@
                 <%= text_field_tag :search, params[:search] %> </br>
                 <%= label_tag("Par membres inscrits") %>
                 <%= text_field_tag :search3, params[:search3] %> </br>
-                <%= submit_tag "Rechercher" %>
+                <button class="btn btn-primary">
+                    <%= submit_tag "Rechercher" %>
+                </button> 
             </div>
         </div>
         <% end %>
