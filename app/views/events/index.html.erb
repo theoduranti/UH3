@@ -11,124 +11,127 @@
 </style>
 
 <div class="writingbig">
-<nav class="navbar navbar-default bg-white border-white fixe70">
-<div class="container shadow p-2">
-<div class="container">
-    <div class="mx-auto text-center">
-    <button class="btn btn-light btn-lg text-body writingbig" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
-        <span class="glyphicon glyphicon-menu-down"></span> BARRE DE RECHERCHE <span class="glyphicon glyphicon-menu-up"></span>
-    </button> 
-    </div>
-</div>
 
+    <nav class="navbar navbar-default bg-white border-white fixe70">
+    <div class="container shadow p-2">
     <div class="container">
-    <div class="collapse container" id="collapseRecherche">
-        <%= form_tag root_path, :method => 'get' do %>
-            <div class="row p-2">
-            <div class="col-sm">
-                <%= label_tag("Choisir une discipline") %>
-                <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
-                <%= label_tag("Choisir la nature de l'évènement") %> </br>
-            </div>
-            <div class="col-sm">
-                <%= label_tag("Sélectionner une période") %> 
-                <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :prompt => params[:search4], :include_blank => true %> </br>
-                <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
-                <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :prompt => params[:search5], :include_blank => true %> </br>
-                <%= label_tag("Ou une date") %> 
-                <%= date_field_tag :search6, :include_blank => true, :prompt => params[:search6] %> </br>
-    
-            </div>
-            <div class="col-sm">
-                <%= label_tag("Ajouter des mots clés") %>
-                <%= text_field_tag :search, params[:search] %> </br>
-                <%= label_tag("Par membres inscrits") %>
-                <%= text_field_tag :search3, params[:search3] %> </br>
-                <%= submit_tag "RECHERCHER", class: "btn btn-primary btn-block text-white" %>
-            </div>
+        <div class="mx-auto text-center">
+        <button class="btn btn-light btn-lg text-body writingbigbig" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
+            <span class="glyphicon glyphicon-menu-down"></span> BARRE DE RECHERCHE <span class="glyphicon glyphicon-menu-up"></span>
+        </button> 
         </div>
-        <% end %>
-    </div>
     </div>
 
-</div>
-</nav>
-<div>
-
-
-</br></br>
-
-
-
-
-<div class="container relative">
-
-    <div class="row p-2">
-    <% @events.each do |event|%>
-       
-
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow p-2">
-                    <h4 class="card-header"><%= event.name %></h4>
-                    <% if event.discipline == "Roller" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/tttj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "BMX" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/eqb1.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Skate" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/gg0z.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Trotinette" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/0h3m.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Parkour" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/u9tk.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Slackline" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/sooq.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Cirque" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/rch2.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Monocycle" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/5vtr.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Roue Cyr" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/nx2e.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Workout" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/gkfg.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Pilat" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/3hhj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Yoga" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/xmza.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Hip-Hop" %>
-                        <img class="card-img-top" <%= image_tag("disciplines/hip-hop1.jpg") %>
-                    <% elsif event.discipline == "Capoeira" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/4q9u.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Danse Latine" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/ut0c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Foot urbain" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/78fw.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Golf urbain" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/rezo.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Streetball" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/di7g.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% elsif event.discipline == "Graff" %>
-                        <img class="card-img-top" src="https://zupimages.net/up/18/26/jb1c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
-                    <% else %>
-                    <% end %>
-
-                        <div class="card-body">
-                            <p class="card-text">Discipline : <%= event.discipline %> </br>
-                            Description : <%= event.description %></br> 
-                            Date: <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br> 
-                            Personnes inscrites : <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br> 
-                            Personnes intéressées: <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
-                        </div>
-                        <div class="card-footer">
-                            <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn btn-primary btn-block text-white h3" %>
-                            <div class="mx-auto text-center">
-                                <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger" %> 
-                            </div>
-                            
-                        </div>
+        <div class="container">
+        <div class="collapse container" id="collapseRecherche">
+            <%= form_tag root_path, :method => 'get' do %>
+                <div class="row p-2">
+                <div class="col-sm">
+                    <%= label_tag("Choisir une discipline") %>
+                    <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
+                    <%= label_tag("Choisir la nature de l'évènement") %> </br>
+                </div>
+                <div class="col-sm">
+                    <%= label_tag("Sélectionner une période") %> 
+                    <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :prompt => params[:search4], :include_blank => true %> </br>
+                    <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
+                    <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :prompt => params[:search5], :include_blank => true %> </br>
+                    <%= label_tag("Ou une date") %> 
+                    <%= date_field_tag :search6, :include_blank => true, :prompt => params[:search6] %> </br>
+        
+                </div>
+                <div class="col-sm">
+                    <%= label_tag("Ajouter des mots clés") %>
+                    <%= text_field_tag :search, params[:search] %> </br>
+                    <%= label_tag("Par membres inscrits") %>
+                    <%= text_field_tag :search3, params[:search3] %> </br>
+                    <%= submit_tag "RECHERCHER", class: "btn btn-primary btn-block text-white writingbigbig" %>
                 </div>
             </div>
-        
-        
-    <% end %>
+            <% end %>
+        </div>
+        </div>
+
     </div>
-</div>
+    </nav>
+
+
+
+    </br></br>
+
+
+
+
+    <div class="container relative">
+
+        <div class="row p-2">
+        <% @events.each do |event|%>
+        
+
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 shadow p-2">
+                        <h4 class="card-header"><%= event.name %></h4>
+                        <% if event.discipline == "Roller" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/tttj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "BMX" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/eqb1.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Skate" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/gg0z.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Trotinette" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/0h3m.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Parkour" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/u9tk.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Slackline" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/sooq.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Cirque" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/rch2.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Monocycle" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/5vtr.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Roue Cyr" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/nx2e.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Workout" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/gkfg.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Pilat" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/3hhj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Yoga" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/xmza.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Hip-Hop" %>
+                            <img class="card-img-top" <%= image_tag("disciplines/hip-hop1.jpg") %>
+                        <% elsif event.discipline == "Capoeira" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/4q9u.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Danse Latine" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/ut0c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Foot urbain" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/78fw.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Golf urbain" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/rezo.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Streetball" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/di7g.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% elsif event.discipline == "Graff" %>
+                            <img class="card-img-top" src="https://zupimages.net/up/18/26/jb1c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
+                        <% else %>
+                        <% end %>
+
+                            <div class="card-body">
+                                <p class="card-text">Discipline : <%= event.discipline %> </br>
+                                Description : <%= event.description %></br> 
+                                Date: <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br> 
+                                Personnes inscrites : <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br> 
+                                Personnes intéressées: <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
+                            </div>
+                            <div class="card-footer">
+                                <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn btn-primary btn-block text-white h3" %>
+                                <div class="mx-auto text-center">
+                                    <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger" %> 
+                                </div>
+                                
+                            </div>
+                    </div>
+                </div>
+            
+            
+        <% end %>
+        </div>
+    </div>
+
+<div>
