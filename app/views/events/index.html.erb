@@ -11,28 +11,23 @@
 
 <nav class="navbar navbar-default bg-white border-white shadow fixe70"
 <div class="container-fluid">
-    <div class="nav navbar-nav">
-    <div class="row">
-    <div class="col">
-    <button class="btn btn-primary mx-auto text-center-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
+    <div class="nav navbar-nav mx-auto text-center">
+    <button class="btn btn-primary text-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
         BARRE DE RECHERCHE
     </button>
     </div>
-    </div>
-    </div>
 
-    <div class="nav navbar-nav">
+    <div class="mx-auto text-center">
     <div class="collapse" id="collapseRecherche">
 
         <%= form_tag root_path, :method => 'get' do %>
-            <div class="row">
             <div class="card card-body">
-                <div class="col nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav navbar-left">
                     <%= label_tag("Choisir une discipline") %>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
                     <%= label_tag("Choisir la nature de l'évènement") %> </br>
-                </div>
-                <div class="col nav navbar-nav navbar-center">
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
                     <%= label_tag("Sélectionner une période") %> 
                     <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :include_blank => true %> </br>
                     <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
@@ -40,15 +35,14 @@
                     <%= label_tag("Ou une date") %> 
                     <%= date_field_tag :search6, :include_blank => true %> </br>
         
-                </div>
-                <div class="col nav navbar-nav navbar-right">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <%= label_tag("Ajouter des mots clés") %>
                     <%= text_field_tag :search, params[:search] %> </br>
                     <%= label_tag("Par membres inscrits") %>
                     <%= text_field_tag :search3, params[:search3] %> </br>
                     <%= submit_tag "Rechercher" %>
-                </div>
-            </div>
+                </ul>
             </div>
         <% end %>
 
