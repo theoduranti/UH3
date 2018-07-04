@@ -23,7 +23,7 @@
     <div class="container-fluid">
     <div class="collapse container-fluid" id="collapseRecherche">
         <%= form_tag root_path, :method => 'get' do %>
-                <ul class="navbar-left">
+                <ul class="nav navbar-nav navbar-left">
                 <div class="card card-body">
                     <%= label_tag("Choisir une discipline") %>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
