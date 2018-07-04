@@ -117,8 +117,9 @@
                         </div>
                         <div class="card-footer">
                             <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn btn-primary btn-block text-white h3" %>
-                            <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger" %> 
-                            
+                            <div class="mx-auto text-center">
+                                <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger" %> 
+                            </div>
                             
                         </div>
                 </div>
