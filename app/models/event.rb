@@ -214,14 +214,24 @@ class Event < ApplicationRecord
         end
     end
 
+    def self.search5(search5)
+        if search5 == 'Les lundis'
+            where(["date LIKE ?", "Monday"])
+        else
+            all
+        end
+    end
+
 =end
 
     
     
 
+    
+
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where(["date LIKE ?", "Monday"])
+            where(["cast(date as text) LIKE ?", "Monday"])
         else
             all
         end
