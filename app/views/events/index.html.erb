@@ -8,7 +8,11 @@
         z-index: 1030;}
 .writingbig {font-size: 1.2rem;}
 .writingbigbig {font-size: 1.5rem;}
+.writingbigbigbig {font-size: 2rem;}
+.writingbigbigbigbig {font-size: 2.9rem;}
 </style>
+
+
 
 <div class="writingbig">
 
@@ -58,6 +62,14 @@
 </div>
 
     </br></br></br>
+
+
+
+@include media-breakpoint-down(xs) { <p class="writingbigbigbigbig">Hello</p> }
+@include media-breakpoint-down(sm) { <p class="writingbigbigbig">Hello</p> }
+@include media-breakpoint-down(md) { <p class="writingbigbig">Hello</p> }
+@include media-breakpoint-down(lg) { <p class="writingbig">Hello</p> }
+
 
 
 
