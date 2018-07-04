@@ -7,6 +7,7 @@
             <% elsif pro_signed_in? %>
               <p class="d-inline text-body"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
               <p class="active"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
+              <button class="btn btn-light text-body"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
             <% else %>
               <p class="d-inline"><a href="/eles/sign_up" class="text-body"><span class="glyphicon glyphicon-user"></span> Créer compte élève</a></p>
               <p class="d-inline"><a href="/pros/sign_up" class="text-body"><span class="glyphicon glyphicon-user"></span> Créer compte professeur</a></p>
