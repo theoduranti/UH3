@@ -240,7 +240,7 @@ class Event < ApplicationRecord
         end
     end
 
-=end
+
 
     def self.search6(search6)
         if search6 == nil
@@ -249,6 +249,7 @@ class Event < ApplicationRecord
             where(['date_trunc("day", date)' == "%#{search6}%"])
         end
     end
-
+    
+=end
 
 end

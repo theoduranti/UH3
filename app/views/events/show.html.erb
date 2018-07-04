@@ -26,34 +26,28 @@
             <p class= "d-inline">
                 <strong>Votre statut :</strong> 
                 <% if @event.etat == "open" %>
-                <% if signed_in? == false %>
-                    <p class= "d-inline"> Connectez-vous pour rejoindre levenement </p>
-                <% elsif pro_signed_in? %>
-                    <% if @event.professor_id == nil %>
-                        <p class= "d-inline">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-                    <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
-                        <p class= "d-inline"> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
-                        Les élèves recevront alors un mail et pourront payer puis recevoir leur invitation </p>
-                        <p class= "d-inline">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
+                    <% if signed_in? == false %>
+                        <p class= "d-inline"> Connectez-vous pour rejoindre levenement </p>
+                    <% elsif pro_signed_in? %>
+                        <% if @event.professor_id == nil %>
+                            <p class= "d-inline">  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+                        <% elsif @event.professor_id.to_s == current_pro.id.to_s %>
+                            <p class= "d-inline"> Vous êtes professeur, deux jours avant l evenement, si le nombre d inscrit est suffisant, validez l event. 
+                            Les élèves recevront alors un mail et pourront payer puis recevoir leur invitation </p>
+                            <p class= "d-inline">  <%= link_to "Valider l'event", { :controller => "events", :action => "closingevent"}, class: "btn btn-success" %> </p>
+                        <% else %>
+                            <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
+                        <% end %>
+                    <% elsif ele_signed_in? %>
+                        <% if @event.asubscribe.include? current_ele.id %>
+                            <p class= "d-inline">  Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
+                        <% else %>
+                        <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
+                        <% end %>
                     <% else %>
-                        <p class= "d-inline"> Le post de prof est occupé par : <%=@professor.email%></p>
-                        
                     <% end %>
-
-                <% elsif ele_signed_in? %>
-
-                    <% if @event.asubscribe.include? current_ele.id %>
-                        <p class= "d-inline">  Vous avez déjà rejoint cet événement, vous recevrez un mail pour payer lorsque le prof aura valider cet event</p>
-                    <% else %>
-                    <p>  <%= link_to "Rejoindre l'événement", { :controller => "events", :action => "subscribe"}, class: "btn btn-success" %> </p>
-                    <% end %>
-
-
-                <% else %>
-                <% end %>
 
                 <% elsif @event.etat == "close" %>
-                
                     <% if ele_signed_in? %>
                         <% if @event.asubscribe.include? current_ele.id %>
                             <% if @event.apayer.include? current_ele.id %>
