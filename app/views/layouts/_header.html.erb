@@ -1,36 +1,36 @@
 <nav class="navbar navbar-default bg-white border-white shadow fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
             <% if ele_signed_in? %>
-              <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
-              <p class="active writingbigbigbig"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
+              <p class="d-inline text-body writingbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
+              <p class="active writingbigbig"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
-              <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
-              <p class="active writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
-              <button type="button" class="btn btn-light text-body writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
+              <p class="d-inline text-body writingbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
+              <p class="active writingbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
+              <button type="button" class="btn btn-light text-body writingbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
             <% else %>
-              <p class="d-inline"><a href="/eles/sign_up" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte élève</a></p>
-              <p class="d-inline"><a href="/pros/sign_up" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte professeur</a></p>
+              <p class="d-inline"><a href="/eles/sign_up" class="text-body writingbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte élève</a></p>
+              <p class="d-inline"><a href="/pros/sign_up" class="text-body writingbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte professeur</a></p>
             <% end %>
         </ul>
 
         <ul class="nav navbar-nav navbar-center">
-            <p class="d-inline"><a href="/" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-search"></span> RECHERCHER UN EVENT</a></p>
+            <p class="d-inline"><a href="/" class="text-body writingbigbig"><span class="glyphicon glyphicon-search"></span> RECHERCHER UN EVENT</a></p>
             <% if signed_in? %>
-              <p class="d-inline"><a href="/events/new" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-upload"></span> CREER UN EVENT</a></p>
+              <p class="d-inline"><a href="/events/new" class="text-body writingbigbig"><span class="glyphicon glyphicon-upload"></span> CREER UN EVENT</a></p>
             <% else %>
-              <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-warning-sign"></span> Connectes-toi pour t inscrire ou créer des événments </p>
+              <p class="d-inline text-body writingbigbig"><span class="glyphicon glyphicon-warning-sign"></span> Connectes-toi pour t inscrire ou créer des événments </p>
             <% end %>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
           
           <% if signed_in? %>
-            <p class="d-inline"><a href="/eles/index" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-search"></span> Rechercher un élève</a></p>
-            <p class="d-inline"><a href="/pros/index" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-search"></span> Rechercher un professeur</a></p>
+            <p class="d-inline"><a href="/eles/index" class="text-body writingbigbig"><span class="glyphicon glyphicon-search"></span> Rechercher un élève</a></p>
+            <p class="d-inline"><a href="/pros/index" class="text-body writingbigbig"><span class="glyphicon glyphicon-search"></span> Rechercher un professeur</a></p>
           <% else %>
-            <p class="d-inline"><a href="/eles/sign_in" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-log-out"></span> Me connecter en tant qu élève</a></p>
-            <p class="d-inline"><a href="/pros/sign_in" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-log-out"></span> Me connecter en tant que professeur</a></p>
+            <p class="d-inline"><a href="/eles/sign_in" class="text-body writingbigbig"><span class="glyphicon glyphicon-log-out"></span> Me connecter en tant qu élève</a></p>
+            <p class="d-inline"><a href="/pros/sign_in" class="text-body writingbigbig"><span class="glyphicon glyphicon-log-out"></span> Me connecter en tant que professeur</a></p>
           <% end %>
         </ul>
     </div>
