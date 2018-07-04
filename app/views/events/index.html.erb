@@ -116,7 +116,7 @@
                             Personnes intéressées: <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
                         </div>
                         <div class="card-footer">
-                            <%= link_to 'Voir l evenement', event_path(event), class: "btn btn-primary btn-block" %>
+                            <%= link_to 'Voir l evenement', event_path(event), class: "btn btn-primary btn-block text-white h3" %>
                             <%= link_to 'Supprimer l evenement', destroy_event_path(event), method: :delete, class: "btn btn-danger btn-block" %> 
                             
                             
