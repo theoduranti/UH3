@@ -6,6 +6,7 @@
         right: 0;
         left: 0;
         z-index: 1030;}
+.largebox {boxe-sizing: border-content;}
 </style>
 
 
@@ -19,8 +20,8 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="collapse" id="collapseRecherche">
+<div class="container-fluid">
+    <div class="collapse largebox" id="collapseRecherche">
         <%= form_tag root_path, :method => 'get' do %>
                 <ul class="navbar-left">
                 <div class="card card-body">
