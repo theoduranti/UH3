@@ -6,7 +6,7 @@
     </br></br>
 
     <%= form_tag root_path, :method => 'get' do %>
-        <div class="row">
+        <div class="row shadow">
             <div class="col-sm">
                 <%= label_tag("Choisir une discipline") %>
                 <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
