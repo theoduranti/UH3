@@ -71,7 +71,7 @@
 
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 shadow p-2">
-                        <h4 class="card-header"><%= event.name %></h4>
+                        <h4 class="card-header writingbigbig"><%= event.name %></h4>
                         <% if event.discipline == "Roller" %>
                             <img class="card-img-top" src="https://zupimages.net/up/18/26/tttj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
                         <% elsif event.discipline == "BMX" %>
@@ -114,16 +114,16 @@
                         <% end %>
 
                             <div class="card-body">
-                                <p class="card-text">Discipline : <%= event.discipline %> </br>
+                                <p class="card-text writingbigbig">Discipline : <%= event.discipline %> </br>
                                 Description : <%= event.description %></br> 
                                 Date: <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br> 
                                 Personnes inscrites : <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br> 
                                 Personnes intéressées: <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
                             </div>
                             <div class="card-footer">
-                                <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn btn-primary btn-block text-white h3" %>
+                                <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn btn-primary btn-block text-white writingbigbig" %>
                                 <div class="mx-auto text-center">
-                                    <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger" %> 
+                                    <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn btn-light btn-large text-danger writingbigbig" %> 
                                 </div>
                                 
                             </div>
