@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
             <% if ele_signed_in? %>
-              <p class="d-inline text-body sm-writingbigbig md-writingbigbigbig lg-writingbigbigbig xl-writingbigbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
+              <p class="d-inline text-body xs-writingbigbig sm-writingbigbigbig md-writingbigbigbig lg-writingbigbigbig xl-writingbigbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.email %>, vous êtes connecté en tant qu'élève</p>
               <p class="active writingbigbig"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
               <p class="d-inline text-body writingbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
