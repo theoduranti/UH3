@@ -8,18 +8,19 @@
         z-index: 1030;}
 </style>
 
-<nav class="navbar fixe80"
+<nav class="navbar navbar-default fixe80"
 <div class="container">
-
+    <div class="row">
     <div class="mx-auto text-center">
     <button class="btn btn-primary text-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
         BARRE DE RECHERCHE
     </button>
     </div>
+    </div>
     
 
     <div class="collapse" id="collapseRecherche">
-    
+    <div class="row">
     <div class="card card-body">
         <%= form_tag root_path, :method => 'get' do %>
             <div class="row shadow p-2">
@@ -47,7 +48,7 @@
             </div>
         <% end %>
     </div>
-    
+    </div>
     </div>
 
 </div>
