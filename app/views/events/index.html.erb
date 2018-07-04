@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <style> 
-.fixe72 {position: fixed; 
-        top: 72px;     
+.fixe71 {position: fixed; 
+        top: 71px;     
         right: 0;
         left: 0;
         z-index: 1030;}
@@ -12,7 +12,7 @@
 
 <div class="writingbig">
 
-    <nav class="navbar navbar-default bg-white border-white fixe72">
+    <nav class="navbar navbar-default bg-white border-white fixe71">
     <div class="container shadow p-2">
     <div class="container">
         <div class="mx-auto text-center">
@@ -71,7 +71,9 @@
 
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 shadow p-2">
-                        <h3 class="card-header writingbigbig"><%= event.name %></h3>
+                        <div class="card-header">
+                            <h3><%= event.name %></h3>
+                        </div>
                         <% if event.discipline == "Roller" %>
                             <img class="card-img-top" src="https://zupimages.net/up/18/26/tttj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
                         <% elsif event.discipline == "BMX" %>
