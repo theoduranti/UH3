@@ -1,38 +1,44 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+
+<div class="container-fluid">
     <div class = "text-body">
         <h1 class="text-center">Rechercher un evenement </h1>
     </div>
-    </br></br>
+    </br>
 
     <%= form_tag root_path, :method => 'get' do %>
-        <div class="row shadow">
-            <div class="col-sm">
-                <%= label_tag("Choisir une discipline") %>
-                <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
-                <%= label_tag("Choisir la nature de l'évènement") %> </br>
-            </div>
-            <div class="col-sm">
-                <%= label_tag("Sélectionner une période") %> 
-                <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :include_blank => true %> </br>
-                <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
-                <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :include_blank => true %> </br>
-                <%= label_tag("Ou une date") %> 
-                <%= date_field_tag :search6, :include_blank => true %> </br>
- 
-            </div>
-            <div class="col-sm">
-                <%= label_tag("Ajouter des mots clés") %>
-                <%= text_field_tag :search, params[:search] %> </br>
-                <%= label_tag("Par membres inscrits") %>
-                <%= text_field_tag :search3, params[:search3] %> </br>
-                <%= submit_tag "Rechercher" %>
-            </div>
+    <div class="row shadow p-2">
+        <div class="col-sm">
+            <%= label_tag("Choisir une discipline") %>
+            <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :include_blank => true %> </br>
+            <%= label_tag("Choisir la nature de l'évènement") %> </br>
         </div>
+        <div class="col-sm">
+            <%= label_tag("Sélectionner une période") %> 
+            <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :include_blank => true %> </br>
+            <%= label_tag("Sélectionner un jour") %> <p class="d-inline"> (marche pas)</p>
+            <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :include_blank => true %> </br>
+            <%= label_tag("Ou une date") %> 
+            <%= date_field_tag :search6, :include_blank => true %> </br>
+
+        </div>
+        <div class="col-sm">
+            <%= label_tag("Ajouter des mots clés") %>
+            <%= text_field_tag :search, params[:search] %> </br>
+            <%= label_tag("Par membres inscrits") %>
+            <%= text_field_tag :search3, params[:search3] %> </br>
+            <%= submit_tag "Rechercher" %>
+        </div>
+    </div>
     <% end %>
 
     </br>
 
+</div>
+
+
+
+<div class="container">
 
     <div class="row p-2">
     <% @events.each do |event|%>
