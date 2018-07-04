@@ -11,12 +11,15 @@
 
 <nav class="navbar navbar-default bg-white border-white shadow fixe70"
 <div class="container-fluid">
+    <div class="row">
     <div class="nav navbar-nav mx-auto text-center">
     <button class="btn btn-primary text-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
         BARRE DE RECHERCHE
     </button>
     </div>
+    </div>
 
+    <div class="row">
     <div class="collapse" id="collapseRecherche">
 
         <%= form_tag root_path, :method => 'get' do %>
@@ -49,6 +52,7 @@
                 </ul>
         <% end %>
 
+    </div>
     </div>
 
 </div>
