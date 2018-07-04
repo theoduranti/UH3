@@ -13,8 +13,8 @@
 <div class="container shadow p-2">
 <div class="container">
     <div class="mx-auto text-center">
-    <button class="btn btn-light text-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
-        <span class="glyphicon glyphicon-chevron-down">BARRE DE RECHERCHE
+    <button class="btn btn-light btn-lg text-body" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
+        <span class="glyphicon glyphicon-chevron-down"> BARRE DE RECHERCHE
     </button> 
     </div>
 </div>
@@ -42,9 +42,7 @@
                 <%= text_field_tag :search, params[:search] %> </br>
                 <%= label_tag("Par membres inscrits") %>
                 <%= text_field_tag :search3, params[:search3] %> </br>
-                <h3>
-                    <%= submit_tag "RECHERCHER", class: "btn btn-light text-body" %>
-                </h3> 
+                <%= submit_tag "RECHERCHER", class: "btn btn-secondary btn-lg text-white" %>
             </div>
         </div>
         <% end %>
