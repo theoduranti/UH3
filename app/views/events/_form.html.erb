@@ -24,7 +24,15 @@
       <div class="field">
         <%= form.label :discipline %> <p class="d-inline text-danger"> (Ne pas sélectionner les cases qui ont la forme</p> <p class="d-inline text-secondary"> ===MAJUSCULE=== </p><p class="d-inline text-danger">. Elles servent de repère)</p>
         <div class="text-body">
-          <%= form.select :discipline, [['===SPORTS DE GLISSE===', {class: 'writingbigbig text-secondary'}], 'Sport De Glisse Autre', ['---Roller---', {class: 'writingbigbig text-secondary'}], 'Roller Autre', 'Roller Fitness Ballade', 'Roller Slalom', 'Roller Quad', 'Roller Vitesse','Roller Agressif', 'Roller Agressif Skatepark', 'Roller Agressif Street', ['---Board---', {class: 'writingbigbig text-secondary'}], 'Board Autre', 'Skateboard', 'Longboard', 'Trotinette', ['---Vélo---', {class: 'writingbigbig text-secondary'}], 'Vélo', 'Vélo Fixi', 'Vélo Vitesse', 'Vélo BMX', ['===EQUILIBRE AGILITE===', {class: 'writingbigbig text-secondary'}], 'Equilibre Agilité Autre' 'Parkour', 'Slackline', 'Jonglage', 'Monocycle', 'Roue Cyr', ['=== BIEN-ÊTRE===', {class: 'writingbigbig text-secondary'}], 'Bien-être autre', 'Workout', 'Pilat', 'Yoga', 'Running', ['===DANSES URBAINES===', {class: 'writingbigbig text-secondary'}], 'Danses Urbaines Autres', 'Hip-Hop', 'Capoeira', 'Danse Latine', ['=== TRUCS UBRAINS ===', {class: 'writingbigbig text-secondary'}], 'Truc Urbain Autre','Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :size => 7, :include_blank => true %>
+          <%= form.select :discipline, 
+          [['===SPORTS DE GLISSE===', {class: 'writingbigbigbig text-secondary'}], 'Sport De Glisse Autre', 
+          ['----Roller----', {class: 'writingbigbigbig text-secondary'}], ['Roller', {class: 'text-primary'}], 'Roller Fitness Ballade', 'Roller Slalom', 'Roller Quad', 'Roller Vitesse', 'Roller Agressif', ['Roller Autre', {class: 'text-primary'}], 
+          ['----Board----', {class: 'writingbigbigbig text-secondary'}], ['Board', {class: 'text-primary'}], 'Skateboard', 'Longboard', 'Trotinette board', ['Board Autre', {class: 'text-primary'}],
+          ['----Vélo----', {class: 'writingbigbigbig text-secondary'}], ['Vélo', {class: 'text-primary'}], 'Vélo Fixi', 'Vélo Vitesse', 'Vélo BMX', ['Vélo Autre', {class: 'text-primary'}],
+          ['===EQUILIBRE AGILITE (EA)===', {class: 'writingbigbigbig text-secondary'}], ['EA', {class: 'text-primary'}], 'EA Parkour', 'EA Slackline', 'EA Jonglage', 'EA Monocycle', 'EA Roue Cyr', ['EA Autre', {class: 'text-primary'}],
+          ['=== BIEN-ÊTRE (BE)===', {class: 'writingbigbigbig text-secondary'}], ['BE', {class: 'text-primary'}], 'Workout (BE)', 'Pilat (BE)', 'Yoga (BE)', 'Running (BE)', ['BE Autre', {class: 'text-primary'}],
+          ['===DANSES URBAINES===', {class: 'writingbigbigbig text-secondary'}], ['Danse', {class: 'text-primary'}], 'Danse Hip-Hop', 'Danse Capoeira', 'Danse Latine', ['Danse Autre', {class: 'text-primary'}],
+          ['=== TRUCS UBRAINS (TU) ===', {class: 'writingbigbigbig text-secondary'}], ['TU', {class: 'text-primary'}],'Foot urbain (TU)', 'Golf urbain (TU)', 'Streetball (TU)', 'Graff (TU)', ['TU Autre', {class: 'text-primary'}]], :size => 7, :include_blank => true %>
         </div>
       </div></br>
 
