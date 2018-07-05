@@ -22,8 +22,8 @@
       </div></br>
 
       <div class="field">
-        <%= form.label :discipline %> <p class="d-inline text-danger"> (Pour sélectionner une catégorie générique, sélectionnes une case qui se trouve sous celles ayant la forme ===MAJUSCULE===  ).
-          Ne pas sélectionner les cases qui contiennent ===MAJUSCULE===. Pour sélectionner une catégorie se trouve sous cette case foncée)</p>
+        <%= form.label :discipline %> <p class="d-inline text-danger"> 
+          <p class="d-inline">Ne pas sélectionner les cases qui sont de la forme ===MAJUSCULE===. Les cases juste en-dessous de celles-ci permettent de sélectionner une catégorie générique. </p>
         <div class="text-body">
           <%= form.select :discipline, 
           [['===SPORTS DE GLISSE===', {class: 'writingbigbigbig font-weight-bold bgbleupal'}], ['Sport De Glisse Autre', {class: 'text-primary bgbleutrpal'}], 
