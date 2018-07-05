@@ -24,7 +24,17 @@
       <div class="field">
         <%= form.label :discipline %>
         <div class="text-body">
-          <%= form.select :discipline, ['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :include_blank => true %>
+          <%= form.select :discipline, 
+          <optgroup label="ROLLER">
+            <option value="Roller Skatepark">Roller Skatepark</option>
+            <option value="Roller Street">Roller Street</option>
+            <option value="Roller Slalom">Roller Slalom</option>
+          </optgroup>
+          <optgroup label="CIRQUE">
+            <option value="Roue Cyr">Roue Cyr</option>
+            <option value="Jonglage">Jonglage</option>
+            <option value="Monocycle">Monocycle</option>
+          </optgroup>, :include_blank => true %>
         </div>
       </div></br>
 
