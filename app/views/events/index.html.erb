@@ -31,7 +31,7 @@
             <%= form_tag root_path, :method => 'get' do %>
                 <div class="row p-2">
                 <div class="col-sm">
-                    <%= label_tag("Choisir une discipline") %>
+                    <%= label_tag("Choisir une discipline"), class: "writingbigbigbig" %>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
                     <%= label_tag("Choisir la nature de l'évènement") %> </br>
                 </div>
