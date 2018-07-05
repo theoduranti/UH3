@@ -6,7 +6,7 @@
           <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
           <ul>
-          <% event.errors.full_messages.Equi-Agich do |message| %>
+          <% event.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
           </ul>
@@ -27,12 +27,12 @@
         <div class="text-body">
           <%= form.select :discipline, 
           [['===SPORTS DE GLISSE (Glisse)===', {class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
-          ['Glisse', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
-          ['Roller (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Roller Fitness Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
-          ['Board (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Skateboard (Glisse)', {class: 'bgbleutrpal'}], ['Longboard (Glisse)', {class: 'bgbleutrpal'}], ['Trotinette board (Glisse)', {class: 'bgbleutrpal'}], ['Board Autre (Glisse)', {class: 'text-primary bgbleutrpal'}],
-          ['Vélo (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Vélo Fixi (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Vélo BMX (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Autre (Glisse)', {class: 'text-primary bgbleutrpal'}],
-          ['AUTRE Glisse', {class: 'text-primary bgbleutrpal'}],
-          ['===EQUILIBRE AGILITE (Equi-Agi)===', {class: 'writingbigbigbig font-weight-bold bgvertpal'}], ['Equi-Agi', {class: 'writingbigbigbig font-weight-bold bgverttrpal'}], ['Parkour (Equi-Agi)', {class: 'bgverttrpal'}], ['Slackline (Equi-Agi)', {class: 'bgverttrpal'}], ['Jonglage (Equi-Agi)', {class: 'bgverttrpal'}], ['Monocycle (Equi-Agi)', {class: 'bgverttrpal'}], ['Roue Cyr (Equi-Agi)', {class: 'bgverttrpal'}], ['Autre Equi-Agi', {class: 'text-primary bgverttrpal'}],
+          ['GLISSE', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
+          ['Roller (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Roller Fitness Ballade (Glisse Roller)', {class: 'bgbleutrpal'}], ['Roller Slalom (Glisse Roller)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse Roller)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse Roller)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse Roller)', {class: 'bgbleutrpal'}], ['Roller Autre (Glisse Roller)', {class: 'text-primary bgbleutrpal'}], 
+          ['Board (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Skateboard (Glisse Board)', {class: 'bgbleutrpal'}], ['Longboard (Glisse Board)', {class: 'bgbleutrpal'}], ['Trotinette board (Glisse Board)', {class: 'bgbleutrpal'}], ['Board Autre (Glisse Board)', {class: 'text-primary bgbleutrpal'}],
+          ['Vélo (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Vélo Fixi (Glisse Vélo)', {class: 'bgbleutrpal'}], ['Vélo Vitesse (Glisse Vélo)', {class: 'bgbleutrpal'}], ['Vélo BMX (Glisse Vélo)', {class: 'bgbleutrpal'}], ['Vélo Autre (Glisse Vélo)', {class: 'text-primary bgbleutrpal'}],
+          ['AUTRE Glisse (Glisse)', {class: 'text-primary bgbleutrpal'}],
+          ['===EQUILIBRE AGILITE (EquilibreAgilité)===', {class: 'writingbigbigbig font-weight-bold bgvertpal'}], ['EquilibreAgilité', {class: 'writingbigbigbig font-weight-bold bgverttrpal'}], ['Parkour (EquilibreAgilité)', {class: 'bgverttrpal'}], ['Slackline (EquilibreAgilité)', {class: 'bgverttrpal'}], ['Jonglage (EquilibreAgilité)', {class: 'bgverttrpal'}], ['Monocycle (EquilibreAgilité)', {class: 'bgverttrpal'}], ['Roue Cyr (EquilibreAgilité)', {class: 'bgverttrpal'}], ['Autre EquilibreAgilité', {class: 'text-primary bgverttrpal'}],
           ['=== BIEN-ÊTRE (BienEtre)===', {class: 'writingbigbigbig font-weight-bold bgvioletpal'}], ['BienEtre', {class: 'writingbigbigbig font-weight-bold bgviolettrpal'}], ['Workout (BienEtre)', {class: 'bgviolettrpal'}], ['Pilat (BienEtre)', {class: ' bgviolettrpal'}], ['Yoga (BienEtre)', {class: 'bgviolettrpal'}], ['Running (BienEtre)', {class: 'bgviolettrpal'}], ['Autre BienEtre', {class: 'text-primary bgviolettrpal'}],
           ['===DANSES URBAINES (Danse)===', {class: 'writingbigbigbig font-weight-bold bgjaune'}], ['Danse', {class: 'writingbigbigbig font-weight-bold bgjaunetrpal'}], ['Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['Autre Danse', {class: 'text-primary bgjaunetrpal'}],
           ['=== TRUCS UBRAINS (TrucUrbain) ===', {class: 'writingbigbigbig font-weight-bold bgrougepal'}], ['TrucUrbain', {class: 'writingbigbigbig font-weight-bold bgrougetrpal'}],['Foot urbain (TrucUrbain)', {class: 'bgrougetrpal'}], ['Golf urbain (TrucUrbain)', {class: 'bgrougetrpal'}], ['Streetball (TrucUrbain)', {class: 'bgrougetrpal'}], ['Graff (TrucUrbain)', {class: 'bgrougetrpal'}], ['Autre TrucUrbain', {class: 'text-primary bgrougetrpal'}]], 
