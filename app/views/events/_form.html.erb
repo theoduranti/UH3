@@ -23,7 +23,7 @@
 
       <div class="field">
         <%= form.label :discipline %> </br>
-        <p class="d-inline text-danger"> (Ne pas sélectionner les cases qui ont la forme <p class="d-inline text-secondary"> ===MAJUSCULE=== </p>. Elles servent de repère)</p>
+        <p class="d-inline text-danger"> (Ne pas sélectionner les cases qui ont la forme</p> <p class="d-inline text-secondary"> ===MAJUSCULE=== </p><p class="d-inline text-danger">. Elles servent de repère)</p>
         <div class="text-body">
           <%= form.select :discipline, [['===ROLLER===', {class: 'writingbigbig text-secondary'}], 'Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :size => 7, :include_blank => true %>
         </div>
