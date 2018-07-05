@@ -1,4 +1,4 @@
-  <div class="container text-body">
+  <div class="container text-body writingbig">
     <h1 class="text-center"> Créer un événement </h1> </br></br>
     <%= form_with(model: event, local: true) do |form| %>
       <% if event.errors.any? %>
@@ -24,7 +24,7 @@
       <div class="field">
         <%= form.label :discipline %>
         <div class="text-body">
-          <%= form.select :discipline, [['===ROLLER===', {class: 'writingbigbig'}], 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :include_blank => true %>
+          <%= form.select :discipline, [['===ROLLER===', {class: 'writingbigbig text-secondary'}], 'Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff'], :include_blank => true %>
         </div>
       </div></br>
 
