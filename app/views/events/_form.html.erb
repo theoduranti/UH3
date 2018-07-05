@@ -53,7 +53,7 @@
         <%= form.label :discipline %>
         <div class="text-body">
           <%= form.select :discipline, 
-          <optgroup label="ROLLER">
+          '<optgroup label="ROLLER">
             <option value="Roller Skatepark">Roller Skatepark</option>
             <option value="Roller Street">Roller Street</option>
             <option value="Roller Slalom">Roller Slalom</option>
@@ -62,7 +62,8 @@
             <option value="Roue Cyr">Roue Cyr</option>
             <option value="Jonglage">Jonglage</option>
             <option value="Monocycle">Monocycle</option>
-          </optgroup>, :include_blank => true %>
+          </optgroup>', 
+          :include_blank => true %>
         </div>
       </div></br>
 
