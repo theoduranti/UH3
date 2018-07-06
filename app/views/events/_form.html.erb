@@ -26,7 +26,7 @@
           <p class="text-danger">Ne pas sélectionner les cases qui sont de la forme ===MAJUSCULE===. </br> Les catégories génériques à sélectionner sont écrits en abrégés et en gros. (Danse pour Danse Urbaine par exemple) </br> CHOISISSEZ LA DISCIPLINE, VOUS CHOISIREZ LA SOUS-DISCIPLINE DANS UN DEUXIEME FORMULAIRE (le premier form renvoie vers un deuxième où l on a: form do ... if @event.discipline == roller   :sous-discipline form.select (roller agressif, roller slalom ...)    elsif @ev.disci == equil ) </p>
         <div class="text-body">
           <%= form.select :discipline, 
-          [['==============', {value: 'GLISSE', class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
+          [['==============', {class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
           ['GLISSE', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
           ['- - - - - - - - - - -', {class: 'writingbigbigbig font-weight-bold bgbleupal'}],
           ['ROLLER (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Roller Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
@@ -43,8 +43,27 @@
         </div>
       </div></br>
 
+      <div class="field">
+      <%= form.label :discipline %>
+      <div class="text-body">
+	      # <%= form.select :discipline, id: :discipline, class: :dicsipline, (
+        <%= form.select :discipline, 
+        <select name="discipline">
+        <optgroup label="ROLLER">
+          <option value="Roller Skatepark">Roller Skatepark</option>
+          <option value="Roller Street">Roller Street</option>
+          <option value="Roller Slalom">Roller Slalom</option>
+        </optgroup>
+        <optgroup label="CIRQUE">
+          <option value="Roue Cyr">Roue Cyr</option>
+          <option value="Jonglage">Jonglage</option>
+          <option value="Monocycle">Monocycle</option>
+        </optgroup>
+        </select>, 
+        :include_blank => true %>
+      </div>
+    </div></br>
 
-      
       
       <p> Entrez des mots clés pour préciser une sous-discipline. Par exemple, si vous avez choisi comme discipline :</br>
       - 'Roller', les mots clés peuvent être : slalom, agressif street, agressif skatepark, quad, saut, slide, vitesse, ballade, ...</br>
