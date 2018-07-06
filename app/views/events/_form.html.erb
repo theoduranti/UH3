@@ -51,7 +51,7 @@
         </br></br><p> 1. Visualises la liste des catégories et sous-catégories </p>
         </br>
           <div class="shadow">
-          <p class="d-inline writingbigbig">DANSE </p>
+          <p class="d-inline writingbigbig"> DANSE </p>
           <p class="d-inline writingbigbig">(Hip-hop, Capoeira, Danse Latine, Autre Danse)</p><p class="d-inline writingbigbig">, </p> 
           </br><p class="d-inline writingbigbig">BIEN-ÊTRE </p>
           <p class="d-inline writingbigbig">(Workout, Pilat, Yoga, Running, Urban Fishing)</p><p class="d-inline writingbigbig">, </p>  
@@ -65,6 +65,7 @@
           </br></br>
         <div class="text-body">
         <p> 2. Choisis une catégorie ou sous-catégorie <p>
+          <div class="selectpicker">
           <%= form.select :discipline,
           [['=====DANSE=====', 'DANSE', {class: 'writingbigbigbig font-weight-bold bgjaunetrpal'}], ['Hip-Hop', 'Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira', 'Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine', 'Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['=>Autre Danse', 'Autre Danse', {class: 'text-primary bgjaunetrpal'}],
           ['====BIEN ÊTRE====', 'BIEN ÊTRE', {class: 'writingbigbigbig font-weight-bold bgviolettrpal'}], ['Workout', 'Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat', 'Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga', 'Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running', 'Running (Bien Être)', {class: 'bgviolettrpal'}], ['Urban Fishing','Urban Fishing (Truc Urbain)', {class: 'bgviolettrpal'}], ['=>Autre Bien Être', 'Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
@@ -76,6 +77,7 @@
           ['=>Autre glisse', 'Autre Glisse', {class: 'text-primary bgbleutrpal'}],
           ['===TRUC URBAIN===', 'TRUC URBAIN', {class: 'writingbigbigbig font-weight-bold bgrougetrpal'}],['Foot urbain', 'Foot urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Golf urbain', 'Golf urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Streetball', 'Streetball (Truc Urbain)', {class: 'bgrougetrpal'}], ['Graff', 'Graff (Truc Urbain)', {class: 'bgrougetrpal'}], ['=>Autre Truc Urbain', 'Autre Truc Urbain', {class: 'text-primary bgrougetrpal'}]], 
           :disabled => ["==============", '- - - - - - - - - - -'], :include_blank => true, :class => "text-danger" %>
+          </div>
         </div>
       </div></br>
 
