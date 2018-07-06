@@ -48,21 +48,23 @@
 
       <div class="field">
         <%= form.label :discipline %> <p class="d-inline text-danger"> <p class="d-inline">Voici une liste des catégories et sous-catégories: </p>
-        </br><p> 1. Visualises la liste des catégories et sous-catégories </p>
+        </br></br><p> 1. Visualises la liste des catégories et sous-catégories </p>
+        </br></br>
           <div class="shadow">
           <p class="d-inline writingbigbig">DANSE </p>
-          </br><p class="d-inline writingbigbig">(Hip-hop, Capoeira, Danse Latine, Autre Danse)</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">BIEN-ÊTRE </p>
-          </br><p class="d-inline writingbigbig">(Workout, Pilat, Yoga, Running, Urban Fishing)</p><p class="d-inline writingbigbig">, </p>  
-          </br><p class="d-inline writingbigbig">EQUILIBRE AGILITE </p>
-          </br><p class="d-inline writingbigbig">(Parkour, Slackline, Jonglage, Monocycle, Roue Cyr, Autre équilibre-agilité)</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">GLISSE URBAINE </p>
-          </br><p class="d-inline writingbigbig">(Roller </p><p class="d-inline">(Ballade, Slalom, Quad, Vitesse, Agressif, Autre)</p><p class="d-inline writingbigbig">, Board </p><p class="d-inline">(Skateboard, Longboard, Trotinette, Autre)</p><p class="d-inline writingbigbig">, Vélo</p> <p class="d-inline">(Fixi, Vitesse, BMX, Autre Vélo)</p> <p class="d-inline writingbigbig">, Autre Glisse)</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">TRUC-URBAIN </p>
-          </br><p class="d-inline writingbigbig">(Foot urbain, Golf urbain, Streetball, Graff, Autre truc-urbain)</p>
+          <p class="d-inline writingbigbig">(Hip-hop, Capoeira, Danse Latine, Autre Danse)</p><p class="d-inline writingbigbig">, </p> 
+          </br></br><p class="d-inline writingbigbig">BIEN-ÊTRE </p>
+          <p class="d-inline writingbigbig">(Workout, Pilat, Yoga, Running, Urban Fishing)</p><p class="d-inline writingbigbig">, </p>  
+          </br></br><p class="d-inline writingbigbig">EQUILIBRE AGILITE </p>
+          <p class="d-inline writingbigbig">(Parkour, Slackline, Jonglage, Monocycle, Roue Cyr, Autre équilibre-agilité)</p><p class="d-inline writingbigbig">, </p> 
+          </br></br><p class="d-inline writingbigbig">GLISSE URBAINE </p>
+          <p class="d-inline writingbigbig">(Roller </p><p class="d-inline">(Ballade, Slalom, Quad, Vitesse, Agressif, Autre)</p><p class="d-inline writingbigbig">, Board </p><p class="d-inline">(Skateboard, Longboard, Trotinette, Autre)</p><p class="d-inline writingbigbig">, Vélo</p> <p class="d-inline">(Fixi, Vitesse, BMX, Autre Vélo)</p> <p class="d-inline writingbigbig">, Autre Glisse)</p><p class="d-inline writingbigbig">, </p> 
+          </br></br><p class="d-inline writingbigbig">TRUC-URBAIN </p>
+          <p class="d-inline writingbigbig">(Foot urbain, Golf urbain, Streetball, Graff, Autre truc-urbain)</p>
           </div> 
+          </br></br>
         <div class="text-body">
-        </br><p> 2. Choisis une catégorie ou sous-catégorie <p>
+        <p> 2. Choisis une catégorie ou sous-catégorie <p>
           <%= form.select :discipline,
           [['=====DANSE=====', 'DANSE', {class: 'writingbigbigbig font-weight-bold bgjaunetrpal'}], ['Hip-Hop', 'Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira', 'Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine', 'Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['=>Autre Danse', 'Autre Danse', {class: 'text-primary bgjaunetrpal'}],
           ['====BIEN ÊTRE====', 'BIEN ÊTRE', {class: 'writingbigbigbig font-weight-bold bgviolettrpal'}], ['Workout', 'Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat', 'Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga', 'Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running', 'Running (Bien Être)', {class: 'bgviolettrpal'}], ['Urban Fishing','Urban Fishing (Truc Urbain)', {class: 'bgviolettrpal'}], ['=>Autre Bien Être', 'Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
