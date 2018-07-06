@@ -25,7 +25,7 @@
         <%= form.label :discipline %> <p class="d-inline text-danger"> 
           <p class="text-danger">Ne pas sélectionner les cases qui sont de la forme ===MAJUSCULE===. </br> Les catégories génériques à sélectionner sont écrits en abrégés et en gros. (Danse pour Danse Urbaine par exemple) </br> CHOISISSEZ LA DISCIPLINE, VOUS CHOISIREZ LA SOUS-DISCIPLINE DANS UN DEUXIEME FORMULAIRE (le premier form renvoie vers un deuxième où l on a: form do ... if @event.discipline == roller   :sous-discipline form.select (roller agressif, roller slalom ...)    elsif @ev.disci == equil ) </p>
         <div class="text-body">
-          <%= form.select :discipline , {class: "selectpicker"},
+          <%= form.select :discipline,
           [['==============', {placeholder: 'GLISSE', class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
           ['GLISSE', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
           ['- - - - - - - - - - -', {class: 'writingbigbigbig font-weight-bold bgbleupal'}],
@@ -43,7 +43,7 @@
         </div>
       </div></br>
 
-      
+     # , {class: "selectpicker"}
 
       
       <p> Entrez des mots clés pour préciser une sous-discipline. Par exemple, si vous avez choisi comme discipline :</br>
