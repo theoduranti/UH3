@@ -44,6 +44,28 @@
       </div></br>
 
 
+
+
+      <div class="field">
+        <%= form.label :discipline %> <p class="d-inline text-danger"> 
+          <p class="text-danger">Ne pas sélectionner les cases qui sont de la forme ===MAJUSCULE===. </br> Les catégories génériques à sélectionner sont écrits en abrégés et en gros. (Danse pour Danse Urbaine par exemple) </br> CHOISISSEZ LA DISCIPLINE, VOUS CHOISIREZ LA SOUS-DISCIPLINE DANS UN DEUXIEME FORMULAIRE (le premier form renvoie vers un deuxième où l on a: form do ... if @event.discipline == roller   :sous-discipline form.select (roller agressif, roller slalom ...)    elsif @ev.disci == equil ) </p>
+        <div class="text-body">
+          <%= form.select :discipline,
+          [['====GLISSE====', 'Glisse', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
+          ['- - - ROLLER - - -', 'Roller (Glisse)' {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Roller Ballade', 'Roller Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom', 'Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
+          ['- - - ROLLER - - -', 'BOARD (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Skateboard (Glisse)', {class: 'bgbleutrpal'}], ['Longboard (Glisse)', {class: 'bgbleutrpal'}], ['Trotinette Board (Glisse)', {class: 'bgbleutrpal'}], ['Board Autre (Glisse)', {class: 'text-primary bgbleutrpal'}],
+          ['- - - - - - - - - - -', {class: 'writingbigbigbig font-weight-bold bgbleupal'}],
+          ['VÉLO (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Vélo Fixi (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Vélo BMX (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Autre (Glisse)', {class: 'text-primary bgbleutrpal'}],
+          ['AUTRE Glisse (Glisse)', {class: 'text-primary bgbleutrpal'}],
+          ['==============', {class: 'writingbigbigbig font-weight-bold bgvertpal'}], ['ÉQUILIBRE AGILITÉ', {class: 'writingbigbigbig font-weight-bold bgverttrpal'}], ['Parkour (Équilibre Agilité)', {class: 'bgverttrpal'}], ['Slackline (Équilibre Agilité)', {class: 'bgverttrpal'}], ['Jonglage (Équilibre Agilité)', {class: 'bgverttrpal'}], ['Monocycle (Équilibre Agilité)', {class: 'bgverttrpal'}], ['Roue Cyr (Équilibre Agilité)', {class: 'bgverttrpal'}], ['Autre Équilibre Agilité', {class: 'text-primary bgverttrpal'}],
+          ['==============', {class: 'writingbigbigbig font-weight-bold bgvioletpal'}], ['BIEN ÊTRE', {class: 'writingbigbigbig font-weight-bold bgviolettrpal'}], ['Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running (Bien Être)', {class: 'bgviolettrpal'}], ['Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
+          ['==============', {class: 'writingbigbigbig font-weight-bold bgjaune'}], ['DANSE', {class: 'writingbigbigbig font-weight-bold bgjaunetrpal'}], ['Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['Autre Danse', {class: 'text-primary bgjaunetrpal'}],
+          ['==============', {class: 'writingbigbigbig font-weight-bold bgrougepal'}], ['TRUC URBAIN', {class: 'writingbigbigbig font-weight-bold bgrougetrpal'}],['Foot urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Golf urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Streetball (Truc Urbain)', {class: 'bgrougetrpal'}], ['Graff (Truc Urbain)', {class: 'bgrougetrpal'}], ['Autre Truc Urbain', {class: 'text-primary bgrougetrpal'}]], 
+          :disabled => ["==============", '- - - - - - - - - - -'], :include_blank => true, :class => "text-danger" %>
+        </div>
+      </div></br>
+
+
       
     # :size => "3")
      # , {class: "selectpicker"}
