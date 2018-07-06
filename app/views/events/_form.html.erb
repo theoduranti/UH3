@@ -16,7 +16,7 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :name %>
+          <%= form.label :name %>
         </div>
         <div class="text-center text-body">
           <%= form.text_field :name, placeholder: "Cours de Slackline débutant" %>
@@ -28,49 +28,49 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :discipline %>
+          <%= form.label :discipline %>
         </div>
         </br></br>
         <div class="row">
-        <div class="col-8">
-          <div class="contentsize p-4 shadow">
-          <p class="text-center font-weight-bold writingbig"> 1. Visualises la liste des catégories et sous-catégories </p>
-          </br> 
-          <p class="d-inline writingbigbig">-> DANSE :</p>
-          <p class="d-inline writingbigbig">Hip-hop, Capoeira, Danse Latine, Autre</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">-> BIEN-ÊTRE :</p>
-          <p class="d-inline writingbigbig">Workout, Pilat, Yoga, Running, Urban Fishing</p><p class="d-inline writingbigbig">, </p>  
-          </br><p class="d-inline writingbigbig">-> AGILITE :</p>
-          <p class="d-inline writingbigbig">Parkour, Slackline, Jonglage, Monocycle, Roue Cyr, Autre</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">-> GLISSE :</p>
-          <p class="d-inline writingbigbig">Roller </p><p class="d-inline">(Ballade, Slalom, Quad, Vitesse, Agressif, Autre)</p><p class="d-inline writingbigbig">,</p>
-                                                        </br><p class="d-inline writingbigbig">&emsp;&emsp;&emsp;&emsp;&emsp;Board </p><p class="d-inline">(Skateboard, Longboard, Trotinette, Autre)</p>
-                                                        </br><p class="d-inline writingbigbig">&emsp;&emsp;&emsp;&emsp;&emsp;Vélo</p> <p class="d-inline">(Fixi, Vitesse, BMX, Autre)</p> <p class="d-inline writingbigbig">, Autre Glisse</p><p class="d-inline writingbigbig">, </p> 
-          </br><p class="d-inline writingbigbig">-> TRUC-URBAIN :</p>
-          <p class="d-inline writingbigbig">Foot urbain, Golf urbain, Streetball, Graff, Autre</p>
-          </div> 
-        </div>
-          </br></br>
-        <div class="col-4">
-        <div class="contentsize p-4 shadow">
-        <div class="text-body">
-        <p class="text-center font-weight-bold writingbig"> 2. Choisis une "===CATÉGORIE===" ou une "Sous-Catégorie" <p></br>
-          <div class="selectpicker">
-          <%= form.select :discipline,
-          [['=====DANSE=====', 'DANSE', {class: 'writingbigbigbig bgjaunetrpal'}], ['Hip-Hop', 'Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira', 'Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine', 'Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['Autre Danse', 'Autre Danse', {class: 'text-primary bgjaunetrpal'}],
-          ['====BIEN ÊTRE====', 'BIEN ÊTRE', {class: 'writingbigbigbig bgviolettrpal'}], ['Workout', 'Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat', 'Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga', 'Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running', 'Running (Bien Être)', {class: 'bgviolettrpal'}], ['Urban Fishing','Urban Fishing (Truc Urbain)', {class: 'bgviolettrpal'}], ['Autre Bien Être', 'Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
-          ['====AGILITÉ====', 'AGILITÉ', {class: 'writingbigbigbig bgverttrpal'}], ['Parkour', 'Parkour (Agilité)', {class: 'bgverttrpal'}], ['Slackline', 'Slackline (Agilité)', {class: 'bgverttrpal'}], ['Jonglage', 'Jonglage (Agilité)', {class: 'bgverttrpal'}], ['Monocycle', 'Monocycle (Agilité)', {class: 'bgverttrpal'}], ['Roue Cyr', 'Roue Cyr (Agilité)', {class: 'bgverttrpal'}], ['Autre Agilité', 'Agilité', {class: 'text-primary bgverttrpal'}],
-          ['=====GLISSE=====', 'Glisse', {class: 'writingbigbigbig bgbleutrpal'}],
-          ['--- Roller ---', 'Roller (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Roller Ballade', 'Roller Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom', 'Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Autre Roller', 'Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
-          ['--- Board ---', 'BOARD (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Skateboard','Skateboard (Glisse)', {class: 'bgbleutrpal'}], ['Longboard','Longboard (Glisse)', {class: 'bgbleutrpal'}], ['Trotinette', 'Trotinette Board (Glisse)', {class: 'bgbleutrpal'}], ['Autre Board', 'Autre Board (Glisse)', {class: 'text-primary bgbleutrpal'}],
-          ['--- Vélo ---', 'VÉLO (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Vélo Fixi', 'Vélo Fixi (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Vitesse', 'Vélo Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Vélo BMX', 'Vélo BMX (Glisse)', {class: 'bgbleutrpal'}], ['Autre vélo', 'Autre vélo (Glisse)', {class: 'text-primary bgbleutrpal'}],
-          ['Autre glisse', 'Autre Glisse', {class: 'text-primary bgbleutrpal'}],
-          ['===TRUC URBAIN===', 'TRUC URBAIN', {class: 'writingbigbigbig bgrougetrpal'}],['Foot urbain', 'Foot urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Golf urbain', 'Golf urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Streetball', 'Streetball (Truc Urbain)', {class: 'bgrougetrpal'}], ['Graff', 'Graff (Truc Urbain)', {class: 'bgrougetrpal'}], ['Autre Truc Urbain', 'Autre Truc Urbain', {class: 'text-primary bgrougetrpal'}]], 
-          :disabled => ["==============", '- - - - - - - - - - -'], :include_blank => true, :class => "text-danger" %>
+          <div class="col-8">
+            <div class="contentsize p-4 shadow">
+              <p class="text-center font-weight-bold writingbig"> 1. Visualises la liste des catégories et sous-catégories </p>
+              </br> 
+              <p class="d-inline writingbigbig">-> DANSE :</p>
+              <p class="d-inline writingbigbig">Hip-hop, Capoeira, Danse Latine, Autre</p><p class="d-inline writingbigbig">, </p> 
+              </br><p class="d-inline writingbigbig">-> BIEN-ÊTRE :</p>
+              <p class="d-inline writingbigbig">Workout, Pilat, Yoga, Running, Urban Fishing</p><p class="d-inline writingbigbig">, </p>  
+              </br><p class="d-inline writingbigbig">-> AGILITE :</p>
+              <p class="d-inline writingbigbig">Parkour, Slackline, Jonglage, Monocycle, Roue Cyr, Autre</p><p class="d-inline writingbigbig">, </p> 
+              </br><p class="d-inline writingbigbig">-> GLISSE :</p>
+              <p class="d-inline writingbigbig">Roller </p><p class="d-inline">(Ballade, Slalom, Quad, Vitesse, Agressif, Autre)</p><p class="d-inline writingbigbig">,</p>
+                                                            </br><p class="d-inline writingbigbig">&emsp;&emsp;&emsp;&emsp;&emsp;Board </p><p class="d-inline">(Skateboard, Longboard, Trotinette, Autre)</p>
+                                                            </br><p class="d-inline writingbigbig">&emsp;&emsp;&emsp;&emsp;&emsp;Vélo</p> <p class="d-inline">(Fixi, Vitesse, BMX, Autre)</p> <p class="d-inline writingbigbig">, Autre Glisse</p><p class="d-inline writingbigbig">, </p> 
+              </br><p class="d-inline writingbigbig">-> TRUC-URBAIN :</p>
+              <p class="d-inline writingbigbig">Foot urbain, Golf urbain, Streetball, Graff, Autre</p>
+            </div> 
           </div>
-        </div>
-        </div>
-        </div>
+            </br></br>
+          <div class="col-4">
+            <div class="contentsize p-4 shadow">
+              <div class="text-body">
+                <p class="text-center font-weight-bold writingbig"> 2. Choisis une "===CATÉGORIE===" ou une "Sous-Catégorie" <p></br>
+                <div class="selectpicker">
+                  <%= form.select :discipline,
+                  [['=====DANSE=====', 'DANSE', {class: 'writingbigbigbig bgjaunetrpal'}], ['Hip-Hop', 'Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira', 'Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine', 'Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['Autre Danse', 'Autre Danse', {class: 'text-primary bgjaunetrpal'}],
+                  ['====BIEN ÊTRE====', 'BIEN ÊTRE', {class: 'writingbigbigbig bgviolettrpal'}], ['Workout', 'Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat', 'Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga', 'Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running', 'Running (Bien Être)', {class: 'bgviolettrpal'}], ['Urban Fishing','Urban Fishing (Truc Urbain)', {class: 'bgviolettrpal'}], ['Autre Bien Être', 'Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
+                  ['====AGILITÉ====', 'AGILITÉ', {class: 'writingbigbigbig bgverttrpal'}], ['Parkour', 'Parkour (Agilité)', {class: 'bgverttrpal'}], ['Slackline', 'Slackline (Agilité)', {class: 'bgverttrpal'}], ['Jonglage', 'Jonglage (Agilité)', {class: 'bgverttrpal'}], ['Monocycle', 'Monocycle (Agilité)', {class: 'bgverttrpal'}], ['Roue Cyr', 'Roue Cyr (Agilité)', {class: 'bgverttrpal'}], ['Autre Agilité', 'Agilité', {class: 'text-primary bgverttrpal'}],
+                  ['=====GLISSE=====', 'Glisse', {class: 'writingbigbigbig bgbleutrpal'}],
+                  ['--- Roller ---', 'Roller (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Roller Ballade', 'Roller Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom', 'Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Autre Roller', 'Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
+                  ['--- Board ---', 'BOARD (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Skateboard','Skateboard (Glisse)', {class: 'bgbleutrpal'}], ['Longboard','Longboard (Glisse)', {class: 'bgbleutrpal'}], ['Trotinette', 'Trotinette Board (Glisse)', {class: 'bgbleutrpal'}], ['Autre Board', 'Autre Board (Glisse)', {class: 'text-primary bgbleutrpal'}],
+                  ['--- Vélo ---', 'VÉLO (Glisse)', {class: 'writingbigbigbig bgbleutrpal'}], ['Vélo Fixi', 'Vélo Fixi (Glisse)', {class: 'bgbleutrpal'}], ['Vélo Vitesse', 'Vélo Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Vélo BMX', 'Vélo BMX (Glisse)', {class: 'bgbleutrpal'}], ['Autre vélo', 'Autre vélo (Glisse)', {class: 'text-primary bgbleutrpal'}],
+                  ['Autre glisse', 'Autre Glisse', {class: 'text-primary bgbleutrpal'}],
+                  ['===TRUC URBAIN===', 'TRUC URBAIN', {class: 'writingbigbigbig bgrougetrpal'}],['Foot urbain', 'Foot urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Golf urbain', 'Golf urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Streetball', 'Streetball (Truc Urbain)', {class: 'bgrougetrpal'}], ['Graff', 'Graff (Truc Urbain)', {class: 'bgrougetrpal'}], ['Autre Truc Urbain', 'Autre Truc Urbain', {class: 'text-primary bgrougetrpal'}]], 
+                  :disabled => ["==============", '- - - - - - - - - - -'], :include_blank => true, :class => "text-danger" %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div></br></br>   
 
@@ -80,7 +80,7 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :description %>
+          <%= form.label :description %>
         </div>
         <div class="text-center text-body">
           <%= form.text_field :description %>
@@ -89,7 +89,7 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :ville %>
+          <%= form.label :ville %>
         </div>
         <div class="text-center text-body">
           <%= form.text_field :ville %>
@@ -98,11 +98,11 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :price %>
+          <%= form.label :price %>
         </div>
         <div class="text-center">
-        <p> Prix min conseillé pour que levent soit attractif pour les professeurs : 3€ <p>
-        <p> Prix max conseillé pour que levent soit attractif pour les élèves : 5€ <p>
+          <p> Prix min conseillé pour que levent soit attractif pour les professeurs : 3€ <p>
+          <p> Prix max conseillé pour que levent soit attractif pour les élèves : 5€ <p>
         </div>
         <div class="text-center text-body">
           <%= form.text_field :price %><p>€</p>
@@ -111,7 +111,7 @@
 
       <div class="field">
         <div class="writingbigbigbig text-center">
-        <%= form.label :date %>
+          <%= form.label :date %>
         </div>
         <div class="text-center text-body">
           <%= form.datetime_select :date %>
@@ -123,11 +123,9 @@
 
       <div class="actions text-center text-body">
         <div class="writingbigbigbig text-center">
-        <%= form.submit %>
+          <%= form.submit %>
         </div>
       </div></br>
     <% end %>
-
-    <p class="text-center"> Manque nature_evenement et mots_clés </p>
 
   </div>
