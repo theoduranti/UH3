@@ -26,7 +26,7 @@
           <p class="text-danger">Ne pas sélectionner les cases qui sont de la forme ===MAJUSCULE===. </br> Les catégories génériques à sélectionner sont écrits en abrégés et en gros. (Danse pour Danse Urbaine par exemple) </br> CHOISISSEZ LA DISCIPLINE, VOUS CHOISIREZ LA SOUS-DISCIPLINE DANS UN DEUXIEME FORMULAIRE (le premier form renvoie vers un deuxième où l on a: form do ... if @event.discipline == roller   :sous-discipline form.select (roller agressif, roller slalom ...)    elsif @ev.disci == equil ) </p>
         <div class="text-body">
           <%= form.select :discipline,
-          [['==============', {placeholder: 'GLISSE', class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
+          ([['==============', {placeholder: 'GLISSE', class: 'writingbigbigbig font-weight-bold bgbleupal'}], 
           ['GLISSE', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}],
           ['- - - - - - - - - - -', {class: 'writingbigbigbig font-weight-bold bgbleupal'}],
           ['ROLLER (Glisse)', {class: 'writingbigbigbig font-weight-bold bgbleutrpal'}], ['Roller Ballade (Glisse)', {class: 'bgbleutrpal'}], ['Roller Slalom (Glisse)', {class: 'bgbleutrpal'}], ['Roller Quad (Glisse)', {class: 'bgbleutrpal'}], ['Roller Vitesse (Glisse)', {class: 'bgbleutrpal'}], ['Roller Agressif (Glisse)', {class: 'bgbleutrpal'}], ['Roller Autre (Glisse)', {class: 'text-primary bgbleutrpal'}], 
@@ -39,30 +39,12 @@
           ['==============', {class: 'writingbigbigbig font-weight-bold bgvioletpal'}], ['BIEN ÊTRE', {class: 'writingbigbigbig font-weight-bold bgviolettrpal'}], ['Workout (Bien Être)', {class: 'bgviolettrpal'}], ['Pilat (Bien Être)', {class: ' bgviolettrpal'}], ['Yoga (Bien Être)', {class: 'bgviolettrpal'}], ['Running (Bien Être)', {class: 'bgviolettrpal'}], ['Autre Bien Être', {class: 'text-primary bgviolettrpal'}],
           ['==============', {class: 'writingbigbigbig font-weight-bold bgjaune'}], ['DANSE', {class: 'writingbigbigbig font-weight-bold bgjaunetrpal'}], ['Hip-Hop (Danse)', {class: 'bgjaunetrpal'}], ['Capoeira (Danse)', {class: 'bgjaunetrpal'}], ['Danse Latine (Danse)', {class: 'bgjaunetrpal'}], ['Autre Danse', {class: 'text-primary bgjaunetrpal'}],
           ['==============', {class: 'writingbigbigbig font-weight-bold bgrougepal'}], ['TRUC URBAIN', {class: 'writingbigbigbig font-weight-bold bgrougetrpal'}],['Foot urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Golf urbain (Truc Urbain)', {class: 'bgrougetrpal'}], ['Streetball (Truc Urbain)', {class: 'bgrougetrpal'}], ['Graff (Truc Urbain)', {class: 'bgrougetrpal'}], ['Autre Truc Urbain', {class: 'text-primary bgrougetrpal'}]], 
-          :size => "3", :include_blank => true %>
+          :size => "3"), :include_blank => true, class: "selectpicker"%>
         </div>
       </div></br>
 
 
-      <div class="field">
-      <%= form.label :discipline %>
-      <div class="text-body">
-        <%= form.select :discipline, (
-        <% select name="discipline" %>
-        <%= optgroup label="ROLLER" %>
-          <%=option value="Roller Skatepark"%>Roller Skatepark<%/option%>
-          <%=option value="Roller Street"%>Roller Street<%/option%>
-          <%=option value="Roller Slalom"%>Roller Slalom<%/option%>
-        <% /optgroup %>
-        <optgroup label="CIRQUE">
-          <%= option value="Roue Cyr">Roue Cyr<% /option %>
-          <%= option value="Jonglage">Jonglage<% /option %>
-          <%= option value="Monocycle">Monocycle<% /option %>
-        <% /optgroup %>
-        <% /select %> ), 
-        :include_blank => true %>
-      </div>
-    </div></br>
+      
 
      # , {class: "selectpicker"}
 
