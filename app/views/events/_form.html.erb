@@ -18,7 +18,7 @@
         <div class="writingbigbigbig text-center">
         <%= form.label :name %>
         </div>
-        <div class="box-center text-body">
+        <div class="text-center text-body">
           <%= form.text_field :name, placeholder: "Cours de Slackline débutant" %>
         </div>
       </div>
@@ -96,37 +96,45 @@
         <div class="writingbigbigbig text-center">
         <%= form.label :description %>
         </div>
-        <div class="text-body">
+        <div class="text-center text-body">
           <%= form.text_field :description %>
         </div>
       </div></br>
 
       <div class="field">
+        <div class="writingbigbigbig text-center">
         <%= form.label :ville %>
-        <div class="text-body">
+        </div>
+        <div class="text-center text-body">
           <%= form.text_field :ville %>
         </div>
       </div></br>
 
       <div class="field">
+        <div class="writingbigbigbig text-center">
         <%= form.label :price %>
+        </div>
         <p> Prix min conseillé pour que levent soit attractif pour les professeurs : 3€ <p>
         <p> Prix max conseillé pour que levent soit attractif pour les élèves : 5€ <p>
-        <div class="text-body">
+        <div class="text-center text-body">
           <%= form.text_field :price %><p>€</p>
         </div>
       </div></br>
 
       <div class="field">
+        <div class="writingbigbigbig text-center">
         <%= form.label :date %>
-        <div class="text-body">
+        </div>
+        <div class="text-center text-body">
           <%= form.datetime_select :date %>
         </div>
       </div></br>
 
 
-      <div class="actions text-body">
+      <div class="actions text-center text-body">
+        <div class="writingbigbigbig text-center">
         <%= form.submit %>
+        </div>
       </div></br>
     <% end %>
 
