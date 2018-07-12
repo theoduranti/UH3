@@ -77,168 +77,7 @@ class Event < ApplicationRecord
     end
 
 
-=begin 
 
-        SELF.SEARCH5 ================ MARCHE PAS
-
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where("strftime('%A', date) = ?", "Monday"])
-        else
-            all
-        end
-    end
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(date.strftime("%A"): "Monday")
-        else
-            all
-        end
-    end
-
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["date(cast(date.strftime('A%') as text)) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["date(date.strftime('A%')) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date.strftime('A%') as text) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date(strftime('A%')) as text) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date as date.strftime('%A')) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            evs = Event.find_by_date(datetime.strftime('A%') = "Monday")
-            if evsid == nil
-                all
-            else
-                evsid = evs.id.to_s
-                where(["cast(id as text) LIKE ?", "%#{evsid}%"])
-            end
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            evs = Event.find_by_date("Monday")
-            if evs == nil
-                all
-            else
-                evsid = evs.id.to_s
-                where(["cast(id as text) LIKE ?", "%#{evsid}%"])
-            end
-        else
-            all
-        end
-    end
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            evs = Event.find_by_date(date.strftime('%A') = "Monday")
-            if evs == nil
-                all
-            else
-                evsid = evs.id.to_s
-                where(["cast(id as text) LIKE ?", "%#{evsid}%"])
-            end
-        else
-            all
-        end
-    end
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(date.strftime('%A'): 'Monday')
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date.strftime('%A') as text)": 'Monday'])
-        else
-            all
-        end
-    end
-
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date as text) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["date LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    def self.search5(search5)
-        if search5 == 'Les lundis'
-            where(["cast(date as text) LIKE ?", "Monday"])
-        else
-            all
-        end
-    end
-
-    where(["date(date.wday) = ?", "1"])
-    where(["cast(strftime('%A', date) as int) = ?", "Monday"])
-    where(["cast(date.strftime('%A', date) as int) = ?", "Monday"])
-    where(["cast(Date.strftime('%A', date) as int) = ?", "Monday"])
-    where(["cast(date.strftime('%d', date) as int) = ?", "1"])
-    where('extract(day from date) = ?', "Monday")
-    
-
-=end
 
     
     def self.search5(search5)
@@ -265,10 +104,6 @@ class Event < ApplicationRecord
 
 
 
-    
-
-
-
     def self.search6(search6)
         if search6 == nil
             all
@@ -279,15 +114,5 @@ class Event < ApplicationRecord
     end
 
 
-=begin
-    def self.search6(search6)
-        if search6 == nil
-            all
-        else 
-            where(['date_trunc("day", date)' == "%#{search6}%"])
-        end
-    end
-    
-=end
 
 end
