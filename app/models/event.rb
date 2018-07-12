@@ -242,9 +242,20 @@ class Event < ApplicationRecord
 
     
     def self.search5(search5)
-        if search5 == 'Les lundis'
-               
+        if search5 == 'Les lundis'     
             where("trim(to_char(date, 'Day')) = ? ", "Monday")    
+        elsif search5 == 'Les mardis'     
+            where("trim(to_char(date, 'Day')) = ? ", "Tuesday") 
+        elsif search5 == 'Les mercredis'     
+            where("trim(to_char(date, 'Day')) = ? ", "Wednesday") 
+        elsif search5 == 'Les jeudis'     
+            where("trim(to_char(date, 'Day')) = ? ", "Thursday") 
+        elsif search5 == 'Les vendredis'     
+            where("trim(to_char(date, 'Day')) = ? ", "Friday") 
+        elsif search5 == 'Les samedis'     
+            where("trim(to_char(date, 'Day')) = ? ", "Saturday")
+        elsif search5 == 'Les dimanches'     
+            where("trim(to_char(date, 'Day')) = ? ", "Sunday") 
         else
             all
         end
