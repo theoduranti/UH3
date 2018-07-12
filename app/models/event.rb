@@ -230,12 +230,15 @@ class Event < ApplicationRecord
         end
     end
 
+    where(["date(date.wday) = ?", "1"])
+
 =end
 
     
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where(["date(date.wday) = ?", "1"])
+            where("cast(strftime('%d', date_column) as int) = ?", "1")
+            
         else
             all
         end
