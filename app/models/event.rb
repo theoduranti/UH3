@@ -242,7 +242,8 @@ class Event < ApplicationRecord
     
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where('extract(day from date) = ?', "Monday")            
+            where('extract(day from date) = ?', Monday)   
+     
         else
             all
         end
