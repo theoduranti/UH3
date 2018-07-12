@@ -237,7 +237,7 @@ class Event < ApplicationRecord
     
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where(["cast(strftime('%d', datetime) as int) = ?", "1"])
+            where(["cast(strftime('%A', date) as int) = ?", "Monday"])
             
         else
             all
