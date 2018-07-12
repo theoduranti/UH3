@@ -231,13 +231,17 @@ class Event < ApplicationRecord
     end
 
     where(["date(date.wday) = ?", "1"])
+    where(["cast(strftime('%A', date) as int) = ?", "Monday"])
+    where(["cast(date.strftime('%A', date) as int) = ?", "Monday"])
+    where(["cast(date.strftime('%d', date) as int) = ?", "1"])
+    
 
 =end
 
     
     def self.search5(search5)
         if search5 == 'Les lundis'
-            where(["cast(date.strftime('%A', date) as int) = ?", "Monday"])
+            where(["cast(Date.strftime('%A', date) as int) = ?", "Monday"])
             
         else
             all
