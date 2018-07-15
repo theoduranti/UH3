@@ -20,8 +20,8 @@
 
 
  @media (max-width: 576px) { 
-    .container {margin-right: 3px; margin-left: 3px;}
+    .container {max-width: 570px;}
   }
   @media (max-width: 768px) { 
-    .container {margin-right: 5px; margin-left: 5px;}
+    .container {max-width: 760px;}
   }
