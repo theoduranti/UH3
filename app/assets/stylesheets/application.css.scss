@@ -19,9 +19,38 @@
  @import 'bootstrap';
 
 
- @media (max-width: 576px) { 
-    .container {max-width: 570px;}
+ .mycontainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
-  @media (max-width: 768px) { 
-    .container {max-width: 760px;}
+  
+  @media (min-width: 576px) {
+    .mycontainer {
+        padding-right: 7px;
+        padding-left: 7px;
+        max-width: 570px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mycontainer {
+        padding-right: 9px;
+        padding-left: 9px;
+        max-width: 759px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mycontainer {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .mycontainer {
+      max-width: 1140px;
+    }
   }
