@@ -27,25 +27,7 @@
     margin-left: auto;
   }
   
-  @media (min-width: 576px) {
-    .mycontainer {
-        padding-right: 2px;
-        padding-left: 2px;
-        max-width: 576px;
-        margin-right: none;
-        margin-left: none;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .mycontainer {
-        padding-right: 2px;
-        padding-left: 2px;
-        max-width: 768px;
-        margin-right: none;
-        margin-left: none;
-    }
-  }
+
   
   @media (min-width: 992px) {
     .mycontainer {
