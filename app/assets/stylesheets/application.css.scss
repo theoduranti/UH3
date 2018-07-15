@@ -62,9 +62,7 @@ form {
 }
 
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: content-box; 
 }
 
