@@ -31,26 +31,26 @@
 
 
   @media (min-width: 576px) {
-    .container {
-      max-width: 95%;
+    .mycontainer {
+      width: 95%;
     }
   }
   
   @media (min-width: 768px) {
-    .container {
-      max-width: 93%;
+    .mycontainer {
+      width: 93%;
     }
   }
   
   @media (min-width: 992px) {
-    .container {
-      max-width: 90%;
+    .mycontainer {
+      width: 90%;
     }
   }
   
   @media (min-width: 1200px) {
-    .container {
-      max-width: 87%;
+    .mycontainer {
+      width: 87%;
     }
   }
 
