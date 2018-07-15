@@ -5,7 +5,7 @@
               <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.firstname %>, vous êtes connecté en élève</p>
               <p class="active writingbigbigbig"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
             <% elsif pro_signed_in? %>
-              <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.email %>, vous êtes connecté en tant que professeur</p>
+              <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.firstname %>, vous êtes connecté en tant que professeur</p>
 
               <button type="button" class="btn bg-transparent text-body writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
             <% else %>
