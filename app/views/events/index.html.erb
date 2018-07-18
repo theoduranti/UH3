@@ -10,7 +10,7 @@
     <div class="mycontainer bgwrist4 shadow p-2">
         <div class="contenair-fluid">
             <div class="mx-auto text-center">
-            <button class="btn bg-transparent btn-lg text-body writingbigbig" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn bg-transparent btn-lg text-body writingbigbigbig" style="width: 200px;" type="button" data-toggle="collapse" data-target="#collapseRecherche" aria-expanded="false" aria-controls="collapseExample">
                 <span class="glyphicon glyphicon-menu-down"></span> BARRE DE RECHERCHE <span class="glyphicon glyphicon-menu-up"></span>
             </button> 
             </div>
@@ -19,12 +19,12 @@
         <div class="contenair-fluid">
         <div class="collapse container-fluid" id="collapseRecherche">
             <%= form_tag root_path, :method => 'get', :class=>"contenair-fluid"  do %>
-                <div class="row p-2 writingbigbig">
+                <div class="row p-2 writingbigbigbig">
                 <div class="col-4">
-                    <p  class="writingbigbig d-inline"><%= label_tag("Choisir une discipline") %></p>
+                    <p  class="d-inline"><%= label_tag("Choisir une discipline") %></p>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
                     </br>
-                    <p  class="writingbigbig d-inline"><%= label_tag("Choisir la nature de l'évènement") %> </p></br>
+                    <p  class="d-inline"><%= label_tag("Choisir la nature de l'évènement") %> </p></br>
                 </div>
                 <div class="col-4">
                     <%= label_tag("Sélectionner une période") %> 
