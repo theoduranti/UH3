@@ -30,7 +30,7 @@
                     <%= label_tag("Sélectionner une période") %> 
                     <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :prompt => params[:search4], :include_blank => true %> </br>
                     </br>
-                    <%= label_tag("Sélectionner un jour") %> <p class="d-inline"></p>
+                    <%= label_tag("Un jour") %> <p class="d-inline"></p>
                     <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :prompt => params[:search5], :include_blank => true %> </br>
                     </br>
                     <%= label_tag("Ou une date") %> 
@@ -39,9 +39,9 @@
                 </div>
                 <div class="col-4">
                     <%= label_tag("Ajouter des mots clés") %>
-                    <%= text_field_tag :search, params[:search] %> </br>
+                    <%= text_field_tag :search, params[:search] %> </br></br>
                     <%= label_tag("Par membres inscrits") %>
-                    <%= text_field_tag :search3, params[:search3] %> </br>
+                    <%= text_field_tag :search3, params[:search3] %> </br></br>
                     <%= submit_tag "RECHERCHER", class: "btn btn-primary btn-block text-white writingbigbig" %>
                 </div>
                 </div>
