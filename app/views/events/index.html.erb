@@ -28,8 +28,10 @@
                 <div class="col-4">
                     <%= label_tag("Sélectionner une période") %> 
                     <%= select_tag "search4", options_for_select(['Les 7 prochains jours', 'Les 30 prochains jours', 'Tous les événements futurs', 'Tous les événements passés']), :prompt => params[:search4], :include_blank => true %> </br>
+                    </br>
                     <%= label_tag("Sélectionner un jour") %> <p class="d-inline"></p>
                     <%= select_tag "search5", options_for_select(['Les lundis', 'Les mardis', 'Les mercredis', 'Les jeudis', 'Les vendredis', 'Les samedis', 'Les dimanches']), :prompt => params[:search5], :include_blank => true %> </br>
+                    </br>
                     <%= label_tag("Ou une date") %> 
                     <%= date_field_tag :search6, :include_blank => true, :prompt => params[:search6] %> </br>
         
