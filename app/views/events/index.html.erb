@@ -21,10 +21,10 @@
             <%= form_tag root_path, :method => 'get', :class=>"contenair-fluid"  do %>
                 <div class="row p-2 writingbigbigbig">
                 <div class="col-4">
-                    <p  class="d-inline"><%= label_tag("Choisir une discipline") %></p>
+                    <%= label_tag("Choisir une discipline") %>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
                     </br>
-                    <p  class="d-inline"><%= label_tag("Choisir la nature de l'évènement") %> </p></br>
+                    <%= label_tag("Choisir la nature de l'évènement") %> </br>
                 </div>
                 <div class="col-4">
                     <%= label_tag("Sélectionner une période") %> 
