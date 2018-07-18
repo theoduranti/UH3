@@ -109,6 +109,11 @@ form {
 }
 
 
+form{box-sizing:content-box;display:block;margin-top:0em}
+*,*::before,*::after{box-sizing:content-box}
+
+
+
 
 // For each breakpoint, define the maximum width of the container in a media query
 @mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
