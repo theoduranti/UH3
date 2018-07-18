@@ -55,6 +55,48 @@
   }
 
 
+  /* 
+  on le refait pour .contenair (juste pour que le form ait les memes propriétés):
+  */
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  @media (min-width: 576px) {
+    .container {
+      width: 95%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      width: 93%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 87%;
+    }
+  }
+
+
+
+
+
+
+
 form {
     box-sizing: content-box;
     display: block;
