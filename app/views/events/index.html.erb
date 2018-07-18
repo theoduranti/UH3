@@ -19,10 +19,11 @@
         <div class="contenair-fluid">
         <div class="collapse container-fluid" id="collapseRecherche">
             <%= form_tag root_path, :method => 'get', :class=>"contenair-fluid"  do %>
-                <div class="row p-2">
+                <div class="row p-2 writingbigbig">
                 <div class="col-4">
                     <p  class="writingbigbig d-inline"><%= label_tag("Choisir une discipline") %></p>
                     <%= select_tag "search2", options_for_select(['Roller', 'BMX', 'Skate', 'Trotinette', 'Parkour', 'Slackline', 'Cirque', 'Monocycle', 'Roue Cyr', 'Workout', 'Pilat', 'Yoga', 'Hip-Hop', 'Capoeira', 'Danse Latine', 'Foot urbain', 'Golf urbain', 'Streetball', 'Graff']), :prompt => params[:search2], :include_blank => true %> </br>
+                    </br>
                     <p  class="writingbigbig d-inline"><%= label_tag("Choisir la nature de l'évènement") %> </p></br>
                 </div>
                 <div class="col-4">
