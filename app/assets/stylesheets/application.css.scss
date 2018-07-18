@@ -93,6 +93,18 @@
 
 
 
+  $grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 456px,
+  md: 720px,
+  lg: 960px
+);
 
 
 
