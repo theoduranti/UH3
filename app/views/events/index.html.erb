@@ -4,7 +4,7 @@
 
 
 
-<div class="writingbig">
+<div class="writingbig d-sm-none">
 
     <nav class="navbar navbar-default bg-transparent fixe71">
     <div class="mycontainer bgwrist4 shadow p-2">
@@ -63,12 +63,11 @@
 
     <div class="mycontainer">
         <div class="row">
-
-        <div class="card-columns">
+        
         <% @events.each do |event|%>
         
 
-                
+                <div class="col-lg-4 mb-4 p-4">
                     <div class="card h-100 bgwrist3 shadow p-2">
                         <div class="card-header">
                             <h3 class="writingbigbigbigbig"><%= event.name %></h3>
@@ -129,11 +128,10 @@
                                 
                             </div>
                     </div>
-                
+                </div>
             
             
         <% end %>
-        </div>
         </div>
      
     </div>
