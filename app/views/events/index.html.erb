@@ -63,11 +63,12 @@
 
     <div class="mycontainer">
         <div class="row">
-        
+
+        <div class="card-columns">
         <% @events.each do |event|%>
         
 
-                <div class="card-columns">
+                
                     <div class="card h-100 bgwrist3 shadow p-2">
                         <div class="card-header">
                             <h3 class="writingbigbigbigbig"><%= event.name %></h3>
@@ -128,10 +129,11 @@
                                 
                             </div>
                     </div>
-                </div>
+                
             
             
         <% end %>
+        </div>
         </div>
      
     </div>
