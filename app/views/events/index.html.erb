@@ -122,7 +122,7 @@
                                 <strong>Personnes intéressées:</strong> </br> <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
                             </div>
                             <div class="card-footer">
-                                <%= link_to 'VOIR L EVENEMENT', event_path(event), class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
+                                <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
                                 <div class="mx-auto text-center">
                                     <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
                                 </div>
