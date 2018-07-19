@@ -49,24 +49,26 @@
             <% end %>
         </div>
         </div>
+        
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <style>
+                .caret.caret-up {
+                    border-top-width: 0;
+                    border-bottom: 4px solid #fff;
+                }
+                </style>
 
-        <style>
-        .caret.caret-up {
-            border-top-width: 0;
-            border-bottom: 4px solid #fff;
-        }
-        </style>
-
-        <script>
-            $(document).ready(function(){
-            $("#collapseRecherche").on("hide.bs.collapseRecherche", function(){
-                $(".btn").html('BARRE DE RECHERCHE <span class="caret"></span>');
-                });
-            $("#collapseRecherche").on("show.bs.collapseRecherche", function(){
-                $(".btn").html('Collapse <span class="caret caret-up"></span>');
-                });
-            });
-        </script>
+                <script>
+                    $(document).ready(function(){
+                    $("#collapseRecherche").on("hide.bs.collapseRecherche", function(){
+                        $(".btn").html('BARRE DE RECHERCHE <span class="caret"></span>');
+                        });
+                    $("#collapseRecherche").on("show.bs.collapseRecherche", function(){
+                        $(".btn").html('Collapse <span class="caret caret-up"></span>');
+                        });
+                    });
+                </script>
 
     </div>
     </nav>
