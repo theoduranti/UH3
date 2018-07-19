@@ -3,11 +3,10 @@
         <ul class="nav navbar-nav navbar-left">
             <% if ele_signed_in? %>
               <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_ele.firstname %>, vous êtes connecté en élève</p>
-              <p class="active writingbigbigbig bg-transparent"><%= link_to destroy_ele_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></p>
+              <button type="button" class="btn bg-transparent text-body writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete, :class=>"text-body" do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
             <% elsif pro_signed_in? %>
               <p class="d-inline text-body writingbigbigbig"><span class="glyphicon glyphicon-check"></span> <%= current_pro.firstname %>, vous êtes connecté en tant que professeur</p>
-
-              <button type="button" class="btn bg-transparent text-body writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
+              <button type="button" class="btn bg-transparent text-body writingbigbigbig"><%= link_to destroy_pro_session_path, method: :delete, :class=>"text-body" do %><span class="glyphicon glyphicon-log-out"></span> Logout<%end%></button>
             <% else %>
               <p class="d-inline"><a href="/eles/sign_up" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte élève</a></p>
               <p class="d-inline"><a href="/pros/sign_up" class="text-body writingbigbigbig"><span class="glyphicon glyphicon-user"></span> Créer compte professeur</a></p>
