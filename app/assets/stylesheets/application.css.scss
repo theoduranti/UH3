@@ -20,7 +20,8 @@
 
 
 
-  
+
+// ======================================mycontainer
  .mycontainer {
     width: 100%;
     padding-right: 15px;
@@ -54,7 +55,42 @@
     }
   }
 
-  // =============================================
+
+  // ========================================mybigcontainer
+  .mybigcontainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  @media (min-width: 576px) {
+    .mybigcontainer {
+      width: 95%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mybigcontainer {
+      width: 93%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mybigcontainer {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .mybigcontainer {
+      width: 87%;
+    }
+  }
+
+  // =============================================mylittlecontainer
 
 
   .mylittlecontainer {
@@ -92,10 +128,10 @@
 
 
 
-
+//=================================big et little contenair display
 
 @media (min-width: 992px) {
-  .mycontainer {
+  .mybigcontainer {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -109,7 +145,7 @@
 
 
 @media (max-width: 992px) {
-  .mycontainer {
+  .mybigcontainer {
     display: none;
   }
   
@@ -119,7 +155,7 @@
 
 
   /* 
-  on le refait pour .contenair (juste pour que le form ait les memes propriétés):
+  ============================================container
   */
   .container {
     width: 100%;
