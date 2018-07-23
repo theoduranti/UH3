@@ -142,9 +142,13 @@
   .mylittlecontenair {
     display: none;
   }
+  .row {
+    display: none;
+  }
+  .col {
+    display: none;
+  }
 }
-
-
 
 @media (max-width: 992px) {
   .mybigcontainer {
