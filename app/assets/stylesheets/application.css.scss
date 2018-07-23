@@ -163,13 +163,13 @@
 }
 
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .dontdisplayifmediaunder1200 {
     display: none;
   }
 }
 
-@media (min-width: 1600px) {
+@media (max-width: 1600px) {
   .dontdisplayifmediaunder1600 {
     display: none;
   }
