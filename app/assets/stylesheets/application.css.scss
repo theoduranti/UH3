@@ -130,9 +130,7 @@
 
 //=================================big et little contenair display
 
-.dontdisplayifmediasup992 {
-  display: inherit;
-}
+
 
 @media (min-width: 992px) {
   .mybigcontainer {
