@@ -108,10 +108,14 @@
 
 
 
+@media (max-width: 992px) {
   .mycontainer {
     display: none;
   }
-
+  .mylittlecontenair {
+    display: block;
+  }
+}
 
 
 
