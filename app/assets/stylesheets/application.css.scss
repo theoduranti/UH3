@@ -109,8 +109,25 @@ $container-max-widths: (
 );
 
 
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+}
 
 
+/*
+.mygrid{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+}
+*/
+
+
+/*
 @media (min-width: 34em) {
   .card-columns {
       -webkit-column-count: 3;
@@ -143,7 +160,7 @@ $container-max-widths: (
   }
 }
 
-
+*/
 
 form {
     box-sizing: content-box;
