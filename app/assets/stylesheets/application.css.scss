@@ -54,6 +54,68 @@
     }
   }
 
+  // =============================================
+
+
+  .mylittlecontainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  @media (min-width: 576px) {
+    .mylittlecontainer {
+      width: 95%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mylittlecontainer {
+      width: 93%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mylittlecontainer {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .mylittlecontainer {
+      width: 87%;
+    }
+  }
+
+
+
+
+
+@media (min-width: 992px) {
+  .mycontainer {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+  }
+  .mylittlecontenair {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .mycontainer {
+    display: none;
+  }
+}
+
+
+
 
   /* 
   on le refait pour .contenair (juste pour que le form ait les memes propriétés):
@@ -93,6 +155,11 @@
 
 
 
+
+
+
+
+
   $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -107,15 +174,6 @@ $container-max-widths: (
   lg: 1024px,
   xl: 1200px,
 );
-
-
-.mycontainer {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: auto;
-}
-
 
 /*
 .mygrid{
