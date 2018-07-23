@@ -229,7 +229,25 @@
 
 
 
+//============ backim
 
+.backim {
+  background-image: url(https://zupimages.net/up/18/30/nw6i.png);
+  background-repeat-x: no-repeat;
+  background-size: 100% ;
+  background-position: fixed-top ;
+}
+
+
+@media (min-width: 992px) {
+  .backim {
+    background-size: auto, 100% ;
+
+  }
+}
+
+
+//====================test grid
 
 
 
