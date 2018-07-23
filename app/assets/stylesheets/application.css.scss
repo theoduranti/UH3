@@ -177,12 +177,18 @@
   }
 }
 
+
 @media (max-width: 1600px) {
   .dontdisplayifmediaunder1600 {
     display: none;
   }
 }
 
+@media (max-width: 1800px) {
+  .dontdisplayifmediaunder1800 {
+    display: none;
+  }
+}
 
 
   /* 
