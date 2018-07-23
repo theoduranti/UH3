@@ -135,7 +135,7 @@
 @media (min-width: 992px) {
   .mybigcontainer {
     display: grid;
-    grid-gap: 18px;
+    grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
     grid-template-rows: auto;
   }
