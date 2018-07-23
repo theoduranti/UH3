@@ -130,6 +130,10 @@
 
 //=================================big et little contenair display
 
+.dontdisplayifmediasup992 {
+  display: inherit;
+}
+
 @media (min-width: 992px) {
   .mybigcontainer {
     display: grid;
@@ -142,10 +146,7 @@
   .mylittlecontenair {
     display: none;
   }
-  .row {
-    display: none;
-  }
-  .col {
+  .dontdisplayifmediasup992 {
     display: none;
   }
 }
