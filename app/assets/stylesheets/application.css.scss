@@ -137,6 +137,8 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: auto;
   }
+}
+@media (min-width: 992px) {
   .mylittlecontenair {
     display: none;
   }
@@ -148,7 +150,6 @@
   .mybigcontainer {
     display: none;
   }
-  
 }
 
 
