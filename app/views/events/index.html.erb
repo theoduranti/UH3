@@ -58,9 +58,17 @@
     </br></br></br>
     <%-#   ====================================== br si background image   ===================================    -%>
     
+   
+        <header class="dontdisplayifmediasup992">
+            <img class="dontdisplayifmediasup992"> <%= image_tag("ville-port.jpg") %> 
+        </header>
+   
 
-        <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+
+        <header class="dontdisplayifmediaunder992">
+        <div id="carouselExampleIndicators" class="carousel slide dontdisplayifmediaunder992" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
@@ -99,7 +107,6 @@
           </a>
         </div>
       </header>
-
 
 
 
