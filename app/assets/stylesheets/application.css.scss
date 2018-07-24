@@ -342,8 +342,12 @@ form{box-sizing:content-box;display:block;margin-top:0em}
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
+.rotating{
+  transform: rotate(5deg);
+}
+
 
 .rotatingrandom {
-  transform: rotate( random(-2..2)deg)
+  transform: rotate( random(-2, 2)deg);
 }
 
