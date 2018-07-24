@@ -165,7 +165,9 @@
 
 <% @events.each do |event|%>
 
-            <div class="card h-100 bgwrist1 shadow p-2 polaroids">
+    <ul class="polaroids">
+        <li>
+            <div class="card h-100 bgwrist1 shadow p-2">
                 <div class="card-header">
                     <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                 </div>
@@ -225,7 +227,8 @@
                         
                     </div>
             </div>
-
+        </li>
+    </ul>
 
         <script>
             $('.card').hover(function() {
