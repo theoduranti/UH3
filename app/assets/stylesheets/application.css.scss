@@ -344,6 +344,6 @@ form{box-sizing:content-box;display:block;margin-top:0em}
 
 
 .rotatingrandom {
-  transform: rotate( random(-2, 2)deg)
+  transform: rotate( random(-2..2)deg)
 }
 
