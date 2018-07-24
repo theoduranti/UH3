@@ -443,3 +443,19 @@ ul.polaroids {
 // ========================================== try polaroid avec number .... =======================================
 
 
+.card:hover {
+  
+  transform: rotate(-3deg);
+  
+  }
+
+.card:nth-of-type(n+1):hover {
+
+  transform: rotate(5deg);
+  
+  }
+.card:nth-of-type(n+2):hover {
+
+    transform: rotate(-2deg);
+    
+    }
