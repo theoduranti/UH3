@@ -365,3 +365,10 @@ ul.polaroids a {
   -webkit-transform: rotate(-2deg);
   -moz-transform: rotate(-2deg);
 }
+
+ul.polaroids li:nth-child(3n) a {
+  -webkit-transform: none;
+  -moz-transform: none;
+  position: relative;
+  top: -5px;
+}
