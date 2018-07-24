@@ -440,10 +440,10 @@ ul.polaroids {
 }
 
 
-// ========================================== try polaroid avec number .... =======================================
+// ========================================== Orientation différentes des cartes selon leur ordre .... =======================================
 
 
-.card:hover {
+.card {
   
   transform: rotate(-3deg);
   
