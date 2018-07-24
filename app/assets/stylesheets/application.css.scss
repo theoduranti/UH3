@@ -410,7 +410,7 @@ ul.polaroids li:nth-child(11n) {
   left: -5px;
 }
 
-ul.polaroids a:hover {
+ul.polaroids :hover {
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   position: relative;
