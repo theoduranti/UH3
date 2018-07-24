@@ -155,11 +155,16 @@
   }
 }
 
-//=================================================
+//================================================= DONT DISPLAY ===
 
 
 @media (max-width: 768px) {
   .dontdisplayifmediaunder768 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .dontdisplayifmediasup768 {
     display: none;
   }
 }
