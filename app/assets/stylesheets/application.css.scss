@@ -17,7 +17,6 @@
 
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
- @import 'application.js';
 
 
 
@@ -352,6 +351,8 @@ form{box-sizing:content-box;display:block;margin-top:0em}
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
+
+.polaroid {}
 
 
 
