@@ -25,5 +25,6 @@ $('.card').hover(function() {
 
 
   var number = Math.floor((Math.random() * 5) + 0);
-
-  $(".polaroid").css("transform", "rotate(" + number + "deg)");
+  var number2 = Math.floor((Math.random() * 0) + -5);
+  $(".polaroid:nth-of-type(n+1)").css("transform", "rotate(" + number + "deg)");
+  $(".polaroid:nth-of-type(n+2)").css("transform", "rotate(" + number2 + "deg)");
