@@ -456,12 +456,12 @@ ul.polaroids {
     }
 
 
-.card:nth-of-type(n+1):hover {
+.card:nth-of-type(n+1) {
 
   transform: rotate(5deg);
   
   }
-.card:nth-of-type(n+1)hover {
+.card:nth-of-type(n+1):hover {
 
   transform: rotate(0deg);
   z-index: 1.2;
@@ -469,31 +469,31 @@ ul.polaroids {
   }
 
 
-.card:nth-of-type(n+2):hover {
+.card:nth-of-type(n+2) {
     transform: rotate(-1deg);
     }
 
-.card:nth-of-type(n+2)hover {
+.card:nth-of-type(n+2):hover {
     transform: rotate(0deg);
     z-index: 1.2;        
     }
 
 
-.card:nth-of-type(n+3):hover {
+.card:nth-of-type(n+3) {
       transform: rotate(-2deg);
       }
       
-.card:nth-of-type(n+3)hover {
+.card:nth-of-type(n+3):hover {
       transform: rotate(0deg);
       z-index: 1.2;        
       }
 
 
-.card:nth-of-type(n+4):hover {
+.card:nth-of-type(n+4) {
         transform: rotate(3deg);
         }
         
-.card:nth-of-type(n+4)hover {
+.card:nth-of-type(n+4):hover {
         transform: rotate(0deg);
         z-index: 1.2;        
         }
