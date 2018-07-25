@@ -402,6 +402,12 @@
   width: 160% ;
 }
 
+@media (max-width: 992px) {
+  .card:active  {
+    font-size: 160% ;
+  }
+}
+
 
 // ============================ display ou non si hover ou non =============================
 
