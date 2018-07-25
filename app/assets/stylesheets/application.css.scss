@@ -265,7 +265,7 @@
   
   transform: rotate(0deg);
   height: 110%; 
-  width: 120%;
+  width: 127%;
   z-index: 15;
   }
 
@@ -349,14 +349,14 @@
 
 // ===================================================      BOX RECHERCHE        ====================================================
 
-.boxrecherche {
+.boxfriendsnews {
   width: 100% ;
   height: 800px ;
   margin: auto ; 
   -webkit-transition: width 2s, transform .2s;
   transition: width 2s, transform .2s;
   }
-.boxrecherche:hover {
+.boxfriendsnews:hover {
   width: 350%;
   z-index: 15 ;
 }
@@ -368,7 +368,20 @@
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
+// ============================ display ou non si hover ou non =============================
 
+.displayifnothover {
+}
+.displayifnothover:hover {
+  display: none ;
+}
+
+.displaywhenhover {
+  display: none ;
+}
+.displaywhenhover:hover {
+  display: block ;
+}
 
 //====================test grid
 
