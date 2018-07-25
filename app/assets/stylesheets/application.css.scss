@@ -253,6 +253,7 @@
 
 // c'était -2deg
 .card:nth-of-type(n+1) {
+  border: 4px;
   transform: rotate3d(1, 1, 1, -10deg);
   }
 // pour que ce ne soit pas de travers sur le portable.
