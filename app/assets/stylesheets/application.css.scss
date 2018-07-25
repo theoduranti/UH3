@@ -355,10 +355,13 @@
   margin: auto ; 
   -webkit-transition: width 2s, transform .2s;
   transition: width 2s, transform .2s;
+  p { display: none; }
   }
 .boxfriendsnews:hover {
   width: 350%;
   z-index: 15 ;
+  h3 { display: none; }
+  p { display: block; }
 }
 
 // ============================== rotating3d ==================================
