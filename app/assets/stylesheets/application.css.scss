@@ -19,6 +19,30 @@
  @import 'bootstrap';
 
 
+
+
+ // ======================================== FONT SIZE ============================================
+
+ 
+    .writingsmall {font-size: 0.95rem;}
+    .writingbig {font-size: 1.2rem;}
+    @media (max-width: 992px) {
+      .writingbig {font-size: 1.5rem;}
+      }
+    .writingbigbig {font-size: 1.5rem;}
+    @media (max-width: 992px) {
+      .writingbigbig {font-size: 1.8rem;}
+      }
+    .writingbigbigbig {font-size: 1.8rem;}
+    @media (max-width: 992px) {
+      .writingbigbigbig {font-size: 2.4rem;}
+      }
+    .writingbigbigbigbig {font-size: 2.4rem;}
+    @media (max-width: 992px) {
+      .writingbigbigbigbig {font-size: 3rem;}
+      }
+
+
   /* 
   ============================================container
   */
@@ -412,12 +436,14 @@
 .card:active {
   width: 160% ;
 }
+/*
 @media (max-width: 992px) {
   .card:active  {
     font-size: 4rem ;
     height: 160% ;
   }
 }
+*/
 
 
 
