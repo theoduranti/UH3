@@ -440,12 +440,9 @@ ul.polaroids {
 
 .card {
   transform: rotate(-3deg);
-  .dontdisplayifmediaunder992 { transform: rotate(0deg);}
+  .dontdisplayifmediasup992 { transform: rotate(0deg);}
   }
 
-.card {
-    transform: rotate(-3deg);
-    }
 
 .card:hover {
 
