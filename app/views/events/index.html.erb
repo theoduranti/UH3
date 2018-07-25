@@ -174,7 +174,8 @@
     <div class="writingbigbig">
         <div class="mybigcontainer avecperspective">
             <% @events.each do |event|%>
-                <div class="card h-100 bgwrist1 shadow-lg p-2" id="agrossir" onclick="fonctiongrossimoica()">
+                <div id="agrossir" onclick="fonctiongrossimoica()">
+                <div class="card h-100 bgwrist1 shadow-lg p-2">
                     <div class="card-header">
                         <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
@@ -231,6 +232,7 @@
                             <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
                         </div>                    
                     </div>
+                </div>
                 </div>
             <% end %>
         </div>
