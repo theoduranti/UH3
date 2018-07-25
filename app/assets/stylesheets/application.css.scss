@@ -371,6 +371,7 @@
 // ============================ display ou non si hover ou non =============================
 
 .displayifnothover {
+  display: block ;
 }
 .displayifnothover:hover {
   display: none ;
