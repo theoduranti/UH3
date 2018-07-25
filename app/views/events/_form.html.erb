@@ -1,7 +1,8 @@
 
 <div class="backim">
 </br></br></br>
-  <div class="container gauche text-body writingbigbig bg-transparent">
+<%-#                                    pourrait rajouter gauche apres container dans prochaine class                          -%>
+  <div class="container text-body writingbigbig">
     <h1 class="text-center"> Créer un événement </h1> </br></br>
     <%= form_with(model: event, local: true) do |form| %>
       <% if event.errors.any? %>
