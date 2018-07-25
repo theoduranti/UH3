@@ -267,7 +267,7 @@
 
 
 .card:nth-of-type(n+2) {
-    transform: rotate3d(0, 1, 1, 4deg);
+    transform: rotate3d(1, 0, 4, 4deg);
     }
 
 .card:nth-of-type(n+2):hover {
