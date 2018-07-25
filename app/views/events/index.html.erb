@@ -158,12 +158,10 @@
     
 
 <%-#   ====================================== Version PC   ===================================    -%>
+<div class="row1sur3 bgwrist3 stickied"></div>
 <div class="writingbigbig">
-
-<div class="mybigcontainer avecperspective">
-
-<% @events.each do |event|%>
-
+    <div class="mybigcontainer avecperspective">
+        <% @events.each do |event|%>
             <div class="card h-100 bgwrist1 shadow-lg p-2">
                 <div class="card-header">
                     <h3 class="writingbigbigbigbig"><%= event.name %></h3>
@@ -208,27 +206,22 @@
                     <img class="card-img-top p-1" src="https://zupimages.net/up/18/26/jb1c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
                 <% else %>
                 <% end %>
-
-                    <div class="card-body">
-                        <p class="card-text writingbigbigbig"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
-                        <strong>Description :</strong> </br> <%= event.description %></br></br>  
-                        <strong>Date:</strong> </br> <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br></br>  
-                        <strong>Personnes inscrites :</strong> </br> <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br></br> 
-                        <strong>Personnes intéressées:</strong> </br> <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
-                    </div>
-                    <div class="card-footer">
-                        <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
-                        <div class="mx-auto text-center">
-                            <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
-                        </div>
-                        
-                    </div>
+                <div class="card-body">
+                    <p class="card-text writingbigbigbig"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
+                    <strong>Description :</strong> </br> <%= event.description %></br></br>  
+                    <strong>Date:</strong> </br> <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br></br>  
+                    <strong>Personnes inscrites :</strong> </br> <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br></br> 
+                    <strong>Personnes intéressées:</strong> </br> <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
+                </div>
+                <div class="card-footer">
+                    <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
+                    <div class="mx-auto text-center">
+                        <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
+                    </div>                    
+                </div>
             </div>
-
-<% end %>
-
-
-</div>
+        <% end %>
+    </div>
 </div>
 
 
@@ -236,10 +229,7 @@
 <div class="writingbigbig">
 <div class="mylittlecontainer">
     <div class="row dontdisplayifmediasup992">
-
-    <% @events.each do |event|%>
-
-
+        <% @events.each do |event|%>
             <div class="col-lg-4 mb-4 p-4 dontdisplayifmediasup992">
                 <div class="card dontdisplayifmediasup992 h-100 bgwrist3 shadow p-2">
                     <div class="card-header">
@@ -286,27 +276,23 @@
                     <% else %>
                     <% end %>
 
-                        <div class="card-body">
-                            <p class="card-text writingbigbigbig"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
-                            <strong>Description :</strong> </br> <%= event.description %></br></br>  
-                            <strong>Date:</strong> </br> <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br></br>  
-                            <strong>Personnes inscrites :</strong> </br> <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br></br> 
-                            <strong>Personnes intéressées:</strong> </br> <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
-                        </div>
-                        <div class="card-footer">
-                            <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
-                            <div class="mx-auto text-center">
-                                <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
-                            </div>
-                            
-                        </div>
+                    <div class="card-body">
+                        <p class="card-text writingbigbigbig"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
+                        <strong>Description :</strong> </br> <%= event.description %></br></br>  
+                        <strong>Date:</strong> </br> <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br></br>  
+                        <strong>Personnes inscrites :</strong> </br> <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br></br> 
+                        <strong>Personnes intéressées:</strong> </br> <%= event.eleattendees.count %> élève(s) <%= event.proinvitatees.count %> prof(s)  </p>
+                    </div>
+                    <div class="card-footer">
+                        <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
+                        <div class="mx-auto text-center">
+                            <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
+                        </div>                            
+                    </div>
                 </div>
-            </div>
-        
-        
-    <% end %>
+            </div>        
+        <% end %>
     </div>
-
 </div>
 
 
