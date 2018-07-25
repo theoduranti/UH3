@@ -453,7 +453,7 @@ ul.polaroids {
 
 .card:nth-of-type(n+1) {
 
-  transform: rotate(5deg);
+  transform: rotate(2deg);
   
   }
 .card:nth-of-type(n+1):hover {
@@ -475,7 +475,7 @@ ul.polaroids {
 
 
 .card:nth-of-type(n+3) {
-      transform: rotate(-2deg);
+      transform: rotate(3deg);
       }
       
 .card:nth-of-type(n+3):hover {
@@ -497,7 +497,7 @@ ul.polaroids {
        
           
 .card:nth-of-type(n+5) {
-            transform: rotate(-4deg);
+            transform: rotate(-2deg);
             }
         
 .card:nth-of-type(n+5):hover {
