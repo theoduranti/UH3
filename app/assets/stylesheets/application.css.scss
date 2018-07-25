@@ -357,7 +357,7 @@
   -webkit-transition: width 2s, transform .2s;
   transition: width 2s, transform .2s;
   p { display: none; }
-  h3 { display: block; transform: rotate(90deg); margin: auto; }
+  h3 { display: block; transform: rotate(90deg); vertical-align: middle; }
   }
 .boxfriendsnews:hover {
   width: 600%;
