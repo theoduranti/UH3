@@ -355,8 +355,9 @@
   margin: auto ; 
 }
 .boxrecherche:hover {
-  height: 130%; 
-  width: 130%;
+  height: 150%; 
+  width: 150%;
+  z-index: 15 ;
 }
 
 // ============================== rotating3d ==================================
@@ -365,81 +366,6 @@
 .rotating3d {
   transform: rotate3d(1, 1, 1, 5deg);
 }
-
-
-
-//   =======================================================try polaroid =================================================
-
-
-/*  =============== Avec ul li ================
-
-ul.polaroids :after {
-  content: attr(title);
-}
-
-
-ul.polaroids {
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-}
- 
-
-ul.polaroids li:nth-child(even) {
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-}
- 
-ul.polaroids li:nth-child(3n) {
-  -webkit-transform: none;
-  -moz-transform: none;
-  position: relative;
-  top: -5px;
-}
- 
-
-ul.polaroids li:nth-child(5n) {
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-  position: relative;
-  right: 5px;
-}
- 
-
-ul.polaroids li:nth-child(8n) {
-  position: relative;
-  top: 8px;
-  right: 5px;
-}
- 
-
-ul.polaroids li:nth-child(11n) {
-  position: relative;
-  top: 3px;
-  left: -5px;
-}
-
-ul.polaroids a:hover {
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  position: relative;
-  z-index: 5;
-}
-
-
-
-ul.polaroids {
-  -webkit-transition: -webkit-transform .15s linear;
-  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-}
- 
-
-ul.polaroids {
-  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-}
-
-*/
 
 
 
