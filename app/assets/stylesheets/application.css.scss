@@ -262,8 +262,9 @@
 
 .card:nth-of-type(n+1):hover {
   transform: rotate(0deg);
-  height: 105%; 
-  width: 105%;
+  height: 110%; 
+  width: 110%;
+  z-index: 15;
   }
 
 
@@ -273,7 +274,7 @@
 
 .card:nth-of-type(n+2):hover {
     transform: rotate(0deg);
-    z-index: 1.2;        
+    z-index: 15;      
     }
 
 
@@ -283,7 +284,7 @@
       
 .card:nth-of-type(n+3):hover {
       transform: rotate(0deg);
-      z-index: 1.2;        
+      z-index: 15;        
       }
 
 
@@ -293,7 +294,7 @@
         
 .card:nth-of-type(n+4):hover {
         transform: rotate(0deg);
-        z-index: 1.2;        
+        z-index: 15;        
         }
 
         
@@ -305,7 +306,7 @@
         
 .card:nth-of-type(n+5):hover {
             transform: rotate(0deg);
-            z-index: 1.2;        
+            z-index: 15;        
             }
         
 
@@ -316,7 +317,7 @@
               
 .card:nth-of-type(n+6):hover {
               transform: rotate(0deg);
-              z-index: 1.2;        
+              z-index: 15;        
               }
         
         
@@ -327,7 +328,7 @@
 
 .card:nth-of-type(n+7):hover {
                 transform: rotate(2deg);
-                z-index: 1.2;        
+                z-index: 15;        
                 }
   
                 
@@ -338,7 +339,7 @@
 
 .card:nth-of-type(n+9):hover {
                   transform: rotate(0deg);
-                  z-index: 1.2; 
+                  z-index: 15; 
                   }
 
 
