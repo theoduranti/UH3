@@ -174,7 +174,7 @@
     <div class="writingbigbig">
         <div class="mybigcontainer avecperspective">
             <% @events.each do |event|%>
-                <div class="card h-100 bgwrist1 shadow-lg p-2" id="agrossir" onclick="fonctiongrossimoica()">
+                <div class="card h-100 bgwrist1 shadow-lg p-2 agrossir" id="agrossir" onclick="fonctiongrossimoica()">
                     <div class="card-header">
                         <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
@@ -248,11 +248,11 @@
     </div>
 </div>
 </div>
-
+<%-#                                       elem.classList.add('biggerdivonclick')              -%>
 <script type="text/javascript">
     var clickcount = 0 ;
     function fonctiongrossimoica(elem) {
-        if (clickcount == 0) { document.getElementById("agrossir"); elem.classList.add('biggerdivonclick') ; clickcount ++ ; }
+        if (clickcount == 0) { document.getElementsByClassName("agrossir").style.width = "500px"; clickcount ++ ; }
         else { document.getElementById("agrossir").style.width = "initial" ; clickcount -- ; }
         end
     }
