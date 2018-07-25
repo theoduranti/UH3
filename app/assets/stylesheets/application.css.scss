@@ -240,8 +240,8 @@
 
 
 .card {
-  -webkit-transition: width 2s, transform .2s;
-  transition: width 2s, transform .2s;
+  -webkit-transition: transform .2s;
+  transition: transform .2s;
   }
 
 
@@ -263,9 +263,8 @@
 
 .card:nth-of-type(n+1):hover {
   
-  transform: rotate(0deg);
-  height: 110%; 
-  width: 110%;
+  transform: rotate(0deg), scale(1.1);
+  
   z-index: 15;
   }
 
