@@ -431,11 +431,13 @@
 }
 */
 
-
+.card { .notdisplayuntilactiv {display: none;} }
 @media (min-width: 992px) {
   .card:active {
     width: 160% ;
+    .notdisplayuntilactiv { display: block; }
   }
+
 }
 
 /*
