@@ -432,10 +432,12 @@
 */
 
 
-
-.card:active {
-  width: 160% ;
+@media (min-width: 992px) {
+  .card:active {
+    width: 160% ;
+  }
 }
+
 /*
 @media (max-width: 992px) {
   .card:active  {
