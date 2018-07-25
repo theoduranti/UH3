@@ -251,8 +251,8 @@
 
 <script type="text/javascript">
     var clickcount = 0 ;
-    function fonctiongrossimoica() {
-        if (clickcount == 0) { document.getElementById("agrossir"); div.className="biggerdivonclick" ; clickcount ++ ; }
+    function fonctiongrossimoica(elem) {
+        if (clickcount == 0) { document.getElementById("agrossir"); elem.classList.add('biggerdivonclick') ; clickcount ++ ; }
         else { document.getElementById("agrossir").style.width = "initial" ; clickcount -- ; }
         end
     }
