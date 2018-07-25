@@ -452,7 +452,7 @@ ul.polaroids {
 
 
 .card:nth-of-type(n+1) {
-  transform: rotate(3deg);
+  transform: rotate(-2deg);
   }
 .card:nth-of-type(n+1).dontdisplayifmediasup992 {
     transform: rotate(0deg);
