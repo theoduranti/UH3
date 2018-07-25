@@ -453,7 +453,7 @@ ul.polaroids {
 
 .card:nth-of-type(n+1) {
 
-  transform: rotate(4deg);
+  transform: rotate(0deg);
 
   }
 .card:nth-of-type(n+1):hover {
@@ -465,7 +465,7 @@ ul.polaroids {
 
 
 .card:nth-of-type(n+2) {
-    transform: rotate(-1deg);
+    transform: rotate(-3deg);
     }
 
 .card:nth-of-type(n+2):hover {
@@ -508,7 +508,7 @@ ul.polaroids {
 
         
 .card:nth-of-type(n+6) {
-              transform: rotate(6deg);
+              transform: rotate(4deg);
               }
               
 .card:nth-of-type(n+6):hover {
@@ -523,7 +523,7 @@ ul.polaroids {
                 }
 
 .card:nth-of-type(n+7):hover {
-                transform: rotate(-5deg);
+                transform: rotate(2deg);
                 z-index: 1.2;        
                 }
   
@@ -531,7 +531,7 @@ ul.polaroids {
                 
 .card:nth-of-type(n+9) {
 
-                  transform: rotate(2deg);
+                  transform: rotate(-3deg);
                   
                   }
 .card:nth-of-type(n+9):hover {
