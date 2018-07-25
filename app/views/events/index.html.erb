@@ -252,7 +252,7 @@
 <script type="text/javascript">
     var clickcount = 0 ;
     function fonctiongrossimoica(elem) {
-        if (clickcount == 0) { document.getElementById("agrossir").style.width = "500px"; $("div:current").addClass("biggerdivonclick") ; clickcount ++ ; }
+        if (clickcount == 0) { document.getElementById("agrossir"); $("div:current").addClass("biggerdivonclick") ; clickcount ++ ; }
         else { document.getElementById("agrossir").style.width = "initial" ; $("div:current").removeClass("biggerdivonclick") ; clickcount -- ; }
         end
     }
