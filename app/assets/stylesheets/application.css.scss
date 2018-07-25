@@ -350,9 +350,12 @@
 // ===================================================      BOX RECHERCHE        ====================================================
 
 .boxrecherche {
-  width: 95% ;
+  width: 98% ;
   height: 800px ;
-  margin-right: 0px ; 
+  margin: auto ; 
+  -webkit-transition: width 2s, transform .2s;
+  transition: width 2s, transform .2s;
+  }
 }
 .boxrecherche:hover {
   width: 150%;
