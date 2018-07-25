@@ -265,7 +265,7 @@
   
   transform: rotate(0deg);
   height: 110%; 
-  width: 110%;
+  width: 120%;
   z-index: 15;
   }
 
@@ -357,7 +357,7 @@
   transition: width 2s, transform .2s;
   }
 .boxrecherche:hover {
-  width: 150%;
+  width: 350%;
   z-index: 15 ;
 }
 
