@@ -236,118 +236,114 @@
 
 
 
-//============ backim
+// ========================================== Orientation différentes des cartes selon leur ordre .... =======================================
 
 
-
-
-//====================test grid
-
-
-
-
-  $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px,
-);
-
-$container-max-widths: (
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px,
-);
-
-/*
-.mygrid{
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: auto;
-}
-*/
-
-
-/*
-@media (min-width: 34em) {
-  .card-columns {
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
+.card {
+  transform: rotate(0deg);
   }
-}
-
-@media (min-width: 48em) {
-  .card-columns {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-  }
-}
-
-@media (min-width: 62em) {
-  .card-columns {
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
-  }
-}
-
-@media (min-width: 75em) {
-  .card-columns {
-      -webkit-column-count: 4;
-      -moz-column-count: 4;
-      column-count: 4;
-  }
-}
-
-*/
-
-form {
-    box-sizing: content-box;
-    display: block;
-    margin-top: 0em;
-}
 
 
-*, *::before, *::after {
-  box-sizing: content-box; 
-}
+.card:hover {
 
-
-form{box-sizing:content-box;display:block;margin-top:0em}
-*,*::before,*::after{box-sizing:content-box}
-
-
-
-
-// For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
-  @each $breakpoint, $container-max-width in $max-widths {
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      max-width: $mycontainer-max-width;
+    transform: rotate(0deg);
+    z-index: 1.2;
+    
     }
+
+
+.card:nth-of-type(n+1) {
+  transform: rotate(-2deg);
   }
-}
+// pour que ce ne soit pas de travers sur le portable.
+.card:nth-of-type(n+1).dontdisplayifmediasup992 {
+    transform: rotate(0deg);
+    }
+
+.card:nth-of-type(n+1):hover {
+  transform: rotate(0deg);
+  z-index: 1.2; 
+  }
+
+
+.card:nth-of-type(n+2) {
+    transform: rotate(4deg);
+    }
+
+.card:nth-of-type(n+2):hover {
+    transform: rotate(0deg);
+    z-index: 1.2;        
+    }
+
+
+.card:nth-of-type(n+3) {
+      transform: rotate(-3deg);
+      }
+      
+.card:nth-of-type(n+3):hover {
+      transform: rotate(0deg);
+      z-index: 1.2;        
+      }
+
+
+.card:nth-of-type(n+4) {
+        transform: rotate(3deg);
+        }
+        
+.card:nth-of-type(n+4):hover {
+        transform: rotate(0deg);
+        z-index: 1.2;        
+        }
+
+        
+       
+          
+.card:nth-of-type(n+5) {
+            transform: rotate(-2deg);
+            }
+        
+.card:nth-of-type(n+5):hover {
+            transform: rotate(0deg);
+            z-index: 1.2;        
+            }
+        
+
+        
+.card:nth-of-type(n+6) {
+              transform: rotate(4deg);
+              }
+              
+.card:nth-of-type(n+6):hover {
+              transform: rotate(0deg);
+              z-index: 1.2;        
+              }
+        
+        
+
+.card:nth-of-type(n+7) {
+                transform: rotate(-3deg);
+                }
+
+.card:nth-of-type(n+7):hover {
+                transform: rotate(2deg);
+                z-index: 1.2;        
+                }
+  
+                
+                
+.card:nth-of-type(n+9) {
+                  transform: rotate(-3deg);
+                  }
+
+.card:nth-of-type(n+9):hover {
+                  transform: rotate(0deg);
+                  z-index: 1.2; 
+                  }
 
 
 
-// ============================== CARROUSSEL ==================================
+// ============================== rotating3d ==================================
 
-
-
-/*
-
-.rotatingrandom {
-  transform: rotate( random(-2, 2)deg);
-}
-*/
-.rotating{
-  transform: rotate(5deg);
-}
 
 .rotating3d {
   transform: rotate3d(1, 1, 1, 5deg);
@@ -430,115 +426,106 @@ ul.polaroids {
 
 
 
-.polaroid {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//====================test grid
+
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+/*
+.mygrid{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+}
+*/
+
+
+/*
+@media (min-width: 34em) {
+  .card-columns {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+  }
+}
+
+@media (min-width: 48em) {
+  .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+@media (min-width: 62em) {
+  .card-columns {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+  }
+}
+
+@media (min-width: 75em) {
+  .card-columns {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4;
+  }
+}
+
+*/
+
+
+
+
+
+// ============================================== FORM ========================================
+form {
+    box-sizing: content-box;
+    display: block;
+    margin-top: 0em;
 }
 
 
-// ========================================== Orientation différentes des cartes selon leur ordre .... =======================================
+*, *::before, *::after {
+  box-sizing: content-box; 
+}
 
 
-.card {
-  transform: rotate(0deg);
+form{box-sizing:content-box;display:block;margin-top:0em}
+*,*::before,*::after{box-sizing:content-box}
+
+
+
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $mycontainer-max-width;
+    }
   }
+}
 
 
-.card:hover {
 
-    transform: rotate(0deg);
-    z-index: 1.2;
-    
-    }
-
-
-.card:nth-of-type(n+1) {
-  transform: rotate(-2deg);
-  }
-.card:nth-of-type(n+1).dontdisplayifmediasup992 {
-    transform: rotate(0deg);
-    }
-
-.card:nth-of-type(n+1):hover {
-
-  transform: rotate(0deg);
-  z-index: 1.2;
-    
-  }
-
-
-.card:nth-of-type(n+2) {
-    transform: rotate(4deg);
-    }
-
-.card:nth-of-type(n+2):hover {
-    transform: rotate(0deg);
-    z-index: 1.2;        
-    }
-
-
-.card:nth-of-type(n+3) {
-      transform: rotate(-3deg);
-      }
-      
-.card:nth-of-type(n+3):hover {
-      transform: rotate(0deg);
-      z-index: 1.2;        
-      }
-
-
-.card:nth-of-type(n+4) {
-        transform: rotate(3deg);
-        }
-        
-.card:nth-of-type(n+4):hover {
-        transform: rotate(0deg);
-        z-index: 1.2;        
-        }
-
-        
-       
-          
-.card:nth-of-type(n+5) {
-            transform: rotate(-2deg);
-            }
-        
-.card:nth-of-type(n+5):hover {
-            transform: rotate(0deg);
-            z-index: 1.2;        
-            }
-        
-
-        
-.card:nth-of-type(n+6) {
-              transform: rotate(4deg);
-              }
-              
-.card:nth-of-type(n+6):hover {
-              transform: rotate(0deg);
-              z-index: 1.2;        
-              }
-        
-        
-
-.card:nth-of-type(n+7) {
-                transform: rotate(-3deg);
-                }
-
-.card:nth-of-type(n+7):hover {
-                transform: rotate(2deg);
-                z-index: 1.2;        
-                }
-  
-                
-                
-.card:nth-of-type(n+9) {
-
-                  transform: rotate(-3deg);
-                  
-                  }
-.card:nth-of-type(n+9):hover {
-        
-                  transform: rotate(0deg);
-                  z-index: 1.2;
-                    
-                  }
+// ======================================= test polaroid =============================================
+.polaroid {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
