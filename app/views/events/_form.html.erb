@@ -1,4 +1,5 @@
 </br></br>
+<div class="backim">
   <div class="container text-body writingbigbig">
     <h1 class="text-center"> Créer un événement </h1> </br></br>
     <%= form_with(model: event, local: true) do |form| %>
@@ -15,7 +16,7 @@
       <% end %></br>
 
 
-      <div class="field shadow p-4 border-top">
+      <div class="field shadow p-4 border-top bgyellow1">
         <div class="writingbigbigbig text-center">
           <%= form.label :name %>
         </div>
@@ -27,7 +28,7 @@
 
 
 
-      <div class="field">
+      <div class="field bgyellow1">
         <div class="writingbigbigbig text-center border-top border-right border-left p-4">
           <%= form.label :discipline %>
         </div>
@@ -78,7 +79,7 @@
 
 
 
-      <div class="field shadow p-4 border-top">
+      <div class="field shadow p-4 border-top bgyellow1">
         <div class="writingbigbigbig text-center">
           <%= form.label :description %>
         </div>
@@ -87,7 +88,7 @@
         </div>
       </div></br></br></br>
 
-      <div class="field shadow p-4 border-top">
+      <div class="field shadow p-4 border-top bgyellow1">
         <div class="writingbigbigbig text-center">
           <%= form.label :ville %>
         </div>
@@ -96,7 +97,7 @@
         </div>
       </div></br></br></br>
 
-      <div class="field shadow p-4 border-top">
+      <div class="field shadow p-4 border-top bgyellow1">
         <div class="writingbigbigbig text-center">
           <%= form.label :price %>
         </div>
@@ -109,7 +110,7 @@
         </div>
       </div></br></br></br>
 
-      <div class="field shadow p-4 border-top">
+      <div class="field shadow p-4 border-top bgyellow1">
         <div class="writingbigbigbig text-center">
           <%= form.label :date %>
         </div>
@@ -129,3 +130,4 @@
     <% end %>
 
   </div>
+</div>
