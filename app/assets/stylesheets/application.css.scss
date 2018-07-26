@@ -434,11 +434,60 @@
 //Fonctionne ! ================================   notdisplayuntilactiv  =========================================== faudra rajouter un   if (width <= 400px) {width: 160% ;} elsif (width <= 435px) {width: 145% ;} elsif (width <= 470px) {width: 130% ;} elsif (width <= 505px) {width: 115% ;} ... 
 
 
-.card (max-width: 400px){ 
+
+
+.card { 
   .notdisplayuntilactiv {display: none;} ; 
   .notdisplaywhenactiv {display: block;} ; 
 }
 
+@media (min-width: 992px) {
+  .card:active {
+    .card { 
+        (max-width: 400px) {
+          width: 160% ;
+        } ; 
+      } ;
+    .card (max-width: 435px) {
+        width: 145% ;
+      } ;
+    .card (max-width: 470px) {
+        width: 130% ;
+      } ;
+    .card (max-width: 700px) {
+        width: 115% ;
+      } ;
+    .notdisplayuntilactiv { display: block; } ;
+    .notdisplaywhenactiv {display: none; } ;
+    img { width: 80% ; margin: auto;  } ;
+  }
+}
+
+
+
+
+
+/*
+
+@media (min-width: 992px) {
+  .card:active {
+    .card (max-width: 400px) {
+        width: 160% ;
+      } ;
+    .card (max-width: 435px) {
+        width: 145% ;
+      } ;
+    .card (max-width: 470px) {
+        width: 130% ;
+      } ;
+    .card (max-width: 700px) {
+        width: 115% ;
+      } ;
+    .notdisplayuntilactiv { display: block; } ;
+    .notdisplaywhenactiv {display: none; } ;
+    img { width: 80% ; margin: auto;  } ;
+  }
+}
 
 
 /*
