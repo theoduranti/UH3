@@ -443,9 +443,7 @@
   .card:active {
     width: 180% ; 
     max-width: 550px ;
-    position: absolute; left: 50%; right: 50%;
-    .card:nth-of-type(n+1) { position: static; };
-    .card:nth-of-type(n-1) { position: static; };
+    right: 50%;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
@@ -455,9 +453,7 @@
   .card:active {
     width: 180% ; 
     max-width: 675px ;
-    position: absolute; left: 50%; right: 50%;
-    .card:nth-of-type(n+1) { position: static; };
-    .card:nth-of-type(n-1) { position: static; };
+    right: 50%;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
@@ -467,9 +463,7 @@
   .card:active {
     width: 180% ; 
     max-width: 750px ;
-    position: absolute; left: 50%; right: 50%;
-    .card:nth-of-type(n+1) { position: static; };
-    .card:nth-of-type(n-1) { position: static; };
+    right: 50%;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
@@ -479,14 +473,20 @@
   .card:active {
     width: 180% ; 
     max-width: 850px ;
-    position: absolute; left: 50%; right: 50%;
-    .card:nth-of-type(n+1) { position: static; };
-    .card:nth-of-type(n-1) { position: static; };
+    right: 50%;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
   }
 }
+
+/*
+position: absolute; left: 50%; right: 50%;
+    .card:nth-of-type(n+1) { position: static; };
+    .card:nth-of-type(n-1) { position: static; };
+*/
+
+
 
 
 
