@@ -441,10 +441,10 @@
 
 @media (min-width: 992px) {
   .card:active {
-    if ((".card").width <= 400px){width: 160% ;}
-    elsif ((".card").width <= 435px){width: 145% ;} 
-    elsif ((".card").width <= 470px){width: 130% ;} 
-    elsif ((".card").width <= 505px){width: 115% ;} 
+    if (".card".width <= 400px){width: 160% ;}
+    elsif (".card".width <= 435px){width: 145% ;} 
+    elsif (".card".width <= 470px){width: 130% ;} 
+    elsif (".card".width <= 505px){width: 115% ;} 
    }
   .card:active {
     .notdisplayuntilactiv { display: block; } ;
