@@ -435,10 +435,10 @@
 .card { .notdisplayuntilactiv {display: none;} ; .notdisplaywhenactiv {display: block;} ; }
 @media (min-width: 992px) {
   .card:active {
-    if (width <= 400px) {width: 160% ;} 
+    if (.card.width <= 400px) {.card.width: 160% ;} 
     elsif (width <= 435px) {width: 145% ;} 
     elsif (width <= 470px) {width: 130% ;} 
-    else (width <= 505px) {width: 115% ;} 
+    elsif (width <= 505px) {width: 115% ;} 
     end ; 
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
