@@ -324,7 +324,7 @@
       <%-#  ================    Ici, le truc Amis y sera constamment, pas seulement :active                                            ==================== -%>
       <%-#  ================    Trouver comment grossir et centré dans la div (alors qu'elle prend déjà toute la width du container)   ==================== -%>
                     <div class="card-body">
-                        <p class="card-text writingbigbigbiggg"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
+                        <p class="writingbigbigbiggg"><strong>Discipline :</strong></br>  <%= event.discipline %> </br></br> 
                         <strong>Description :</strong> </br> <%= event.description %></br></br>  
                         <strong>Date:</strong> </br> <%= event.date.strftime("le %A %d/%m/%y à %H:%M") %></br></br>  
                         <strong>Personnes inscrites :</strong> </br> <% if event.professeur == "present" %> <%= (event.asubscribe.count)-1 %> élève(s) + 1 prof <% else %> <%= event.asubscribe.count %> élèves <% end %> </br></br> 
