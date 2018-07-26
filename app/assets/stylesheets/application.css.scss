@@ -436,7 +436,7 @@
   .card:active {
     width: 160% ;
     .notdisplayuntilactiv { display: block; } ;
-    .notdisplaywhenactiv {display: none; } ;
+    .notdisplaywhenactiv {display: none; margin: auto; } ;
     img { width: 80% } ;
   }
 
