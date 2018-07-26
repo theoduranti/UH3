@@ -442,7 +442,7 @@
 }
 @media (min-width: 992px) and (max-width: 1199px)  {
   .card:active {
-    width: 160% ; 
+    width: 180% ; 
     max-width: 550px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
@@ -451,7 +451,7 @@
 }
 @media (min-width: 1200px) and (max-width: 1599px)  {
   .card:active {
-    width: 160% ; 
+    width: 180% ; 
     max-width: 675px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
@@ -460,7 +460,7 @@
 }
 @media (min-width: 1600px) and (max-width: 1799px)  {
   .card:active {
-    width: 160% ; 
+    width: 180% ; 
     max-width: 800px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
@@ -469,7 +469,7 @@
 }
 @media (min-width: 1800px) {
   .card:active {
-    width: 160% ; 
+    width: 180% ; 
     max-width: 900px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
