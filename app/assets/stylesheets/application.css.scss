@@ -489,7 +489,7 @@
 
 //   activ ========
 @media (max-width: 991px)  {
-  h3::after {content: ' \00000a0';};
+  h3::after {content: ' \00a0 \00a0';};
   .card:active {
     width: 105% ; 
     right: 3%;
