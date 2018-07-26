@@ -436,6 +436,7 @@
 */
 //Fonctionne ! ================================   card active not_active  =========================================== 
 
+// ======================= Version PC ========================
 //    not activ ======
 .card { 
   .notdisplayuntilactiv {display: none;} ; 
@@ -483,19 +484,31 @@
   }
 }
 
+
+// ======================= Version Portable ========================
+
+//   activ ========
+@media (max-width: 991px)  {
+  .card:active {
+    width: 105% ; 
+    max-width: 630px ;
+    right: 2%;
+    font-size: 112%;
+    .notdisplayuntilactiv { display: block; } ;
+    .notdisplaywhenactiv {display: none; } ;
+    img { width: 75% ; margin: auto;  } ;
+  }
+}
+
+
+
+
+
+
 /*
 position: absolute; left: 50%; right: 50%;
     .card:nth-of-type(n+1) { position: static; };
     .card:nth-of-type(n-1) { position: static; };
-*/
-
-
-
-
-
-
-
-/*
 
 PAS ENCORE TESTE CELLE6CI
 @media (min-width: 992px) {
