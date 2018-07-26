@@ -443,7 +443,7 @@
 @media (min-width: 992px) {
   .card:active {
     width: 160% ; 
-    max-width: 500px ; 
+    
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
@@ -456,6 +456,31 @@
 
 
 /*
+
+PAS ENCORE TESTE CELLE6CI
+@media (min-width: 992px) {
+  .card:active {
+    @card { 
+        (max-width: 400px) {
+          width: 160% ;
+        } ; 
+      } ;
+    @card (max-width: 435px) {
+        width: 145% ;
+      } ;
+    @card (max-width: 470px) {
+        width: 130% ;
+      } ;
+    @card (max-width: 700px) {
+        width: 115% ;
+      } ;
+    .notdisplayuntilactiv { display: block; } ;
+    .notdisplaywhenactiv {display: none; } ;
+    img { width: 80% ; margin: auto;  } ;
+  }
+}
+
+
 
 @media (min-width: 992px) {
   .card:active {
