@@ -461,7 +461,7 @@
 @media (min-width: 1600px) and (max-width: 1799px)  {
   .card:active {
     width: 180% ; 
-    max-width: 800px ;
+    max-width: 750px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
@@ -470,7 +470,7 @@
 @media (min-width: 1800px) {
   .card:active {
     width: 180% ; 
-    max-width: 900px ;
+    max-width: 850px ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
