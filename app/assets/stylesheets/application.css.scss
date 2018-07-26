@@ -431,12 +431,12 @@
 }
 */
 //Fonctionne ! ================================   notdisplayuntilactiv  ===========================================
-.card { .notdisplayuntilactiv {display: none;} ; .notsdiplaywhenactiv {display: block;} ; }
+.card { .notdisplayuntilactiv {display: none;} ; .notdisplaywhenactiv {display: block;} ; }
 @media (min-width: 992px) {
   .card:active {
     width: 160% ;
     .notdisplayuntilactiv { display: block; } ;
-    .notsdiplaywhenactiv {display: none; } ;
+    .notdisplaywhenactiv {display: none; } ;
   }
 
 }
