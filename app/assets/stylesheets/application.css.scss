@@ -431,7 +431,7 @@
 }
 */
 //Fonctionne ! ================================   notdisplayuntilactiv  ===========================================
-.card { .notdisplayuntilactiv {display: none;} ; .notsdiplaywhenactiv {display: initial;} ; }
+.card { .notdisplayuntilactiv {display: none;} ; .notsdiplaywhenactiv {display: block;} ; }
 @media (min-width: 992px) {
   .card:active {
     width: 160% ;
