@@ -396,6 +396,7 @@
   height: 800px ;
   margin: auto ; 
   padding: 5px ;
+  z-index: 1;
   -webkit-transition: width 2s, transform .2s;
   transition: width 2s, transform .2s;
   p { display: none; }
