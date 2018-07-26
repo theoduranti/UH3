@@ -431,19 +431,20 @@
   @media (max-width: 992px) { font-size: 4rem ; height: 160% ; }
 }
 */
-//Fonctionne ! ================================   notdisplayuntilactiv  =========================================== faudra rajouter un   if (width <= 400px) {width: 160% ;} elsif (width <= 435px) {width: 145% ;} elsif (width <= 470px) {width: 130% ;} elsif (width <= 505px) {width: 115% ;} ... 
+//Fonctionne ! ================================   card active not_active  =========================================== 
 
-
-
-
+//    not activ ======
 .card { 
   .notdisplayuntilactiv {display: none;} ; 
   .notdisplaywhenactiv {display: block;} ; 
 }
+//   activ ===========
 @media (min-width: 992px) and (max-width: 1199px)  {
   .card:active {
     width: 180% ; 
     max-width: 550px ;
+    position: absolute; left: 50%; right: 50%;
+    display: 
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
