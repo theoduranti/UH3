@@ -430,16 +430,15 @@
   @media (max-width: 992px) { font-size: 4rem ; height: 160% ; }
 }
 */
-//Fonctionne ! ================================   notdisplayuntilactiv  ===========================================
+//Fonctionne ! ================================   notdisplayuntilactiv  =========================================== faudra rajouter un   if (width <= 450px) {width: 160%;} elsif (width <= 500px) {width: 160%;} ... 
 .card { .notdisplayuntilactiv {display: none;} ; .notdisplaywhenactiv {display: block;} ; }
 @media (min-width: 992px) {
   .card:active {
-    width: 160% ;
+    width: 160% ; 
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
     img { width: 80% ; margin: auto;  } ;
   }
-
 }
 
 /*
