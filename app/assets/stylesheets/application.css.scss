@@ -445,7 +445,7 @@
     elsif ((".card").width <= 435px){width: 145% ;} 
     elsif ((".card").width <= 470px){width: 130% ;} 
     elsif ((".card").width <= 505px){width: 115% ;} 
-    end ; }
+   }
   .card:active {
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
