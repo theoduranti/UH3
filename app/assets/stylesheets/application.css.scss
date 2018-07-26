@@ -489,11 +489,11 @@
 
 //   activ ========
 @media (max-width: 991px)  {
+  h3::after {content: ' \00000a0';};
   .card:active {
     width: 105% ; 
     right: 3%;
     padding: 4px;
-    h3::after {content: ', \00a0';};
     p {font-size: 180% ; line-height: 102% ;} ;
     .notdisplayuntilactiv { display: block; } ;
     .notdisplaywhenactiv {display: none; } ;
