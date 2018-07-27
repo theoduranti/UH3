@@ -234,10 +234,20 @@
     display: none;
   }
 }
+@media (min-width: 992px) {
+  .dontdisplayifmediasup992 {
+    display: none;
+  }
+}
 
 
 @media (max-width: 1200px) {
   .dontdisplayifmediaunder1200 {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .dontdisplayifmediasup1200 {
     display: none;
   }
 }
@@ -248,9 +258,19 @@
     display: none;
   }
 }
+@media (min-width: 1600px) {
+  .dontdisplayifmediasup1600 {
+    display: none;
+  }
+}
 
 @media (max-width: 1800px) {
   .dontdisplayifmediaunder1800 {
+    display: none;
+  }
+}
+@media (min-width: 1800px) {
+  .dontdisplayifmediasup1800 {
     display: none;
   }
 }
