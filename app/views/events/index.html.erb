@@ -252,6 +252,16 @@
     
 
 <%-#   ====================================== Version PC   ===================================    -%>
+
+<script type="text/javascript">
+    var clickcount = 0 ;
+    function fonctiongrossimoica() {
+        if (clickcount == 0) { document.getElementById("agrossir").style.width = "initial + 50px"; clickcount ++ ; }
+        else { document.getElementById("agrossir").style.width = "initial"; clickcount -- ; }
+        end
+    }
+</script>
+
 <div class="container-fluid">
 <div class="row">
     <div class="col-1 dontdisplayifmediaunder992">
@@ -268,7 +278,8 @@
     <div class="writingbigbig">
         <div class="mybigcontainer avecperspective">
             <% @events.each do |event|%>
-                <div class="card h-100 bgwrist1 shadow-lg p-2 agrossir" id="agrossir" onclick="fonctiongrossimoica()">
+                <div class="card h-100 bgwrist1 shadow-lg p-2 agrossir" onclick="fonctiongrossimoica()">
+                    <div id="agrossir">
                     <div class="card-header">
                         <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
@@ -350,6 +361,7 @@
                             <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
                         </div>                    
                     </div>
+                </div>
                 </div>
             <% end %>
         </div>
