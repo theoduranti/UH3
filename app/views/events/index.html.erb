@@ -260,7 +260,7 @@
       var clickcount = 0 ; 
       function fonctiongrossimoica() {  
         if (clickcount == 0) { document.getElementsByClassName('card')[0].className="huger" ; clickcount ++ ; }  
-        else { document.getElementsByClassName('card')[0].replace(/\bcard\b/,'') ; clickcount -- ; }  
+        else { document.getElementsByClassName('card')[0].className.replace(/\bcard\b/,'') ; clickcount -- ; }  
         end   
         }  
 </script> 
