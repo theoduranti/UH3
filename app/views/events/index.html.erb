@@ -253,15 +253,19 @@
 
 <%-#   ====================================== Version PC   ===================================    -%>
 <%-#   ===   document.activeElement.style.width = "initial"  ==    -%>
+<%-#   ===   document.activeElement.style.width = "initial"  ==    -%>
+.replace(/\bMyClass\b/,'')
 
 <script type="text/javascript"> 
       var clickcount = 0 ; 
       function fonctiongrossimoica() {  
         if (clickcount == 0) { document.getElementsByClassName('card')[0].className="huger" ; clickcount ++ ; }  
-        else { document.getElementsByClassName('card')[0].classList.remove("huger") ; clickcount -- ; }  
+        else { document.getElementsByClassName('card')[0].replace(/\bcard\b/,'') ; clickcount -- ; }  
         end   
         }  
 </script> 
+
+
 
 <div class="container-fluid">
 <div class="row">
