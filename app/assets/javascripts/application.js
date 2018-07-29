@@ -28,3 +28,14 @@ $('.card').hover(function() {
   var number2 = Math.floor((Math.random() * 0) + -5);
   $(".polaroid:nth-of-type(n+1)").css("transform", "rotate(" + number + "deg)");
   $(".polaroid:nth-of-type(n+2)").css("transform", "rotate(" + number2 + "deg)");
+
+
+
+
+
+  var clickcount = 0 ; 
+  function fonctiongrossimoica() {  
+      if (clickcount == 0) { document.getElementsByClassName('card')[0].className="huger" ; clickcount ++ ; }  
+      else { document.getElementsByClassName('card')[0].className="anulhuger" ; clickcount -- ; }  
+      end   
+  }  
