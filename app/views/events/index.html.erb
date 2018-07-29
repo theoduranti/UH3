@@ -254,13 +254,12 @@
 <%-#   ====================================== Version PC   ===================================    -%>
 <%-#   ===   document.activeElement.style.width = "initial"  ==    -%>
 <%-#   ===   document.activeElement.style.width = "initial"  ==    -%>
-.replace(/\bMyClass\b/,'')
 
 <script type="text/javascript"> 
       var clickcount = 0 ; 
       function fonctiongrossimoica() {  
-        if (clickcount == 0) { document.getElementsByClassName('card').className="huger" ; clickcount ++ ; }  
-        else { document.getElementsByClassName('card').className.replace(/\bcard\b/,'') ; clickcount -- ; }  
+        if (clickcount == 0) { document.getElementsByClassName('card')[0].className="huger" ; clickcount ++ ; }  
+        else { document.getElementsByClassName('card')[0].className.replace(/\bcard\b/,'') ; clickcount -- ; }  
         end   
         }  
 </script> 
