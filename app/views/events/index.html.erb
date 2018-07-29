@@ -256,8 +256,8 @@
 <script type="text/javascript">
     var clickcount = 0 ;
     function fonctiongrossimoica() {
-        if (clickcount == 0) { document.getElementsByClassName("agrossir").className="huger" ; clickcount ++ ; }
-        else { document.getElementsByClassName("agrossir").style.width = "initial"; clickcount -- ; }
+        if (clickcount == 0) { document.getElementById("agrossir").className="huger" ; clickcount ++ ; }
+        else { document.getElementById("agrossir").style.width = "initial"; clickcount -- ; }
         end
     }
 </script>
@@ -279,7 +279,7 @@
         <div class="mybigcontainer avecperspective">
             <% @events.each do |event|%>
                 <div class="card h-100 bgwrist1 shadow-lg p-2" onclick="fonctiongrossimoica()">
-                    <div class="card-header agrossir">
+                    <div class="card-header" id="agrossir">
                         <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
                     <% if event.discipline == "Roller" %>
@@ -322,7 +322,7 @@
                         <img class="card-img-top p-1" src="https://zupimages.net/up/18/26/jb1c.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
                     <% else %>
                     <% end %>
-                    <div class="card-body card-text writingbigbigbig agrossir">
+                    <div class="card-body card-text writingbigbigbig">
                         
                         <div class="notdisplaywhenactiv">
                             <p class="card-text writingbigbigbig">
@@ -354,7 +354,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="card-footer agrossir">
+                    <div class="card-footer">
                         <%= link_to 'VOIR L EVENEMENT', event_path(event), target: "_blank", class: "btn bg-transparent btn-block text-primary writingbigbigbig" %>
                         <div class="mx-auto text-center">
                             <span class="glyphicon glyphicon-alert"><%= link_to ' SUPPRIMER L EVENEMENT', destroy_event_path(event), method: :delete, class: "btn bg-transparent btn-large text-danger writingbigbigbig" %> 
