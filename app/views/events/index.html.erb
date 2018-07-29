@@ -386,6 +386,7 @@
     <div class="row dontdisplayifmediasup992">
         <% @events.each do |event|%>
             <div class="col-lg-4 mb-4 p-4 dontdisplayifmediasup992">
+            <div onclick="fonctiongrossimoica()">
                 <div class="card dontdisplayifmediasup992 h-100 bgwrist3 shadow p-2">
                     <div class="card-header">
                         <h3 class="writingbigbigbigbig d-inline"><%= event.name %></h3> <p class="writingbigbigbig text-danger d-inline justify-content-end notdisplaywhenactiv"> Presse un coté de la photo pour + de détails</p>
@@ -432,9 +433,9 @@
                     <% end %>
 
 
-      <%-#  ================    Comme pour pc  :active réduit la photo, agrandit la card mais moins, grossi l'écriture.                ==================== -%>
-      <%-#  ================    Ici, le truc Amis y sera constamment, pas seulement :active                                            ==================== -%>
-      <%-#  ================    Trouver comment grossir et centré dans la div (alors qu'elle prend déjà toute la width du container)   ==================== -%>
+                        <%-#  ================    Comme pour pc  :active réduit la photo, agrandit la card mais moins, grossi l'écriture.                ==================== -%>
+                        <%-#  ================    Ici, le truc Amis y sera constamment, pas seulement :active                                            ==================== -%>
+                        <%-#  ================    Trouver comment grossir et centré dans la div (alors qu'elle prend déjà toute la width du container)   ==================== -%>
                     <div class="card-body">
                         <div class="notdisplaywhenactiv">
                             <p class="card-text writingbigbigbig">
@@ -473,7 +474,8 @@
                         </div>                            
                     </div>
                 </div>
-            </div>        
+            </div>  
+            </div>      
         <% end %>
     </div>
 </div>
