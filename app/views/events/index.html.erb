@@ -256,10 +256,10 @@
 <script type="text/javascript"> 
       var clickcount = 0 ; 
       function fonctiongrossimoica() {  
-         if (clickcount == 0) { document.activeElement.className="huger" ; clickcount ++ ; }  
-          else { document.activeElement.style.width = "initial"; clickcount -- ; }  
-      end   
-    }  
+        if (clickcount == 0) { document.getElementsByTagName("CARD")[3].className="huger" ; clickcount ++ ; }  
+        else { document.activeElement.style.width = "initial"; clickcount -- ; }  
+        end   
+        }  
 </script> 
 
 <div class="container-fluid">
@@ -386,7 +386,7 @@
     <div class="row dontdisplayifmediasup992">
         <% @events.each do |event|%>
             <div class="col-lg-4 mb-4 p-4 dontdisplayifmediasup992">
-                <div class="card dontdisplayifmediasup992 h-100 bgwrist3 shadow p-2" onclick="fonctiongrossimoica()">
+                <div class="card dontdisplayifmediasup992 h-100 bgwrist3 shadow p-2">
                     <div class="card-header">
                         <h3 class="writingbigbigbigbig d-inline"><%= event.name %></h3> <p class="writingbigbigbig text-danger d-inline justify-content-end notdisplaywhenactiv"> Presse un coté de la photo pour + de détails</p>
                     </div>
