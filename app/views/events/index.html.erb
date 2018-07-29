@@ -252,12 +252,13 @@
     
 
 <%-#   ====================================== Version PC   ===================================    -%>
+<%-#   ===   document.activeElement.style.width = "initial"  ==    -%>
 
 <script type="text/javascript"> 
       var clickcount = 0 ; 
       function fonctiongrossimoica() {  
-        if (clickcount == 0) { document.getElementsByClassName('card')[3].className="huger" ; clickcount ++ ; }  
-        else { document.activeElement.style.width = "initial"; clickcount -- ; }  
+        if (clickcount == 0) { document.getElementsByClassName('card').className="huger" ; clickcount ++ ; }  
+        else { document.getElementsByClassName('card').classList.remove("huger") ; clickcount -- ; }  
         end   
         }  
 </script> 
