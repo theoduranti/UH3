@@ -277,8 +277,8 @@
     <div class="col-10">
     <div class="writingbigbig">
         <div class="mybigcontainer avecperspective">
-            <% @events.each do |event|%>
-                <div class="card h-100 bgwrist1 shadow-lg p-2" onclick="fonctiongrossimoica()">
+            <% @events.each do |event| :onclick=>"fonctiongrossimoica()" %>
+                <div class="card h-100 bgwrist1 shadow-lg p-2">
                     <div class="card-header" id="agrossir">
                         <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
