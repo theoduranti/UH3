@@ -279,8 +279,8 @@
         <div class="mybigcontainer avecperspective">
             <% @events.each do |event|%>
                 <div class="card h-100 bgwrist1 shadow-lg p-2">
-                    <div class="card-header" id="agrossir">
-                        <h3 class="writingbigbigbigbig" onclick="fonctiongrossimoica()"><%= event.name %></h3>
+                    <div class="card-header" id="agrossir" onclick="fonctiongrossimoica()">
+                        <h3 class="writingbigbigbigbig"><%= event.name %></h3>
                     </div>
                     <% if event.discipline == "Roller" %>
                         <img class="card-img-top" src="https://zupimages.net/up/18/26/tttj.jpg" alt="correspond à lien direct zupimage pour hip-hop1.png en 700x400">
