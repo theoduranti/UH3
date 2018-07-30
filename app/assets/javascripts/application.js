@@ -35,7 +35,7 @@ $('.card').hover(function() {
 
   var clickcount = 0 ; 
   function fonctiongrossimoica() {  
-      if (clickcount == 0) { document.getElementsByClassName('card')[0].className="huger" ; clickcount ++ ; }  
-      else { document.getElementsByClassName('card')[0].className="anulhuger" ; clickcount -- ; }  
+      if (clickcount == 0) { document.getElementsByClassName('card').className="huger" ; clickcount ++ ; }  
+      else { document.getElementsByClassName('card').className="anulhuger" ; clickcount -- ; }  
       end   
   }  
