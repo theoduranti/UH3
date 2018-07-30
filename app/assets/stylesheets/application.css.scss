@@ -422,9 +422,9 @@
   p { display: none; }
   }
 .boxprofsnews:hover {
-  transform: translateX(-600px);
   width: 600%;
   z-index: 15 ;
+  transform: translateX(-600px);
   h3 { display: none; }
   p { display: block; }
 }
